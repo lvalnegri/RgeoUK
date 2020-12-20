@@ -7,7 +7,7 @@ Authors@R: person("Luca", "Valnegri", email = "l.valnegri@datamaps.co.uk", role 
 Description: This package consists of datasets designed to help Data Sourcing, Cleaning and Wrangling of geographical data, plus a bunch of other visualization and geographical stuff.
 License: file LICENSE
 Encoding: UTF-8
-Depends: R (>= 4.0.1)
+Depends: R (>= 4.0)
 Imports:
     data.table,
     fst

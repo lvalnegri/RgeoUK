@@ -1,0 +1,26 @@
+location_type,name,theme,ordering,count_ons,count_pc,count_db
+PCS,Postcode Sector,Postal,11,11210,11072,9987
+PCD,Postcode District,Postal,12,2984,2955,2932
+PCT,Post Town,Postal,13,,,1411
+PCA,Postcode Area,Postal,14,121,121,121
+OA,Output Area,Statistical,21,232296,231933,232296
+LSOA,Lower Layer Super Output Area,Statistical,22,42619,42617,42619
+MSOA,Middle Layer Super Output Area,Statistical,23,8480,8480,8480
+LAD,Local Authority District,Statistical,24,391,391,391
+CTY,County,Statistical,25,35,27,94
+RGN,Region,Statistical,26,9,9,12
+CTRY,Country,Statistical,27,4,4,4
+TTWA,Travel To Work Area,Administrative,31,228,228,228
+PCON,Westminster Parliamentary Constituencies,Administrative,32,650,650,650
+WARD,Electoral Ward,Administrative,33,9114,9114,9100
+CED,County Electoral Division,Administrative,34,1724,1719,1717
+PAR,Civil Parish,Administrative,35,10460,11538,10454
+BUAS,Built-up Area Sub-division,Census,41,1826,1822,1693
+BUA,Built-up Area,Census,42,5830,5789,5493
+MTC,Major Town or City,Census,43,112,,112
+WPZ,Workplace Zone,Census,44,60709,60686,
+PFA,Police Force Area,Social,51,44,44,44
+STP,Sustainability and Transformation Partnership,Social,52,42,42,42
+CCG,Clinical Commissioning Group,Social,56,241,241,241
+NHSO,NHS England Local Office,Social,57,14,14,14
+NHSR,NHS England Region,Social,58,5,5,5

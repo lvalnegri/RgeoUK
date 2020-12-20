@@ -1,6 +1,6 @@
-###################################################################
-# popiFun * Copy datasets from PUBLIC repo to package DATA subdir #
-###################################################################
+####################################################################
+# popiData * Copy datasets from PUBLIC repo to package DATA subdir #
+####################################################################
 
 # datasets related to UK geography
 fnames <- c('output_areas', 'locations', 'lookups', 'hierarchies', 'workplace_zones')

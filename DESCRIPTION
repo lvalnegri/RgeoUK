@@ -1,7 +1,7 @@
 Package: popiData.geouk
 Type: Package
 Date: 2020-12-25
-Title: Datasets realted to UK Geographies
+Title: Datasets related to UK Geographies
 Version: 0.0.1
 Authors@R: person("Luca", "Valnegri", email = "l.valnegri@datamaps.co.uk", role = c("aut", "cre"))
 Description: This package consists of datasets designed to help Data Sourcing, Cleaning and Wrangling of geographical data, plus a bunch of other visualization and geographical stuff.

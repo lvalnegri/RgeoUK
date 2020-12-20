@@ -2,8 +2,7 @@
 # popiFun * Copy datasets from PUBLIC repo to package DATA subdir #
 ###################################################################
 
-fnames <- c('output_areas', 'locations', 'lookups', 'hierarchies', 'workplace_zones')
-for(fn in fnames){
+for(fn in c('output_areas', 'locations', 'lookups', 'hierarchies', 'workplace_zones')){
     message('Processing <', fn, '>')
     message(' * reading...')
     assign(fn, fst::read_fst(file.path(popiFun::geouk_path, fn), as.data.table = TRUE))

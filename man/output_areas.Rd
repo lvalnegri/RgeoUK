@@ -16,7 +16,7 @@ For further details, see \url{http://}
 output_areas
 }
 \description{
-This dataset contains both a complete list of the UK \it{Output Areas}, the smallest statistical geographic area in the UK,
-with some of its characteristics, and a mapping between them and some other geographies as deployed and maintaned by \it{ONS}.
+This dataset contains both a complete list of the UK \emph{Output Areas}, the smallest statistical geographic area in the UK,
+with some of its characteristics, and a mapping between them and some other geographies as deployed and maintaned by \emph{ONS}.
 }
 \keyword{datasets}

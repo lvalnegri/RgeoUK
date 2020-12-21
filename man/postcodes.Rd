@@ -3,12 +3,12 @@
 \docType{data}
 \name{postcodes}
 \alias{postcodes}
-\title{A list of all the currently active postcodes in the UK (1,718,610 as of NOV-2020), their coordinates in WGS84 CRS,
-and the corresponding Output Area, based on a *best-fit* approach}
+\title{UK Postcodes}
 \format{
 A data.table with 4 columns:
 \describe{
-  \item{\code{PCU}}{postcode unit in 7-chars format}
+  \item{\code{PCU}}{unit postcode in 7-chars format}
+  \item{\code{is_active}}{flag that indicates if the corresponding unit postcode is currently active or terminated}
   \item{\code{OA}}{output area ONS code}
   \item{\code{x_lon}}{longitude}
   \item{\code{y_lat}}{latitude}
@@ -20,7 +20,8 @@ For further details, see \url{http://}
 postcodes
 }
 \description{
-A list of all the currently active postcodes in the UK (1,718,610 as of NOV-2020), their coordinates in WGS84 CRS,
+A list of all the postcodes in the UK, as of NOV-2020 (1,718,610 active, , terminated)
+their coordinates in WGS84 CRS,
 and the corresponding Output Area, based on a *best-fit* approach
 }
 \keyword{datasets}

@@ -6,11 +6,11 @@ fnames <- c('output_areas', 'locations', 'location_types', 'lookups', 'hierarchi
 for(fn in fnames){
     message('Processing <', fn, '>')
     message(' * reading...')
-    assign(fn, fst::read_fst(file.path(popiFun::geouk_path, fn), as.data.table = TRUE))
+    assign(y, fst::read_fst(file.path(popiFun::geouk_path, fn), as.data.table = TRUE))
     message(' * saving csv...')
-    data.table::fwrite(get(fn), file.path('data-raw', paste0(fn, '.csv')))
+    data.table::fwrite(y, file.path('data-raw', paste0(fn, '.csv')))
     message(' * saving compressed rda...')
-    save(list = fn, file = file.path('data', paste0(fn, '.rda')), version = 3, compress = 'gzip')
+    save(list = y, file = file.path('data', paste0(fn, '.rda')), version = 3, compress = 'gzip')
 }
 message('Processing <postcodes>...')
 message(' * reading...')

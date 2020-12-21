@@ -16,7 +16,7 @@ For further details, see \url{http://}
 workplace_zones
 }
 \description{
-This dataset contains both a complete list of the UK \it{Workplace Zones}, a similar statistical geographic area as OAs but based on workers commuting patterns,
+This dataset contains both a complete list of the UK \emph{Workplace Zones}, a similar statistical geographic area as OAs but based on workers commuting patterns,
 with some of its characteristics, and a mapping between them and MSOA, so that there is a link to some higher level geographies.
 }
 \keyword{datasets}

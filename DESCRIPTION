@@ -1,4 +1,4 @@
-Package: popiData.geouk
+Package: popipkg.geouk
 Type: Package
 Date: 2020-12-25
 Title: Datasets related to UK Geographies
@@ -13,4 +13,5 @@ Imports:
     fst
 Suggests:
 LazyData: true
+URL: https://github.com/lvalnegri/packages-popiData_geouk
 RoxygenNote: 7.1.1

@@ -3,7 +3,7 @@ NULL
 
 #' UK Postcodes
 #'
-#' A list of all the postcodes in the UK, as of NOV-2020 (1,718,610 active, , terminated)
+#' A list of all the postcode units in the UK, as of NOV-2020 (1,718,610 active, terminated)
 #' their coordinates in WGS84 CRS,
 #' and the corresponding Output Area, based on a *best-fit* approach
 #'
@@ -20,7 +20,7 @@ NULL
 #'
 'postcodes'
 
-#' Output Areas lookups for the UK geographies
+#' Output Areas list plus lookups for all the remaining UK geographies
 #'
 #' This dataset contains both a complete list of the UK \emph{Output Areas}, the smallest statistical geographic area in the UK,
 #' with some of its characteristics, and a mapping between them and some other geographies as deployed and maintaned by \emph{ONS}.
@@ -99,3 +99,17 @@ NULL
 #' For further details, see \url{http://}
 #'
 'workplace_zones'
+
+#' Neighbours
+#'
+#' This dataset contains the 1st order neighbours for all location areas
+#'
+#' @format A data.table with 2 columns:
+#' \describe{
+#'   \item{\code{location_id}}{The code of an area}
+#'   \item{\code{neighbour_id}}{The 1st order neighbours of an area}
+#' }
+#'
+#' For further details, see \url{http://}
+#'
+'neighbours'

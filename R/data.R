@@ -34,9 +34,22 @@ NULL
 #'
 'output_areas'
 
-#' locations
+#' The list of the geographies included in the package
 #'
 #' A list of all the geographies included in the \code{output_areas} mapping dataset (apart from the Output Areas themselves and the Workplace Zones)
+#'
+#' @format A data.table with ??? columns:
+#' \describe{
+#'   \item{\code{OA}}{Output Area}
+#' }
+#'
+#' For further details, see \url{http://}
+#'
+'location_types'
+
+#' locations
+#'
+#' A list of all the areas included in the \code{output_areas} mapping dataset (apart from the Output Areas themselves and the Workplace Zones)
 #'
 #' @format A data.table with ??? columns:
 #' \describe{

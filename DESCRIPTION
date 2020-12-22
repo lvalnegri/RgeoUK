@@ -1,6 +1,6 @@
-Package: popipkg.geouk
+Package: dmpkg.geouk
 Type: Package
-Date: 2020-12-25
+Date: 2021-01-01
 Title: Datasets related to UK Geographies
 Version: 0.0.1
 Authors@R: person("Luca", "Valnegri", email = "l.valnegri@datamaps.co.uk", role = c("aut", "cre"))
@@ -9,9 +9,8 @@ License: file LICENSE
 Encoding: UTF-8
 Depends: R (>= 4.0)
 Imports:
-    data.table,
-    fst
+    data.table
 Suggests:
 LazyData: true
-URL: https://github.com/lvalnegri/packages-popiData_geouk
+URL: https://github.com/lvalnegri/packages-data_geouk
 RoxygenNote: 7.1.1

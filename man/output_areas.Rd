@@ -3,7 +3,7 @@
 \docType{data}
 \name{output_areas}
 \alias{output_areas}
-\title{Output Areas lookups for the UK geographies}
+\title{Output Areas list plus lookups for all the remaining UK geographies}
 \format{
 A data.table with 30 columns:
 \describe{

@@ -20,7 +20,7 @@ For further details, see \url{http://}
 postcodes
 }
 \description{
-A list of all the postcodes in the UK, as of NOV-2020 (1,718,610 active, , terminated)
+A list of all the postcode units in the UK, as of NOV-2020 (1,718,610 active, terminated)
 their coordinates in WGS84 CRS,
 and the corresponding Output Area, based on a *best-fit* approach
 }

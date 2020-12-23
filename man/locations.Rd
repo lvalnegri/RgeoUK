@@ -16,6 +16,6 @@ For further details, see \url{http://}
 locations
 }
 \description{
-A list of all the geographies included in the \code{output_areas} mapping dataset (apart from the Output Areas themselves and the Workplace Zones)
+A list of all the areas included in the \code{output_areas} mapping dataset (apart from the Output Areas themselves and the Workplace Zones)
 }
 \keyword{datasets}

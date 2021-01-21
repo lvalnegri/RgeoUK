@@ -2,6 +2,20 @@ Do not use as package is still a work in progress.
 
 *Last update: 21-01-2021*
 
+## Overview
+This *R* package provides unified information about various geographical aresa in the UK.
+
+## Installation
+The package is not on *CRAN*. 
+
+You can instead install this package from *github* as:
+```
+# install.packages("devtools")
+devtools::install_github('lvalnegri/dmpkg.geouk')
+```
+
+Notice that because of the mass of information contained the package file is actually quite big (110Mb), and it'll take a while for download and installation.
+
 ## Datasets related to UK Geographies
 
 The following datasets are available both in *CSV* format, in the `data-raw` directory, and as *data.tables* in *RData* format in the `data` directory, ready to be called after installation:

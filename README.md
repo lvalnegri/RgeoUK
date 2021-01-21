@@ -1,25 +1,27 @@
 ## Datasets related to UK Geographies
 
-The following datasets are available both in *CSV* format, in the `data-raw` directory, and in *RDA* format in the `data` directory:
+The following datasets are available both in *CSV* format, in the `data-raw` directory, and as *data.tables* in *RDA* format in the `data` directory, ready to be called after installation:
 
+ - **entities**
+ 
+ - **location_types**
+ 
+ - **hierarchies** 
+ 
  - **postcodes**
  
  - **output_areas**
  
  - **locations** 
  
- - **location_types**
- 
  - **lookups**
- 
- - **hierarchies** 
  
  - **workplace_zones**
  
  - **neighbours** 
 
 
-### Credits
+## Attributions
 
  - Contains OS data © Crown copyright and database rights [2020] 
  

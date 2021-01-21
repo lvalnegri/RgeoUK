@@ -1,26 +1,34 @@
-location_type,name,theme,ordering,count_ons,count_pc,count_db
-PCS,Postcode Sector,Postal,11,11210,11072,9987
-PCD,Postcode District,Postal,12,2984,2955,2932
-PCT,Post Town,Postal,13,,,1411
-PCA,Postcode Area,Postal,14,121,121,121
-OA,Output Area,Statistical,21,232296,231933,232296
-LSOA,Lower Layer Super Output Area,Statistical,22,42619,42617,42619
-MSOA,Middle Layer Super Output Area,Statistical,23,8480,8480,8480
-LAD,Local Authority District,Statistical,24,391,391,391
-CTY,County,Statistical,25,35,27,94
-RGN,Region,Statistical,26,9,9,12
-CTRY,Country,Statistical,27,4,4,4
-TTWA,Travel To Work Area,Administrative,31,228,228,228
-PCON,Westminster Parliamentary Constituencies,Administrative,32,650,650,650
-WARD,Electoral Ward,Administrative,33,9114,9114,9100
-CED,County Electoral Division,Administrative,34,1724,1719,1717
-PAR,Civil Parish,Administrative,35,10460,11538,10454
-BUAS,Built-up Area Sub-division,Census,41,1826,1822,1693
-BUA,Built-up Area,Census,42,5830,5789,5493
-MTC,Major Town or City,Census,43,112,,112
-WPZ,Workplace Zone,Census,44,60709,60686,
-PFA,Police Force Area,Social,51,44,44,44
-STP,Sustainability and Transformation Partnership,Social,52,42,42,42
-CCG,Clinical Commissioning Group,Social,56,241,241,241
-NHSO,NHS England Local Office,Social,57,14,14,14
-NHSR,NHS England Region,Social,58,5,5,5
+location_type,prog_id,pd_id,name,theme,countries,ordering,count_ons,count_pc,count_pkg,last_update,is_frozen,max_child,exact_cov,min_parent,pref_filter,pref_map,locations,lookups,boundaries
+OA,1,OA11,Output Area,Census,ENSW,11,232 296,232 039,232 296,2011,Y,,100,LSOA,,,https://opendata.arcgis.com/datasets/65664b00231444edb3f6f83c9d40591f_0.csv,,
+LSOA,2,LSOA11,Lower Layer Super Output Area,Census,ENSW,12,42 619,42 619,42 619,2011,Y,OA,100,MSOA,,,https://opendata.arcgis.com/datasets/65664b00231444edb3f6f83c9d40591f_0.csv,,
+MSOA,3,MSOA11,Middle Layer Super Output Area,Census,ESW,13,9 370,9 370,9 370,2011,Y,LSOA,100,LAD,,,,pd,
+LAD,4,OSLAUA,Local Authority & District,Census,ENSW,14,379,379,379,Dec-20,N,MSOA,100,CTY,,,https://opendata.arcgis.com/datasets/65664b00231444edb3f6f83c9d40591f_0.csv,pd,
+CTY,5,OSCTY,County,Census,E,15,93,93,93,,N,LAD,100,RGN,,,,pd,
+RGN,6,RGN,Region,Census,E,16,12,12,12,,Y,CTY,100,CTRY,,,,pd,
+CTRY,7,CTRY,Country,Census,ENSW,17,4,4,4,,Y,RGN,,,,,,pd,
+WPZ,8,WZ11,Workplace Zone,Census,ENSW,19,60 709,60 707,60 707,2011,Y,,,MSOA,,,,pd,
+PCS,9,,Postcode Sector,Postal,ENSW,21,,,9 538,Nov-20,N,OA,,PCD,,,,,
+PCD,10,,Postcode District,Postal,ENSW,22,,,2 815,Nov-20,N,PCS,,PCT,,,,,
+PCT,11,,Post Town,Postal,ENSW,23,,,1 430,Nov-20,N,PCD,,PCA,,,,,
+PCA,12,,Postcode Area,Postal,ENSW,24,,,121,Nov-20,N,PCT,,,,,,,
+PCON,13,PCON,Westminster Parliamentary Constituency,Electoral,ENSW,31,650,650,650,,N,,,,,,,pd,
+WARD,14,OSWARD,Electoral Ward,Electoral,ENSW,32,8 887,8 875,8 875,Dec-20,N,,,,,,,pip,https://opendata.arcgis.com/datasets/71658b704db247718ccc3f01b53c06e2_0.zip
+CED,15,CED,County Electoral Division,Electoral,E,33,1 717,1 719,1 719,,,,,,,,,pd,
+TTWA,16,TTWA,Travel To Work Area,Urban,ENSW,41,228,228,228,2011,Y,,,,,,,pd,
+MTC,17,,Major Town or City,Urban,EW,42,113,113,113,2015,Y,,,,,,,pip,
+BUA,18,BUA11,Built-up Area,Urban,EW,44,5 830,5 795,5 795,2015,Y,,,,,,,pd,
+BUAS,19,BUASD11,Built-up Area Sub-division,Urban,EW,43,1 826,1 824,1 824,2015,Y,,,,,,,pd,
+PAR,19,PARISH,Civil Parish or Unparished; Community,Social,EWS,51,11 561,12 629,12 415,Dec-20,N,,,,,,,pip,https://opendata.arcgis.com/datasets/743ab54b61aa4827a5771ade3f1b99c4_0.zip
+PFN,20,,Police Neighborhood,Social,ENSW,52,0,0,4 814,Nov-20,N,,,,,,,pip,https://data.police.uk/data/boundaries/2020-11.zip
+PFA,21,PFA,Police Force Area,Social,ENSW,53,45,0,45,Dec-19,N,,,,,,,pd,https://opendata.arcgis.com/datasets/e79b2d65db914d83899b1cf5b09385ad_0.zip
+FRA,22,,Fire Rescue Authority,Social,ENSW,54,79,0,48,Dec-19,N,,,,,,,pip,
+CSP,23,,Community Safety Partnership,Social,EW,55,314,0,314,Dec-19,N,,,,,,,pd,
+LPA,24,,Local Planning Authority,Social,ENSW,56,398,0,397,Apr-20,N,,,,,,,pip,
+RGD,25,,Registration District,Social,EW,57,173,0,173,Apr-19,N,,,,,,,pip,
+LRF,26,,Local Resilience Forum,Social,EW,58,42,0,42,Dec-19,N,,,,,,,pip,
+CCG,27,CCG,Clinical Commissioning Group,Health,ENSW,61,142,181,181,,N,,,STP,,,,pd,
+STP,28,STP,Sustainability and Transformation Partnership,Health,E,62,42,42,42,,N,CCG,,NHSO,,,,pd,
+NHSO,29,NHSRLO,NHS England Local Office,Health,E,63,0,14,14,,N,STP,,NHSR,,,,pd,
+NHSR,30,NHSER,NHS England Region,Health,E,64,7,7,7,,N,NHSO,,,,,,pd,
+CIS,31,,Covid Infection Survey,Health,E,69,116,116,116,Oct-20,N,,,,,,id,pip,
+,,,,,,,,,,,,,,,,,,,

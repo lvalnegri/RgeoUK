@@ -3,9 +3,9 @@
 \docType{data}
 \name{postcodes}
 \alias{postcodes}
-\title{UK Postcodes}
+\title{Postcodes}
 \format{
-A data.table with 4 columns:
+A data.table with the following four columns:
 \describe{
   \item{\code{PCU}}{unit postcode in 7-chars format}
   \item{\code{is_active}}{flag that indicates if the corresponding unit postcode is currently active or terminated}

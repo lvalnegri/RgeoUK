@@ -5,9 +5,14 @@
 \alias{workplace_zones}
 \title{Workplace Zones}
 \format{
-A data.table with ??? column:
+A data.table with the following six column:
 \describe{
   \item{\code{WPZ}}{Workplace Zone}
+  \item{\code{MSOA}}{Middle LAyer Super Output Area (NA for N.Ireland)}
+  \item{\code{LAD}}{Local Authority}
+  \item{\code{CTY}}{County (England only)}
+  \item{\code{RGN}}{Region (England only)}
+  \item{\code{CTRY}}{Country}
 }
 
 For further details, see \url{http://}

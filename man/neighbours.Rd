@@ -3,9 +3,9 @@
 \docType{data}
 \name{neighbours}
 \alias{neighbours}
-\title{Neighbours}
+\title{neighbours}
 \format{
-A data.table with 2 columns:
+A data.table with the following two columns:
 \describe{
   \item{\code{location_id}}{The code of an area}
   \item{\code{neighbour_id}}{The 1st order neighbours of an area}

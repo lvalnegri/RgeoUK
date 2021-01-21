@@ -3,11 +3,42 @@
 \docType{data}
 \name{output_areas}
 \alias{output_areas}
-\title{Output Areas list plus lookups for all the remaining UK geographies}
+\title{Output Areas}
 \format{
-A data.table with 30 columns:
+A data.table with the following 30 columns:
 \describe{
   \item{\code{OA}}{Output Area}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
 }
 
 For further details, see \url{http://}
@@ -17,6 +48,7 @@ output_areas
 }
 \description{
 This dataset contains both a complete list of the UK \emph{Output Areas}, the smallest statistical geographic area in the UK,
-with some of its characteristics, and a mapping between them and some other geographies as deployed and maintaned by \emph{ONS}.
+with some of its characteristics, and a mapping between them and all the other Geographies contained in the package
+(apart from Workplace Zones, which have a similar dedicated mapping dataset), as deployed and maintaned by \emph{ONS}.
 }
 \keyword{datasets}

@@ -3,11 +3,19 @@
 \docType{data}
 \name{location_types}
 \alias{location_types}
-\title{The list of the geographies included in the package}
+\title{Location Types}
 \format{
-A data.table with ??? columns:
+A data.table with the following ??? columns:
 \describe{
-  \item{\code{OA}}{Output Area}
+  \item{\code{location_type}}{An acronym for the geography, used as its id}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
 }
 
 For further details, see \url{http://}
@@ -16,6 +24,7 @@ For further details, see \url{http://}
 location_types
 }
 \description{
-A list of all the geographies included in the \code{output_areas} mapping dataset (apart from the Output Areas themselves and the Workplace Zones)
+A list of all the Geographies included in the package
+(apart from the Output Areas and the Workplace Zones, which are listed in the corresponding datasets)
 }
 \keyword{datasets}

@@ -5,9 +5,13 @@
 \alias{lookups}
 \title{lookups}
 \format{
-A data.table with ??? column:
+A data.table with the following ??? column:
 \describe{
-  \item{\code{OA}}{Output Area}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
 }
 
 For further details, see \url{http://}

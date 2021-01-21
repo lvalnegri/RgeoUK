@@ -5,9 +5,15 @@
 \alias{locations}
 \title{locations}
 \format{
-A data.table with ??? columns:
+A data.table with the following ??? columns:
 \describe{
-  \item{\code{OA}}{Output Area}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
+  \item{\code{}}{}
 }
 
 For further details, see \url{http://}
@@ -16,6 +22,8 @@ For further details, see \url{http://}
 locations
 }
 \description{
-A list of all the areas included in the \code{output_areas} mapping dataset (apart from the Output Areas themselves and the Workplace Zones)
+A list of all the areas included in the \code{output_areas} mapping dataset
+(apart from the Output Areas themselves and the Workplace Zones)
+together with some of , like coordinates, Perimeter, and Area
 }
 \keyword{datasets}

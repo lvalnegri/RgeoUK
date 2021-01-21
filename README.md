@@ -1,11 +1,13 @@
+## Datasets related to UK Geographies
+
 Do not use this package at the moment as it is still a work in progress.
 
 *Last update: 21-01-2021*
 
-## Overview
+### Overview
 This *R* package provides unified information about various geographical aresa in the UK.
 
-## Installation
+### Installation
 The package is not on *CRAN*. 
 
 You can instead install this package from *github* as:
@@ -16,7 +18,7 @@ devtools::install_github('lvalnegri/dmpkg.geouk')
 
 Notice that because of the mass of information contained the package file is actually quite big (110Mb), and it'll take a while for download and installation.
 
-## Datasets related to UK Geographies
+### List of Datasets
 
 The following datasets are available both in *CSV* format, in the `data-raw` directory, and as *data.tables* in *RData* format in the `data` directory, ready to be called after installation:
 
@@ -39,16 +41,22 @@ The following datasets are available both in *CSV* format, in the `data-raw` dir
  - **neighbours** 
 
 
-## Resources
+### Resources
 
- - [ONS Postcode Directory]()
+ - [Register of Geographic Codes](https://geoportal.statistics.gov.uk/search?collection=Dataset&sort=-created&tags=all(PRD_RGC))
+ 
+ - [Code History Database](https://geoportal.statistics.gov.uk/search?collection=Dataset&sort=-created&tags=all(PRD_CHD))
+ 
+ - [Hierarchical Representation of UK Statistical Geographies]()
 
- - [NHS Postcode Directory]()
+ - [ONS Postcode Directory](https://geoportal.statistics.gov.uk/search?collection=Dataset&sort=-created&tags=all(PRD_ONSPD))
+
+ - [NHS Postcode Directory](https://geoportal.statistics.gov.uk/search?collection=Dataset&sort=-created&tags=all(PRD_NHSPD))
 
  - 
 
 
-## Attributions
+### Attributions
 
  - Contains OS data © Crown copyright and database rights [2020] 
  

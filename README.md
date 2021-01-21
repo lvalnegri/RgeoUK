@@ -1,3 +1,6 @@
+Do not use as package is still a work in progress.
+*Last update: 21-01-2021*
+
 ## Datasets related to UK Geographies
 
 The following datasets are available both in *CSV* format, in the `data-raw` directory, and as *data.tables* in *RData* format in the `data` directory, ready to be called after installation:

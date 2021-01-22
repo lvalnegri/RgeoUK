@@ -5,7 +5,8 @@ Do not use this package at the moment as it is still a work in progress.
 *Last update: 21-01-2021*
 
 ### Overview
-This *R* package provides unified information about various geographical aresa in the UK.
+This *R* package provides unified information about various geographical aresa in the UK. All geographies, apart from *WPZ-Workplace Zone*, are built on top of the minimal *OA Output Area*, or *SA Small Area* as it is called in N.Ireland. This means that some of the maps that you draw upon them are only an approximation of the corresponding developed by the [ONS]().
+
 
 ### Installation
 The package is not on *CRAN*. 
@@ -17,6 +18,7 @@ devtools::install_github('lvalnegri/dmpkg.geouk')
 ```
 
 Notice that because of the mass of information contained the package file is actually quite big (110Mb), and it'll take a while for download and installation.
+
 
 ### List of Datasets
 

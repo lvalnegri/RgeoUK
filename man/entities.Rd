@@ -7,14 +7,16 @@
 \format{
 A data.table with the following ??? column:
 \describe{
-  \item{\code{}}{}
-  \item{\code{}}{}
-  \item{\code{}}{}
-  \item{\code{}}{}
-  \item{\code{}}{}
-  \item{\code{}}{}
-  \item{\code{}}{}
-  \item{\code{}}{}
+  \item{\code{location_type}}{An acronym for the geography, used as its id}
+  \item{\code{country}}{}
+  \item{\code{prog_id}}{}
+  \item{\code{ordering}}{}
+  \item{\code{code}}{}
+  \item{\code{name}}{}
+  \item{\code{ons}}{}
+  \item{\code{N_ons}}{}
+  \item{\code{N_onspd}}{}
+  \item{\code{N_package}}{}
 }
 
 For further details, see \url{http://}

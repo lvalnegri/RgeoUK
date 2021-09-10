@@ -7,13 +7,15 @@
 \format{
 A data.table with the following ??? columns:
 \describe{
-  \item{\code{}}{}
-  \item{\code{}}{}
-  \item{\code{}}{}
-  \item{\code{}}{}
-  \item{\code{}}{}
-  \item{\code{}}{}
-  \item{\code{}}{}
+  \item{\code{type}}{}
+  \item{\code{location_id}}{}
+  \item{\code{name}}{}
+  \item{\code{x_lon}}{}
+  \item{\code{y_lat}}{}
+  \item{\code{wx_lon}}{}
+  \item{\code{wy_lat}}{}
+  \item{\code{perimeter}}{}
+  \item{\code{area}}{}
 }
 
 For further details, see \url{http://}

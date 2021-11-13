@@ -5,11 +5,11 @@ Do not use this package in production at the moment as it is still a work in pro
 *Last update: 21-01-2021*
 
 ### Overview
-This *R* package provides unified information about various geographical aresa in the UK. All geographies, apart from *WPZ-Workplace Zone*, are built on top of the minimal *OA Output Area*, or *SA Small Area* as it is called in N.Ireland. This means that some of the maps that you draw upon them are only an approximation of the corresponding developed by the [ONS]().
+This *R* package provides unified information about most geographical areas in the UK. All geographies, apart from *WPZ-Workplace Zone*, are built on top of the minimal *OA Output Area* (or *SA Small Area* as they are called in N.Ireland.) This means that some of the maps that you draw upon them are only a geographical approximation of the corresponding developed by the [ONS](https://geoportal.statistics.gov.uk/) (notice though that not all the boundaries found in the package are developed or shared by the *ONS*).
 
 
 ### Installation
-The package is not on *CRAN*. 
+The package is not on *CRAN* (it can't be due to its size). 
 
 You can instead install this package from *github* as:
 ```
@@ -54,8 +54,6 @@ The following datasets are available both in *CSV* format, in the `data-raw` dir
  - [ONS Postcode Directory](https://geoportal.statistics.gov.uk/search?collection=Dataset&sort=-created&tags=all(PRD_ONSPD))
 
  - [NHS Postcode Directory](https://geoportal.statistics.gov.uk/search?collection=Dataset&sort=-created&tags=all(PRD_NHSPD))
-
- - 
 
 
 ### Attributions

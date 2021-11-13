@@ -1,8 +1,8 @@
 ## Datasets related to UK Geographies
 
-Do not use this package in production at the moment as it is still a work in progress.
+*Last update: 21-10-2021*
 
-*Last update: 21-01-2021*
+Do not use this package in production at the moment as it is still a work in progress. I hope to work on it for a final version after the ONS Nov-21 Postcodes Directory update.
 
 ### Overview
 This *R* package provides unified information about most geographical areas in the UK. All geographies, apart from *WPZ-Workplace Zone*, are built on top of the minimal *OA Output Area* (or *SA Small Area* as they are called in N.Ireland.) This means that some of the maps that you draw upon them are only a geographical approximation of the corresponding developed by the [ONS](https://geoportal.statistics.gov.uk/) (notice though that not all the boundaries found in the package are developed or shared by the *ONS*).

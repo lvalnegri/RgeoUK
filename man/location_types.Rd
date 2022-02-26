@@ -8,14 +8,25 @@
 A data.table with the following ??? columns:
 \describe{
   \item{\code{location_type}}{An acronym for the geography, used as its id}
-  \item{\code{}}{}
-  \item{\code{}}{}
-  \item{\code{}}{}
-  \item{\code{}}{}
-  \item{\code{}}{}
-  \item{\code{}}{}
-  \item{\code{}}{}
-  \item{\code{}}{}
+  \item{\code{prog_id}}{}
+  \item{\code{pd_id}}{}
+  \item{\code{ordering}}{}
+  \item{\code{name}}{}
+  \item{\code{theme}}{}
+  \item{\code{countries}}{}
+  \item{\code{count_ons}}{}
+  \item{\code{count_pd}}{}
+  \item{\code{count_pkg}}{}
+  \item{\code{last_update}}{}
+  \item{\code{is_frozen}}{}
+  \item{\code{max_child}}{}
+  \item{\code{exact_coverage}}{}
+  \item{\code{min_parent}}{}
+  \item{\code{pref_filter}}{}
+  \item{\code{pref_map}}{}
+  \item{\code{locations}}{}
+  \item{\code{lookups}}{}
+  \item{\code{boundaries}}{}
 }
 
 For further details, see \url{http://}

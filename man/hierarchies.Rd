@@ -7,14 +7,18 @@
 \format{
 A data.table with the following ??? column:
 \describe{
-  \item{\code{}}{}
-  \item{\code{}}{}
-  \item{\code{}}{}
-  \item{\code{}}{}
-  \item{\code{}}{}
-  \item{\code{}}{}
-  \item{\code{}}{}
-  \item{\code{}}{}
+  \item{\code{hierarchy_id}}{}
+  \item{\code{child_type}}{}
+  \item{\code{child_id}}{}
+  \item{\code{parent_type}}{}
+  \item{\code{parent_id}}{}
+  \item{\code{countries}}{}
+  \item{\code{is_exact}}{}
+  \item{\code{is_direct}}{}
+  \item{\code{listing}}{}
+  \item{\code{filtering}}{}
+  \item{\code{mapping}}{}
+  \item{\code{charting}}{}
 }
 
 For further details, see \url{http://}

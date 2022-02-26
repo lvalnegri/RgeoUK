@@ -1,0 +1,77 @@
+subgroup_id,subgroup_code,subgroup_desc,group_id,group_code,group_desc,supergroup_id,supergroup_desc
+111,1A1,Rural Workers and Families,11,1A,Farming Communities,1,Rural Residents
+112,1A2,Established Farming Communities,11,1A,Farming Communities,1,Rural Residents
+113,1A3,Agricultural Communities,11,1A,Farming Communities,1,Rural Residents
+114,1A4,Older Farming Communities,11,1A,Farming Communities,1,Rural Residents
+121,1B1,Rural Life,12,1B,Rural Tenants,1,Rural Residents
+122,1B2,Rural White-Collar Workers,12,1B,Rural Tenants,1,Rural Residents
+123,1B3,Ageing Rural Flat Tenants,12,1B,Rural Tenants,1,Rural Residents
+131,1C1,Rural Employment and Retirees,13,1C,Ageing Rural Dwellers,1,Rural Residents
+132,1C2,Renting Rural Retirement,13,1C,Ageing Rural Dwellers,1,Rural Residents
+133,1C3,Detached Rural Retirement,13,1C,Ageing Rural Dwellers,1,Rural Residents
+211,2A1,Student Communal Living,21,2A,Students Around Campus,2,Cosmopolitans
+212,2A2,Student Digs,21,2A,Students Around Campus,2,Cosmopolitans
+213,2A3,Students and Professionals,21,2A,Students Around Campus,2,Cosmopolitans
+221,2B1,Students and Commuters,22,2B,Inner-City Students,2,Cosmopolitans
+222,2B2,Multicultural Student Neighbourhoods,22,2B,Inner-City Students,2,Cosmopolitans
+231,2C1,Migrant Families,23,2C,Comfortable Cosmopolitans,2,Cosmopolitans
+232,2C2,Migrant Commuters,23,2C,Comfortable Cosmopolitans,2,Cosmopolitans
+233,2C3,Professional Service Cosmopolitans,23,2C,Comfortable Cosmopolitans,2,Cosmopolitans
+241,2D1,Urban Cultural Mix,24,2D,Aspiring and Affluent,2,Cosmopolitans
+242,2D2,Highly-Qualified Quaternary Workers,24,2D,Aspiring and Affluent,2,Cosmopolitans
+243,2D3,EU White-Collar Workers,24,2D,Aspiring and Affluent,2,Cosmopolitans
+311,3A1,Established Renting Families,31,3A,Ethnic Family Life,3,Ethnicity Central
+312,3A2,Young Families and Students,31,3A,Ethnic Family Life,3,Ethnicity Central
+321,3B1,Striving Service Workers,32,3B,Endeavouring Ethnic Mix,3,Ethnicity Central
+322,3B2,Bangladeshi Mixed Employment,32,3B,Endeavouring Ethnic Mix,3,Ethnicity Central
+323,3B3,Multi-Ethnic Professional Service Workers,32,3B,Endeavouring Ethnic Mix,3,Ethnicity Central
+331,3C1,Constrained Neighbourhoods,33,3C,Ethnic Dynamics,3,Ethnicity Central
+332,3C2,Constrained Commuters,33,3C,Ethnic Dynamics,3,Ethnicity Central
+341,3D1,New EU Tech Workers,34,3D,Aspirational Techies,3,Ethnicity Central
+342,3D2,Established Tech Workers,34,3D,Aspirational Techies,3,Ethnicity Central
+343,3D3,Old EU Tech Workers,34,3D,Aspirational Techies,3,Ethnicity Central
+411,4A1,Private Renting Young Families,41,4A,Rented Family Living,4,Multicultural Metropolitans
+412,4A2,Social Renting New Arrivals,41,4A,Rented Family Living,4,Multicultural Metropolitans
+413,4A3,Commuters with Young Families,41,4A,Rented Family Living,4,Multicultural Metropolitans
+421,4B1,Asian Terraces and Flats,42,4B,Challenged Asian Terraces,4,Multicultural Metropolitans
+422,4B2,Pakistani Communities,42,4B,Challenged Asian Terraces,4,Multicultural Metropolitans
+431,4C1,Achieving Minorities,43,4C,Asian Traits,4,Multicultural Metropolitans
+432,4C2,Multicultural New Arrivals,43,4C,Asian Traits,4,Multicultural Metropolitans
+433,4C3,Inner City Ethnic Mix,43,4C,Asian Traits,4,Multicultural Metropolitans
+511,5A1,White Professionals,51,5A,Urban Professionals and Families,5,Urbanites
+512,5A2,Multi-Ethnic Professionals with Families,51,5A,Urban Professionals and Families,5,Urbanites
+513,5A3,Families in Terraces and Flats,51,5A,Urban Professionals and Families,5,Urbanites
+521,5B1,Delayed Retirement,52,5B,Ageing Urban Living,5,Urbanites
+522,5B2,Communal Retirement,52,5B,Ageing Urban Living,5,Urbanites
+523,5B3,Self-Sufficient Retirement,52,5B,Ageing Urban Living,5,Urbanites
+611,6A1,Indian Tech Achievers,61,6A,Suburban Achievers,6,Suburbanites
+612,6A2,Comfortable Suburbia,61,6A,Suburban Achievers,6,Suburbanites
+613,6A3,Detached Retirement Living,61,6A,Suburban Achievers,6,Suburbanites
+614,6A4,Ageing in Suburbia,61,6A,Suburban Achievers,6,Suburbanites
+621,6B1,Multi-Ethnic Suburbia,62,6B,Semi-Detached Suburbia,6,Suburbanites
+622,6B2,White Suburban Communities,62,6B,Semi-Detached Suburbia,6,Suburbanites
+623,6B3,Semi-Detached Ageing,62,6B,Semi-Detached Suburbia,6,Suburbanites
+624,6B4,Older Workers and Retirement,62,6B,Semi-Detached Suburbia,6,Suburbanites
+711,7A1,Transitional Eastern European,71,7A,Challenged Diversity,7,Constrained City Dwellers
+712,7A2,Hampered Aspiration,71,7A,Challenged Diversity,7,Constrained City Dwellers
+713,7A3,Multi-Ethnic Hardship,71,7A,Challenged Diversity,7,Constrained City Dwellers
+721,7B1,Eastern European Communities,72,7B,Constrained Flat Dwellers,7,Constrained City Dwellers
+722,7B2,Deprived Neighbourhoods,72,7B,Constrained Flat Dwellers,7,Constrained City Dwellers
+723,7B3,Endeavouring Flat Dwellers,72,7B,Constrained Flat Dwellers,7,Constrained City Dwellers
+731,7C1,Challenged Transitionaries,73,7C,White Communities,7,Constrained City Dwellers
+732,7C2,Constrained Young Families,73,7C,White Communities,7,Constrained City Dwellers
+733,7C3,Outer City Hardship,73,7C,White Communities,7,Constrained City Dwellers
+741,7D1,Ageing Communities and Families,74,7D,Ageing City Dwellers,7,Constrained City Dwellers
+742,7D2,Retired Independent City Dwellers,74,7D,Ageing City Dwellers,7,Constrained City Dwellers
+743,7D3,Retired Communal City Dwellers,74,7D,Ageing City Dwellers,7,Constrained City Dwellers
+744,7D4,Retired City Hardship,74,7D,Ageing City Dwellers,7,Constrained City Dwellers
+811,8A1,Industrious Transitions,81,8A,Industrious Communities,8,Hard-Pressed Living
+812,8A2,Industrious Hardship,81,8A,Industrious Communities,8,Hard-Pressed Living
+821,8B1,Deprived Blue-Collar Terraces,82,8B,Challenged Terraced Workers,8,Hard-Pressed Living
+822,8B2,Hard-Pressed Rented Terraces,82,8B,Challenged Terraced Workers,8,Hard-Pressed Living
+831,8C1,Ageing Industrious Workers,83,8C,Hard-Pressed Ageing Workers,8,Hard-Pressed Living
+832,8C2,Ageing Rural Industry Workers,83,8C,Hard-Pressed Ageing Workers,8,Hard-Pressed Living
+833,8C3,Renting Hard-Pressed Workers,83,8C,Hard-Pressed Ageing Workers,8,Hard-Pressed Living
+841,8D1,Young Hard-Pressed Families,84,8D,Migration and Churn,8,Hard-Pressed Living
+842,8D2,Hard-Pressed Ethnic Mix,84,8D,Migration and Churn,8,Hard-Pressed Living
+843,8D3,Hard-Pressed European Settlers,84,8D,Migration and Churn,8,Hard-Pressed Living

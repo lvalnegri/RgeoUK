@@ -1,0 +1,67 @@
+type_id,code,name,code_name,code_exp,description,group_id,group_code,postcodes,population,households
+11,A01,World-Class Wealth,A01 - World-Class Wealth,1,Global high flyers and families of privilege living luxurious lifestyles in London most exclusive boroughs,1,A,10463,,162107
+12,A02,Uptown Elite,A02 - Uptown Elite,2,High status households owning elegant homes in accessible inner suburbs where they enjoy city life in comfort,1,A,20890,,386800
+13,A03,Penthouse Chic,A03 - Penthouse Chic,3,City suits renting premium-priced flats in prestige central locations where they work hard and play hard,1,A,9891,,160509
+14,A04,Metro High-Flyers,A04 - Metro High-Flyers,4,Ambitious 20 and 30-somethings renting expensive apartments in highly commutable areas of major cities,1,A,18698,,429711
+21,B05,Premium Fortunes,B05 - Premium Fortunes,5,"Influential families with substantial income established in distinctive, expansive homes in wealthy enclaves",2,B,22523,,251726
+22,B06,Diamond Days,B06 - Diamond Days,6,Retired residents in sizeable homes whose finances are secured by significant assets and generous pensions,2,B,29426,,366338
+23,B07,Alpha Families,B07 - Alpha Families,7,"High-achieving families living fast-track lives, advancing careers, finances and their school-age kids development",2,B,28901,,395378
+24,B08,Bank of Mum and Dad,B08 - Bank of Mum and Dad,8,Well-off families in upmarket suburban homes where grown-up children benefit from continued financial support,2,B,26599,,375404
+25,B09,Empty-Nest Adventure,B09 - Empty-Nest Adventure,9,Mature couples in comfortable detached houses who have the means to enjoy their empty-nest status,2,B,27221,,421972
+31,C10,Wealthy Landowners,C10 - Wealthy Landowners,10,"Prosperous owners of country houses including the rural upper class, successful farmers and second-home owners",3,C,66392,,469233
+32,C11,Rural Vogue,C11 - Rural Vogue,11,Country-loving families pursuing a rural idyll in comfortable village homes while commuting some distance to work,3,C,47983,,311425
+33,C12,Scattered Homesteads,C12 - Scattered Homesteads,12,Older households appreciating rural calm in stand-alone houses within agricultural landscapes,3,C,63069,,385052
+34,C13,Village Retirement,C13 - Village Retirement,13,Retirees enjoying pleasant village locations with amenities to service their social and practical needs,3,C,48249,,571153
+41,D14,Satellite Settlers,D14 - Satellite Settlers,14,Mature households living in expanding developments around larger villages with good transport links,4,D,51965,,615203
+42,D15,Local Focus,D15 - Local Focus,15,Rural families in affordable village homes who are reliant on the local economy for jobs,4,D,33888,,553136
+43,D16,Outlying Seniors,D16 - Outlying Seniors,16,Pensioners living in inexpensive housing in out of the way locations,4,D,36443,,539753
+44,D17,Far-Flung Outposts,D17 - Far-Flung Outposts,17,Inter-dependent households living in the most remote communities with long travel times to larger towns,4,D,12433,,147376
+51,E18,Legacy Elders,E18 - Legacy Elders,18,Time-honoured elders now mostly living alone in comfortable suburban homes on final salary pensions,5,E,33010,,481544
+52,E19,Bungalow Haven,E19 - Bungalow Haven,19,Peace-seeking seniors appreciating the calm of bungalow estates designed for the elderly,5,E,42432,,766035
+53,E20,Classic Grandparents,E20 - Classic Grandparents,20,Lifelong couples in standard suburban homes enjoying retirement through grandchildren and gardening,5,E,23888,,468692
+54,E21,Solo Retirees,E21 - Solo Retirees,21,Senior singles whose reduced incomes are satisfactory in their affordable but pleasant owned homes,5,E,25755,,463215
+61,F22,Boomerang Boarders,F22 - Boomerang Boarders,22,Long-term couples with mid-range incomes whose adult children have returned to the shelter of the family home,6,F,23863,,415025
+62,F23,Family Ties,F23 - Family Ties,23,Active families with teens and adult children whose prolonged support is eating up household resources,6,F,12635,,570846
+63,F24,Fledgling Free,F24 - Fledgling Free,24,Pre-retirement couples with respectable incomes enjoying greater space and spare cash since children left home,6,F,17545,,294701
+64,F25,Dependable Me,F25 - Dependable Me,25,Single mature owners settled in traditional suburban semis working in intermediate occupations,6,F,28176,,309572
+71,G26,Cafes and Catchments,G26 - Cafes and Catchments,26,Affluent families with growing children living in upmarket housing in city environs,7,G,23415,,486818
+72,G27,Thriving Independence,G27 - Thriving Independence,27,Well-qualified older singles with incomes from successful professional careers in good quality housing,7,G,36188,,502033
+73,G28,Modern Parents,G28 - Modern Parents,28,Busy couples in modern detached homes juggling the demands of school-age children and careers,7,G,23561,,586462
+74,G29,Mid-Career Convention,G29 - Mid-Career Convention,29,Professional families with children in traditional mid-range suburbs where neighbours are often older,7,G,27626,,585579
+81,H30,Primary Ambitions,H30 - Primary Ambitions,30,Forward-thinking younger families who sought affordable homes in good suburbs which they may now be out-growing,8,H,26935,,657534
+82,H31,Affordable Fringe,H31 - Affordable Fringe,31,"Settled families with children owning modest, 3-bed semis in areas where there more house for less money",8,H,22175,,712530
+83,H32,First-Rung Futures,H32 - First-Rung Futures,32,Pre-family newcomers who have bought value homes with space to grow in affordable but pleasant areas,8,H,25236,,368598
+84,H33,Contemporary Starts,H33 - Contemporary Starts,33,Fashion-conscious young singles and partners setting up home in developments attractive to their peers,8,H,25532,,464670
+85,H34,New Foundations,H34 - New Foundations,34,Occupants of brand new homes who are often younger singles or couples with children,8,H,10859,,56092
+86,H35,Flying Solo,H35 - Flying Solo,35,Bright young singles on starter salaries choosing to rent homes in family suburbs,8,H,8075,,159962
+91,I36,Solid Economy,I36 - Solid Economy,36,Stable families with children renting better quality homes from social landlords,9,I,28379,,579560
+92,I37,Budget Generations,I37 - Budget Generations,37,Families supporting both adult and younger children where expenditure can exceed income,9,I,11287,,317475
+93,I38,Childcare Squeeze,I38 - Childcare Squeeze,38,Younger families with children who own a budget home and are striving to cover all expenses,9,I,17746,,378644
+94,I39,Families with Needs,I39 - Families with Needs,39,Families with many children living in areas of high deprivation and who need support,9,I,34337,,663582
+101,J40,Make Do & Move On,J40 - Make Do & Move On,40,Yet to settle younger singles and couples making interim homes in low cost properties,10,J,19708,,418812
+102,J41,Disconnected Youth,J41 - Disconnected Youth,41,Young people endeavouring to gain employment footholds while renting cheap flats and terraces,10,J,7039,,185045
+103,J42,Midlife Stopgap,J42 - Midlife Stopgap,42,Maturing singles in employment who are renting short-term affordable homes,10,J,31513,,579647
+104,J43,Renting a Room,J43 - Renting a Room,43,Transient renters of low cost accommodation often within subdivided older properties,10,J,36986,,551166
+111,K44,Inner City Stalwarts,K44 - Inner City Stalwarts,44,Long-term renters of inner city social flats who have witnessed many changes,11,K,9149,,254247
+112,K45,Crowded Kaleidoscope,K45 - Crowded Kaleidoscope,45,Multi-cultural households with children renting social flats in over-crowded conditions,11,K,12962,,318477
+113,K46,High Rise Residents,K46 - High Rise Residents,46,Renters of social flats in high rise blocks where levels of need are significant,11,K,3935,,158895
+114,K47,Streetwise Singles,K47 - Streetwise Singles,47,Hard-pressed singles in low cost social flats searching for opportunities,11,K,20288,,549753
+115,K48,Low Income Workers,K48 - Low Income Workers,48,Older social renters settled in low value homes in communities where employment is harder to find,11,K,26562,,545949
+121,L49,Dependent Greys,L49 - Dependent Greys,49,Ageing social renters with high levels of need in centrally located developments of small units,12,L,14393,,369877
+122,L50,Pocket Pensions,L50 - Pocket Pensions,50,Penny-wise elderly singles renting in developments of compact social homes,12,L,19624,,434494
+123,L51,Aided Elderly,L51 - Aided Elderly,51,Supported elders in specialised accommodation including retirement homes and complexes of small homes,12,L,14936,,341150
+124,L52,Estate Veterans,L52 - Estate Veterans,52,Long-standing elderly renters of social homes who have seen neighbours change to a mix of owners and renters,12,L,20089,,473849
+125,L53,Seasoned Survivors,L53 - Seasoned Survivors,53,Deep-rooted single elderly owners of low value properties whose modest home equity provides some security,12,L,16941,,337950
+131,M54,Down-to-Earth Owners,M54 - Down-to-Earth Owners,54,Ageing couples who have owned their inexpensive home for many years while working in routine jobs,13,M,21115,,431788
+132,M55,Offspring Overspill,M55 - Offspring Overspill,55,Lower income owners whose adult children are still striving to gain independence meaning space is limited,13,M,22603,,551493
+133,M56,Self Supporters,M56 - Self Supporters,56,Hard-working mature singles who own budget terraces manageable within their modest wage,13,M,23800,,393085
+134,N57,Community Elders,N57 - Community Elders,57,Established older households owning city homes in diverse neighbourhoods,13,M,12883,,339373
+141,N58,Asian Heritage,N58 - Asian Heritage,58,Thriving families with good incomes in multi-cultural urban communities,14,N,15055,,332937
+142,N59,Asian Heritage,N59 - Asian Heritage,59,Large extended families in neighbourhoods with a strong South Asian tradition,14,N,12590,,295592
+143,N60,Ageing Access,N60 - Ageing Access,60,Older residents owning small inner suburban properties with good access to amenities,14,N,17318,,358120
+151,O61,Career Builders,O61 - Career Builders,61,Motivated singles and couples in their 20s and 30s progressing in their field of work from commutable properties,15,O,24048,,396845
+152,O62,Central Pulse,O62 - Central Pulse,62,Entertainment-seeking youngsters renting city centre flats in vibrant locations close to jobs and night life,15,O,16492,,377693
+153,O63,Flexible Workforce,O63 - Flexible Workforce,63,Self-starting young renters ready to move to follow worthwhile incomes from service sector jobs,15,O,18698,,397242
+154,O64,Bus-Route Renters,O64 - Bus-Route Renters,64,Singles renting affordable private flats away from central amenities and often on main roads,15,O,29599,,654410
+155,O65,Learners & Earners,O65 - Learners & Earners,65,Inhabitants of the university fringe where students and older residents mix in cosmopolitan locations,15,O,10751,,223223
+156,O66,Student Scene,O66 - Student Scene,66,Students living in high density accommodation close to universities and educational centres,15,O,5486,,116767

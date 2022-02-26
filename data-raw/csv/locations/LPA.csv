@@ -1,0 +1,393 @@
+LPA,LPAn
+E60000001,County Durham LPA
+E60000002,Darlington LPA
+E60000003,Hartlepool LPA
+E60000004,Middlesbrough LPA
+E60000005,Northumberland LPA
+E60000006,Redcar and Cleveland LPA
+E60000007,Stockton-on-Tees LPA
+E60000008,Gateshead LPA
+E60000009,Newcastle upon Tyne LPA
+E60000010,North Tyneside LPA
+E60000011,South Tyneside LPA
+E60000012,Sunderland LPA
+E60000013,Blackburn with Darwen LPA
+E60000014,Blackpool LPA
+E60000015,Cheshire East LPA
+E60000016,Cheshire West and Chester LPA
+E60000017,Halton LPA
+E60000018,Warrington LPA
+E60000019,Allerdale LPA
+E60000020,Barrow-in-Furness LPA
+E60000021,Carlisle LPA
+E60000022,Copeland LPA
+E60000023,Eden LPA
+E60000024,South Lakeland LPA
+E60000025,Bolton LPA
+E60000026,Bury LPA
+E60000027,Manchester LPA
+E60000028,Oldham LPA
+E60000029,Rochdale LPA
+E60000030,Salford LPA
+E60000031,Stockport LPA
+E60000032,Tameside LPA
+E60000033,Trafford LPA
+E60000034,Wigan LPA
+E60000035,Burnley LPA
+E60000036,Chorley LPA
+E60000037,Fylde LPA
+E60000038,Hyndburn LPA
+E60000039,Lancaster LPA
+E60000040,Pendle LPA
+E60000041,Preston LPA
+E60000042,Ribble Valley LPA
+E60000043,Rossendale LPA
+E60000044,South Ribble LPA
+E60000045,West Lancashire LPA
+E60000046,Wyre LPA
+E60000047,Knowsley LPA
+E60000048,Liverpool LPA
+E60000049,Sefton LPA
+E60000050,St. Helens LPA
+E60000051,Wirral LPA
+E60000052,East Riding of Yorkshire LPA
+E60000053,"Kingston upon Hull, City of LPA"
+E60000054,North East Lincolnshire LPA
+E60000055,North Lincolnshire LPA
+E60000056,York LPA
+E60000057,Craven LPA
+E60000058,Hambleton LPA
+E60000059,Harrogate LPA
+E60000060,Richmondshire LPA
+E60000061,Ryedale LPA
+E60000062,Scarborough LPA
+E60000063,Selby LPA
+E60000064,Barnsley LPA
+E60000065,Doncaster LPA
+E60000066,Rotherham LPA
+E60000067,Sheffield LPA
+E60000068,Bradford LPA
+E60000069,Calderdale LPA
+E60000070,Kirklees LPA
+E60000071,Leeds LPA
+E60000072,Wakefield LPA
+E60000073,Derby LPA
+E60000074,Leicester LPA
+E60000075,Nottingham LPA
+E60000076,Rutland LPA
+E60000077,Amber Valley LPA
+E60000078,Bolsover LPA
+E60000079,Chesterfield LPA
+E60000080,Derbyshire Dales LPA
+E60000081,Erewash LPA
+E60000082,High Peak LPA
+E60000083,North East Derbyshire LPA
+E60000084,South Derbyshire LPA
+E60000085,Blaby LPA
+E60000086,Charnwood LPA
+E60000087,Harborough LPA
+E60000088,Hinckley and Bosworth LPA
+E60000089,Melton LPA
+E60000090,North West Leicestershire LPA
+E60000091,Oadby and Wigston LPA
+E60000092,Boston LPA
+E60000093,East Lindsey LPA
+E60000094,Lincoln LPA
+E60000095,North Kesteven LPA
+E60000096,South Holland LPA
+E60000097,South Kesteven LPA
+E60000098,West Lindsey LPA
+E60000106,Ashfield LPA
+E60000107,Bassetlaw LPA
+E60000108,Broxtowe LPA
+E60000109,Gedling LPA
+E60000110,Mansfield LPA
+E60000111,Newark and Sherwood LPA
+E60000112,Rushcliffe LPA
+E60000113,"Herefordshire, County of LPA"
+E60000114,Shropshire LPA
+E60000115,Stoke-on-Trent LPA
+E60000116,Telford and Wrekin LPA
+E60000117,Cannock Chase LPA
+E60000118,East Staffordshire LPA
+E60000119,Lichfield LPA
+E60000120,Newcastle-under-Lyme LPA
+E60000121,South Staffordshire LPA
+E60000122,Stafford LPA
+E60000123,Staffordshire Moorlands LPA
+E60000124,Tamworth LPA
+E60000125,North Warwickshire LPA
+E60000126,Nuneaton and Bedworth LPA
+E60000127,Rugby LPA
+E60000128,Stratford-on-Avon LPA
+E60000129,Warwick LPA
+E60000130,Birmingham LPA
+E60000131,Coventry LPA
+E60000132,Dudley LPA
+E60000133,Sandwell LPA
+E60000134,Solihull LPA
+E60000135,Walsall LPA
+E60000136,Wolverhampton LPA
+E60000137,Bromsgrove LPA
+E60000138,Malvern Hills LPA
+E60000139,Redditch LPA
+E60000140,Worcester LPA
+E60000141,Wychavon LPA
+E60000142,Wyre Forest LPA
+E60000143,Bedford LPA
+E60000144,Central Bedfordshire LPA
+E60000145,Luton LPA
+E60000146,Peterborough LPA
+E60000147,Southend-on-Sea LPA
+E60000148,Thurrock LPA
+E60000149,Cambridge LPA
+E60000150,East Cambridgeshire LPA
+E60000151,Fenland LPA
+E60000152,Huntingdonshire LPA
+E60000153,South Cambridgeshire LPA
+E60000154,Basildon LPA
+E60000155,Braintree LPA
+E60000156,Brentwood LPA
+E60000157,Castle Point LPA
+E60000158,Chelmsford LPA
+E60000159,Colchester LPA
+E60000160,Epping Forest LPA
+E60000161,Harlow LPA
+E60000162,Maldon LPA
+E60000163,Rochford LPA
+E60000164,Tendring LPA
+E60000165,Uttlesford LPA
+E60000166,Broxbourne LPA
+E60000167,Dacorum LPA
+E60000168,East Hertfordshire LPA
+E60000169,Hertsmere LPA
+E60000170,North Hertfordshire LPA
+E60000171,St Albans LPA
+E60000172,Stevenage LPA
+E60000173,Three Rivers LPA
+E60000174,Watford LPA
+E60000175,Welwyn Hatfield LPA
+E60000176,Breckland LPA
+E60000177,Broadland LPA
+E60000178,Great Yarmouth LPA
+E60000179,King’s Lynn and West Norfolk LPA
+E60000180,North Norfolk LPA
+E60000181,Norwich LPA
+E60000182,South Norfolk LPA
+E60000183,Babergh LPA
+E60000184,East Suffolk LPA
+E60000185,Ipswich LPA
+E60000186,Mid Suffolk LPA
+E60000187,West Suffolk LPA
+E60000188,Camden LPA
+E60000189,City of London LPA
+E60000190,Hackney LPA
+E60000191,Hammersmith and Fulham LPA
+E60000192,Haringey LPA
+E60000193,Islington LPA
+E60000194,Kensington and Chelsea LPA
+E60000195,Lambeth LPA
+E60000196,Lewisham LPA
+E60000197,Newham LPA
+E60000198,Southwark LPA
+E60000199,Tower Hamlets LPA
+E60000200,Wandsworth LPA
+E60000201,Westminster LPA
+E60000202,Barking and Dagenham LPA
+E60000203,Barnet LPA
+E60000204,Bexley LPA
+E60000205,Brent LPA
+E60000206,Bromley LPA
+E60000207,Croydon LPA
+E60000208,Ealing LPA
+E60000209,Enfield LPA
+E60000210,Greenwich LPA
+E60000211,Harrow LPA
+E60000212,Havering LPA
+E60000213,Hillingdon LPA
+E60000214,Hounslow LPA
+E60000215,Kingston upon Thames LPA
+E60000216,Merton LPA
+E60000217,Redbridge LPA
+E60000218,Richmond upon Thames LPA
+E60000219,Sutton LPA
+E60000220,Waltham Forest LPA
+E60000221,Bracknell Forest LPA
+E60000222,Brighton and Hove LPA
+E60000223,Isle of Wight LPA
+E60000224,Medway LPA
+E60000225,Milton Keynes LPA
+E60000226,Portsmouth LPA
+E60000227,Reading LPA
+E60000228,Slough LPA
+E60000229,Southampton LPA
+E60000230,West Berkshire LPA
+E60000231,Windsor and Maidenhead LPA
+E60000232,Wokingham LPA
+E60000237,Eastbourne LPA
+E60000238,Hastings LPA
+E60000239,Lewes LPA
+E60000240,Rother LPA
+E60000241,Wealden LPA
+E60000242,Basingstoke and Deane LPA
+E60000243,East Hampshire LPA
+E60000244,Eastleigh LPA
+E60000245,Fareham LPA
+E60000246,Gosport LPA
+E60000247,Hart LPA
+E60000248,Havant LPA
+E60000249,New Forest LPA
+E60000250,Rushmoor LPA
+E60000251,Test Valley LPA
+E60000252,Winchester LPA
+E60000253,Ashford LPA
+E60000254,Canterbury LPA
+E60000255,Dartford LPA
+E60000256,Dover LPA
+E60000257,Folkestone and Hythe LPA
+E60000258,Gravesham LPA
+E60000259,Maidstone LPA
+E60000260,Sevenoaks LPA
+E60000261,Swale LPA
+E60000262,Thanet LPA
+E60000263,Tonbridge and Malling LPA
+E60000264,Tunbridge Wells LPA
+E60000265,Cherwell LPA
+E60000266,Oxford LPA
+E60000267,South Oxfordshire LPA
+E60000268,Vale of White Horse LPA
+E60000269,West Oxfordshire LPA
+E60000270,Elmbridge LPA
+E60000271,Epsom and Ewell LPA
+E60000272,Guildford LPA
+E60000273,Mole Valley LPA
+E60000274,Reigate and Banstead LPA
+E60000275,Runnymede LPA
+E60000276,Spelthorne LPA
+E60000277,Surrey Heath LPA
+E60000278,Tandridge LPA
+E60000279,Waverley LPA
+E60000280,Woking LPA
+E60000281,Adur LPA
+E60000282,Arun LPA
+E60000283,Chichester LPA
+E60000284,Crawley LPA
+E60000285,Horsham LPA
+E60000286,Mid Sussex LPA
+E60000287,Worthing LPA
+E60000288,Bath and North East Somerset LPA
+E60000289,"Bournemouth, Christchurch and Poole LPA"
+E60000290,"Bristol, City of LPA"
+E60000291,Cornwall LPA
+E60000292,Dorset LPA
+E60000293,Isles of Scilly LPA
+E60000294,North Somerset LPA
+E60000295,Plymouth LPA
+E60000296,South Gloucestershire LPA
+E60000297,Swindon LPA
+E60000298,Torbay LPA
+E60000299,Wiltshire LPA
+E60000300,East Devon LPA
+E60000301,Exeter LPA
+E60000302,Mid Devon LPA
+E60000303,North Devon LPA
+E60000304,South Hams LPA
+E60000305,Teignbridge LPA
+E60000306,Torridge LPA
+E60000307,West Devon LPA
+E60000308,Cheltenham LPA
+E60000309,Cotswold LPA
+E60000310,Forest of Dean LPA
+E60000311,Gloucester LPA
+E60000312,Stroud LPA
+E60000313,Tewkesbury LPA
+E60000314,Mendip LPA
+E60000315,Sedgemoor LPA
+E60000316,Somerset West and Taunton LPA
+E60000317,South Somerset LPA
+E60000318,Dartmoor National Park LPA
+E60000319,Exmoor National Park LPA
+E60000320,Lake District National Park LPA
+E60000321,New Forest National Park LPA
+E60000322,North York Moors National Park LPA
+E60000323,Northumberland National Park LPA
+E60000324,Peak District National Park LPA
+E60000325,South Downs National Park LPA
+E60000326,The Broads Authority LPA
+E60000327,Yorkshire Dales National Park LPA
+E60000328,Ebbsfleet Development Corporation LPA
+E60000329,London Legacy Development Corporation LPA
+E60000330,Old Oak and Park Royal Development Corporation LPA
+E60000331,Buckinghamshire LPA
+E60000332,North Northamptonshire LPA
+E60000333,West Northamptonshire LPA
+N13000001,Antrim and Newtownabbey LPA
+N13000002,Ards and North Down LPA
+N13000003,"Armagh City, Banbridge and Craigavon LPA"
+N13000004,Belfast LPA
+N13000005,Causeway Coast and Glens LPA
+N13000006,Derry City and Strabane LPA
+N13000007,Fermanagh and Omagh LPA
+N13000008,Lisburn and Castlereagh LPA
+N13000009,Mid and East Antrim LPA
+N13000010,Mid Ulster LPA
+N13000011,"Newry, Mourne and Down LPA"
+S44000001,Aberdeen City LPA
+S44000002,Aberdeenshire LPA
+S44000003,Angus LPA
+S44000004,Argyll and Bute LPA
+S44000005,City of Edinburgh LPA
+S44000006,Clackmannanshire LPA
+S44000007,Dumfries and Galloway LPA
+S44000008,Dundee City LPA
+S44000009,East Ayrshire LPA
+S44000010,East Dunbartonshire LPA
+S44000011,East Lothian LPA
+S44000012,East Renfrewshire LPA
+S44000013,Falkirk LPA
+S44000014,Fife LPA
+S44000015,Glasgow City LPA
+S44000016,Highland LPA
+S44000017,Inverclyde LPA
+S44000018,Midlothian LPA
+S44000019,Moray LPA
+S44000020,Na h-Eileanan Siar LPA
+S44000021,North Ayrshire LPA
+S44000022,North Lanarkshire LPA
+S44000023,Orkney Islands LPA
+S44000024,Perth and Kinross LPA
+S44000025,Renfrewshire LPA
+S44000026,Scottish Borders LPA
+S44000027,Shetland Islands LPA
+S44000028,South Ayrshire LPA
+S44000029,South Lanarkshire LPA
+S44000030,Stirling LPA
+S44000031,The Cairngorms National Park LPA
+S44000032,The Loch Lomond and the Trossachs National Park LPA
+S44000033,West Dunbartonshire LPA
+S44000034,West Lothian LPA
+W43000001,Isle of Anglesey LPA
+W43000002,Gwynedd LPA
+W43000003,Snowdonia National Park LPA
+W43000004,Conwy LPA
+W43000005,Denbighshire LPA
+W43000006,Flintshire LPA
+W43000007,Wrexham LPA
+W43000008,Powys LPA
+W43000009,Ceredigion LPA
+W43000010,Pembrokeshire Coast National Park LPA
+W43000011,Pembrokeshire LPA
+W43000012,Carmarthenshire LPA
+W43000013,Brecon Beacons National Park LPA
+W43000014,Swansea LPA
+W43000015,Neath Port Talbot LPA
+W43000016,Bridgend LPA
+W43000017,Vale of Glamorgan LPA
+W43000018,Cardiff LPA
+W43000019,Rhondda Cynon Taf LPA
+W43000020,Merthyr Tydfil LPA
+W43000021,Caerphilly LPA
+W43000022,Blaenau Gwent LPA
+W43000023,Torfaen LPA
+W43000024,Monmouthshire LPA
+W43000025,Newport LPA

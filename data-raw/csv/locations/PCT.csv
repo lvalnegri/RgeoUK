@@ -1,0 +1,1428 @@
+PCT,name
+PCT0001,Abbots Langley
+PCT0002,Aberaeron
+PCT0003,Aberdare
+PCT0004,Aberdeen
+PCT0005,Aberdovey
+PCT0006,Aberfeldy
+PCT0007,Abergele
+PCT0008,Aberlour
+PCT0009,Abertillery
+PCT0010,Abingdon
+PCT0011,Aboyne
+PCT0012,Accrington
+PCT0013,Acharacle
+PCT0014,Achnasheen
+PCT0015,Addlestone
+PCT0016,Airdrie
+PCT0017,Alcester
+PCT0018,Aldeburgh
+PCT0019,Aldershot
+PCT0020,Alford (AB)
+PCT0021,Alford (LN)
+PCT0022,Alfreton
+PCT0023,Alness
+PCT0024,Alresford
+PCT0025,Alston
+PCT0026,Alton
+PCT0027,Altrincham
+PCT0028,Alva
+PCT0029,Ambleside
+PCT0030,Amersham
+PCT0031,Amlwch
+PCT0032,Ammanford
+PCT0033,Andover
+PCT0034,Annan
+PCT0035,Anstruther
+PCT0036,Antrim
+PCT0037,Appin
+PCT0038,Appleby-in-Westmorland
+PCT0039,Arbroath
+PCT0040,Ardgay
+PCT0041,Ardrossan
+PCT0042,Arisaig
+PCT0043,Arlesey
+PCT0044,Armagh
+PCT0045,Arrochar
+PCT0046,Arthog
+PCT0047,Arundel
+PCT0048,Ascot
+PCT0049,Ashbourne
+PCT0050,Ashby-de-La-Zouch
+PCT0051,Ashford (TN)
+PCT0052,Ashford (TW)
+PCT0053,Ashington
+PCT0054,Ashtead
+PCT0055,Ashton-under-Lyne
+PCT0056,Askam-in-Furness
+PCT0057,Atherstone
+PCT0058,Attleborough
+PCT0059,Auchterarder
+PCT0060,Augher
+PCT0061,Aughnacloy
+PCT0062,Aviemore
+PCT0063,Avoch
+PCT0064,Axbridge
+PCT0065,Axminster
+PCT0066,Aylesbury
+PCT0067,Aylesford
+PCT0068,Ayr
+PCT0069,Bacup
+PCT0070,Badminton
+PCT0071,Bagshot
+PCT0072,Bakewell
+PCT0073,Bala
+PCT0074,Baldock
+PCT0075,Ballachulish
+PCT0076,Ballater
+PCT0077,Ballindalloch
+PCT0078,Ballycastle
+PCT0079,Ballyclare
+PCT0080,Ballymena
+PCT0081,Ballymoney
+PCT0082,Ballynahinch
+PCT0083,Bamburgh
+PCT0084,Banbridge
+PCT0085,Banbury
+PCT0086,Banchory
+PCT0087,Banff
+PCT0088,Bangor (BT)
+PCT0089,Bangor (LL)
+PCT0090,Banstead
+PCT0091,Banwell
+PCT0092,Bargoed
+PCT0093,Barking
+PCT0094,Barmouth
+PCT0095,Barnard Castle
+PCT0096,Barnet
+PCT0097,Barnetby
+PCT0098,Barnoldswick
+PCT0099,Barnsley
+PCT0100,Barnstaple
+PCT0101,Barrow-in-Furness
+PCT0102,Barrow-upon-Humber
+PCT0103,Barry
+PCT0104,Barton-upon-Humber
+PCT0105,Basildon
+PCT0106,Basingstoke
+PCT0107,Bath
+PCT0108,Bathgate
+PCT0109,Batley
+PCT0110,Battle
+PCT0111,Beaconsfield
+PCT0112,Beaminster
+PCT0113,Beauly
+PCT0114,Beaumaris
+PCT0115,Beaworthy
+PCT0116,Beccles
+PCT0117,Beckenham
+PCT0118,Beckermet
+PCT0119,Bedford
+PCT0120,Bedlington
+PCT0121,Bedworth
+PCT0122,Beith
+PCT0123,Belfast
+PCT0124,Belford
+PCT0125,Bellshill
+PCT0126,Belper
+PCT0127,Belvedere
+PCT0128,Bembridge
+PCT0129,Benfleet
+PCT0130,Berkeley
+PCT0131,Berkhamsted
+PCT0132,Berriedale
+PCT0133,Berwick-upon-Tweed
+PCT0134,Betchworth
+PCT0135,Betws-y-Coed
+PCT0136,Beverley
+PCT0137,Bewdley
+PCT0138,Bexhill-on-Sea
+PCT0139,Bexley
+PCT0140,Bexleyheath
+PCT0141,Bicester
+PCT0142,Bideford
+PCT0143,Biggar
+PCT0144,Biggleswade
+PCT0145,Billericay
+PCT0146,Billingham
+PCT0147,Billingshurst
+PCT0148,Bilston
+PCT0149,Bingley
+PCT0150,Birchington
+PCT0151,Birkenhead
+PCT0152,Birmingham
+PCT0153,Bishop Auckland
+PCT0154,Bishop's Stortford
+PCT0155,Bishops Castle
+PCT0156,Bishopton
+PCT0157,Blackburn
+PCT0158,Blackpool
+PCT0159,Blackwood
+PCT0160,Blaenau Ffestiniog
+PCT0161,Blairgowrie
+PCT0162,Blandford Forum
+PCT0163,Blaydon-on-Tyne
+PCT0164,Blyth
+PCT0165,Bo'Ness
+PCT0166,Boat of Garten
+PCT0167,Bodmin
+PCT0168,Bodorgan
+PCT0169,Bognor Regis
+PCT0170,Boldon Colliery
+PCT0171,Bolton
+PCT0172,Boncath
+PCT0173,Bonnybridge
+PCT0174,Bonnyrigg
+PCT0175,Bootle
+PCT0176,Bordon
+PCT0177,Borehamwood
+PCT0178,Boscastle
+PCT0179,Boston
+PCT0180,Bourne
+PCT0181,Bourne End
+PCT0182,Bournemouth
+PCT0183,Brackley
+PCT0184,Bracknell
+PCT0185,Bradford
+PCT0186,Bradford-on-Avon
+PCT0187,Braintree
+PCT0188,Brandon
+PCT0189,Braunton
+PCT0190,Brechin
+PCT0191,Brecon
+PCT0192,Brentford
+PCT0193,Brentwood
+PCT0194,Bridge of Orchy
+PCT0195,Bridge of Weir
+PCT0196,Bridgend
+PCT0197,Bridgnorth
+PCT0198,Bridgwater
+PCT0199,Bridlington
+PCT0200,Bridport
+PCT0201,Brierley Hill
+PCT0202,Brigg
+PCT0203,Brighouse
+PCT0204,Brighton
+PCT0205,Bristol
+PCT0206,Brixham
+PCT0207,Broadstairs
+PCT0208,Broadstone
+PCT0209,Broadway
+PCT0210,Brockenhurst
+PCT0211,Bromley
+PCT0212,Bromsgrove
+PCT0213,Bromyard
+PCT0214,Brora
+PCT0215,Broseley
+PCT0216,Brough
+PCT0217,Broughton-in-Furness
+PCT0218,Broxbourne
+PCT0219,Broxburn
+PCT0220,Bruton
+PCT0221,Brynteg
+PCT0222,Buckfastleigh
+PCT0223,Buckhurst Hill
+PCT0224,Buckie
+PCT0225,Buckingham
+PCT0226,Bude
+PCT0227,Budleigh Salterton
+PCT0228,Builth Wells
+PCT0229,Bungay
+PCT0230,Buntingford
+PCT0231,Bures
+PCT0232,Burgess hill
+PCT0233,Burnham-on-Sea
+PCT0234,Burnley
+PCT0235,Burntisland
+PCT0236,Burntwood
+PCT0237,Burry Port
+PCT0238,Burton-on-Trent
+PCT0239,Bury
+PCT0240,Bury St. Edmunds
+PCT0241,Bushey
+PCT0242,Bushmills
+PCT0243,Buxton
+PCT0244,Caernarfon
+PCT0245,Caerphilly
+PCT0246,Cairndow
+PCT0247,Caldicot
+PCT0248,Caledon
+PCT0249,Callander
+PCT0250,Callington
+PCT0251,Calne
+PCT0252,Camberley
+PCT0253,Camborne
+PCT0254,Cambridge
+PCT0255,Camelford
+PCT0256,Campbeltown
+PCT0257,Cannock
+PCT0258,Canonbie
+PCT0259,Canterbury
+PCT0260,Canvey Island
+PCT0261,Cardiff
+PCT0262,Cardigan
+PCT0263,Carlisle
+PCT0264,Carluke
+PCT0265,Carmarthen
+PCT0266,Carnforth
+PCT0267,Carnoustie
+PCT0268,Carrbridge
+PCT0269,Carrickfergus
+PCT0270,Carshalton
+PCT0271,Carterton
+PCT0272,Castle Cary
+PCT0273,Castle Douglas
+PCT0274,Castlederg
+PCT0275,Castlewellan
+PCT0276,Caterham
+PCT0277,Catterick Garrison
+PCT0278,Cemaes Bay
+PCT0279,Chalfont St. Giles
+PCT0280,Chard
+PCT0281,Chatham
+PCT0282,Chathill
+PCT0283,Chatteris
+PCT0284,Cheadle
+PCT0285,Cheddar
+PCT0286,Chelmsford
+PCT0287,Cheltenham
+PCT0288,Chepstow
+PCT0289,Chertsey
+PCT0290,Chesham
+PCT0291,Chessington
+PCT0292,Chester
+PCT0293,Chester le Street
+PCT0294,Chesterfield
+PCT0295,Chichester
+PCT0296,Chigwell
+PCT0297,Chinnor
+PCT0298,Chippenham
+PCT0299,Chipping Campden
+PCT0300,Chipping Norton
+PCT0301,Chislehurst
+PCT0302,Choppington
+PCT0303,Chorley
+PCT0304,Christchurch
+PCT0305,Chulmleigh
+PCT0306,Church Stretton
+PCT0307,Clackmannan
+PCT0308,Clacton-on-Sea
+PCT0309,Clarbeston Road
+PCT0310,Cleator
+PCT0311,Cleator Moor
+PCT0312,Cleckheaton
+PCT0313,Cleethorpes
+PCT0314,Clevedon
+PCT0315,Clitheroe
+PCT0316,Clogher
+PCT0317,Clydebank
+PCT0318,Clynderwen
+PCT0319,Coatbridge
+PCT0320,Cobham
+PCT0321,Cockburnspath
+PCT0322,Cockermouth
+PCT0323,Colchester
+PCT0324,Coleford
+PCT0325,Coleraine
+PCT0326,Colintraive
+PCT0327,Colne
+PCT0328,Colwyn Bay
+PCT0329,Colyton
+PCT0330,Congleton
+PCT0331,Coniston
+PCT0332,Conwy
+PCT0333,Cookstown
+PCT0334,Corbridge
+PCT0335,Corby
+PCT0336,Corrour
+PCT0337,Corsham
+PCT0338,Corwen
+PCT0339,Cottingham
+PCT0340,Coulsdon
+PCT0341,Coventry
+PCT0342,Coventry N&W Satellite Villages
+PCT0343,Coventry Southern Satellite Villages & Kenilworth
+PCT0344,Cowbridge
+PCT0345,Cowes
+PCT0346,Cradley Heath
+PCT0347,Craigavon
+PCT0348,Cramlington
+PCT0349,Cranbrook
+PCT0350,Cranleigh
+PCT0351,Crawley
+PCT0352,Crediton
+PCT0353,Crewe
+PCT0354,Crewkerne
+PCT0355,Crianlarich
+PCT0356,Criccieth
+PCT0357,Crickhowell
+PCT0358,Crieff
+PCT0359,Cromarty
+PCT0360,Cromer
+PCT0361,Crook
+PCT0362,Crowborough
+PCT0363,Crowthorne
+PCT0364,Croydon
+PCT0365,Crumlin
+PCT0366,Crymych
+PCT0367,Cullompton
+PCT0368,Cumnock
+PCT0369,Cupar
+PCT0370,Cwmbran
+PCT0371,Dagenham
+PCT0372,Dalbeattie
+PCT0373,Dalkeith
+PCT0374,Dalmally
+PCT0375,Dalry
+PCT0376,Dalton-in-Furness
+PCT0377,Dalwhinnie
+PCT0378,Darlington
+PCT0379,Dartford
+PCT0380,Dartmouth
+PCT0381,Darvel
+PCT0382,Darwen
+PCT0383,Daventry
+PCT0384,Dawlish
+PCT0385,Deal
+PCT0386,Deeside
+PCT0387,Delabole
+PCT0388,Denbigh
+PCT0389,Denny
+PCT0390,Derby
+PCT0391,Dereham
+PCT0392,Devizes
+PCT0393,Dewsbury
+PCT0394,Didcot
+PCT0395,Dingwall
+PCT0396,Diss
+PCT0397,Dolgellau
+PCT0398,Dollar
+PCT0399,Dolwyddelan
+PCT0400,Donaghadee
+PCT0401,Doncaster
+PCT0402,Dorchester
+PCT0403,Dorking
+PCT0404,Dornoch
+PCT0405,Doune
+PCT0406,Dover
+PCT0407,Downham Market
+PCT0408,Downpatrick
+PCT0409,Driffield
+PCT0410,Droitwich
+PCT0411,Dromore
+PCT0412,Dronfield
+PCT0413,Dudley
+PCT0414,Dukinfield
+PCT0415,Dulas
+PCT0416,Dulverton
+PCT0417,Dumbarton
+PCT0418,Dumfries
+PCT0419,Dunbar
+PCT0420,Dunbeath
+PCT0421,Dunblane
+PCT0422,Dundee
+PCT0423,Dunfermline
+PCT0424,Dungannon
+PCT0425,Dunkeld
+PCT0426,Dunmow
+PCT0427,Dunoon
+PCT0428,Duns
+PCT0429,Dunstable
+PCT0430,Durham
+PCT0431,Dyffryn Ardudwy
+PCT0432,Earlston
+PCT0433,East Boldon
+PCT0434,East Cowes
+PCT0435,East Linton
+PCT0436,East grinstead
+PCT0437,Eastbourne
+PCT0438,Eastleigh
+PCT0439,Ebbw Vale
+PCT0440,Edenbridge
+PCT0441,Edgware
+PCT0442,Edinburgh
+PCT0443,Egham
+PCT0444,Egremont
+PCT0445,Elgin
+PCT0446,Elland
+PCT0447,Ellesmere
+PCT0448,Ellesmere Port
+PCT0449,Ellon
+PCT0450,Ely
+PCT0451,Emsworth
+PCT0452,Enfield
+PCT0453,Enniskillen
+PCT0454,Epping
+PCT0455,Epsom
+PCT0456,Erith
+PCT0457,Erskine
+PCT0458,Esher
+PCT0459,Etchingham
+PCT0460,Evesham
+PCT0461,Exeter
+PCT0462,Exmouth
+PCT0463,Eye
+PCT0464,Eyemouth
+PCT0465,Fairbourne
+PCT0466,Fakenham
+PCT0467,Falkirk
+PCT0468,Falmouth
+PCT0469,Fareham
+PCT0470,Faringdon
+PCT0471,Farnborough
+PCT0472,Farnham
+PCT0473,Faversham
+PCT0474,Felixstowe
+PCT0475,Feltham
+PCT0476,Ferndale
+PCT0477,Ferndown
+PCT0478,Ferryhill
+PCT0479,Filey
+PCT0480,Fishguard
+PCT0481,Fivemiletown
+PCT0482,Fleet
+PCT0483,Fleetwood
+PCT0484,Flint
+PCT0485,Fochabers
+PCT0486,Folkestone
+PCT0487,Fordingbridge
+PCT0488,Forest row
+PCT0489,Forres
+PCT0490,Forsinard
+PCT0491,Fort Augustus
+PCT0492,Fort William
+PCT0493,Fortrose
+PCT0494,Fowey
+PCT0495,Fraserburgh
+PCT0496,Freshwater
+PCT0497,Frinton-on-Sea
+PCT0498,Frizington
+PCT0499,Frodsham
+PCT0500,Frome
+PCT0501,Gaerwen
+PCT0502,Gainsborough
+PCT0503,Gairloch
+PCT0504,Galashiels
+PCT0505,Galston
+PCT0506,Garndolbenmaen
+PCT0507,Garve
+PCT0508,Gateshead
+PCT0509,Gerrards Cross
+PCT0510,Gillingham (ME)
+PCT0511,Gillingham (SP)
+PCT0512,Girvan
+PCT0513,Glasgow
+PCT0514,Glastonbury
+PCT0515,Glenfinnan
+PCT0516,Glenrothes
+PCT0517,Glogue
+PCT0518,Glossop
+PCT0519,Gloucester
+PCT0520,Godalming
+PCT0521,Godstone
+PCT0522,Golspie
+PCT0523,Goodwick
+PCT0524,Goole
+PCT0525,Gordon
+PCT0526,Gorebridge
+PCT0527,Gourock
+PCT0528,Grange-over-Sands
+PCT0529,Grangemouth
+PCT0530,Grantham
+PCT0531,Grantown-on-Spey
+PCT0532,Gravesend
+PCT0533,Grays
+PCT0534,Great Missenden
+PCT0535,Great Yarmouth
+PCT0536,Greenford
+PCT0537,Greenhithe
+PCT0538,Greenock
+PCT0539,Gretna
+PCT0540,Grimsby
+PCT0541,Guildford
+PCT0542,Guisborough
+PCT0543,Gullane
+PCT0544,Gunnislake
+PCT0545,Haddington
+PCT0546,Hailsham
+PCT0547,Halesowen
+PCT0548,Halesworth
+PCT0549,Halifax
+PCT0550,Halkirk
+PCT0551,Halstead
+PCT0552,Haltwhistle
+PCT0553,Hamilton
+PCT0554,Hampton
+PCT0555,Harlech
+PCT0556,Harleston
+PCT0557,Harlow
+PCT0558,Harpenden
+PCT0559,Harrogate
+PCT0560,Harrow
+PCT0561,Hartfield
+PCT0562,Hartlepool
+PCT0563,Harwich
+PCT0564,Hassocks
+PCT0565,Hastings
+PCT0566,Hatfield
+PCT0567,Haverfordwest
+PCT0568,Haverhill
+PCT0569,Hayes
+PCT0570,Hayle
+PCT0571,Hayling Island
+PCT0572,Haywards heath
+PCT0573,Heanor
+PCT0574,Heathfield
+PCT0575,Hebburn
+PCT0576,Hebden Bridge
+PCT0577,Heckmondwike
+PCT0578,Helensburgh
+PCT0579,Helmsdale
+PCT0580,Helston
+PCT0581,Hemel Hempstead
+PCT0582,Henfield
+PCT0583,Hengoed
+PCT0584,Henley-in-Arden
+PCT0585,Henley-on-Thames
+PCT0586,Henlow
+PCT0587,Hereford
+PCT0588,Heriot
+PCT0589,Herne Bay
+PCT0590,Hertford
+PCT0591,Hessle
+PCT0592,Hexham
+PCT0593,Heywood
+PCT0594,High Peak
+PCT0595,High Wycombe
+PCT0596,Highbridge
+PCT0597,Hillsborough
+PCT0598,Hinckley
+PCT0599,Hindhead
+PCT0600,Hinton St. George
+PCT0601,Hitchin
+PCT0602,Hockley
+PCT0603,Hoddesdon
+PCT0604,Holmfirth
+PCT0605,Holmrook
+PCT0606,Holsworthy
+PCT0607,Holt
+PCT0608,Holyhead
+PCT0609,Holywell
+PCT0610,Holywood
+PCT0611,Honiton
+PCT0612,Hook
+PCT0613,Hope Valley
+PCT0614,Horley
+PCT0615,Horncastle
+PCT0616,Hornchurch
+PCT0617,Hornsea
+PCT0618,Horsham
+PCT0619,Houghton le Spring
+PCT0620,Hounslow
+PCT0621,Hove
+PCT0622,Huddersfield
+PCT0623,Hull
+PCT0624,Humbie
+PCT0625,Hungerford
+PCT0626,Hunstanton
+PCT0627,Huntingdon
+PCT0628,Huntly
+PCT0629,Hyde
+PCT0630,Hythe
+PCT0631,Ilford
+PCT0632,Ilkeston
+PCT0633,Ilkley
+PCT0634,Ilminster
+PCT0635,Immingham
+PCT0636,Ingatestone
+PCT0637,Innerleithen
+PCT0638,Insch
+PCT0639,Inveraray
+PCT0640,Invergarry
+PCT0641,Invergordon
+PCT0642,Inverkeithing
+PCT0643,Inverness
+PCT0644,Inverurie
+PCT0645,Ipswich
+PCT0646,Irvine
+PCT0647,Isle of Barra
+PCT0648,Isle of Benbecula
+PCT0649,Isle of Bute
+PCT0650,Isle of Coll
+PCT0651,Isle of Colonsay
+PCT0652,Isle of Gigha
+PCT0653,Isle of Harris
+PCT0654,Isle of Iona
+PCT0655,Isle of Islay
+PCT0656,Isle of Jura
+PCT0657,Isle of Lewis
+PCT0658,Isle of Mull
+PCT0659,Isle of North Uist
+PCT0660,Isle of Scalpay
+PCT0661,Isle of Skye
+PCT0662,Isle of South Uist
+PCT0663,Isle of Tiree
+PCT0664,Isle of arran
+PCT0665,Isle of cumbrae
+PCT0666,Isles of Scilly
+PCT0667,Isleworth
+PCT0668,Iver
+PCT0669,Ivybridge
+PCT0670,Jarrow
+PCT0671,Jedburgh
+PCT0672,Johnstone
+PCT0673,Juniper Green
+PCT0674,Keighley
+PCT0675,Keith
+PCT0676,Kelso
+PCT0677,Kelty
+PCT0678,Kendal
+PCT0679,Keston
+PCT0680,Keswick
+PCT0681,Kettering
+PCT0682,Kidderminster
+PCT0683,Kidlington
+PCT0684,Kidwelly
+PCT0685,Kilbirnie
+PCT0686,Kilgetty
+PCT0687,Killin
+PCT0688,Kilmacolm
+PCT0689,Kilmarnock
+PCT0690,Kilwinning
+PCT0691,Kinbrace
+PCT0692,King's Lynn
+PCT0693,Kings Langley
+PCT0694,Kingsbridge
+PCT0695,Kingston upon Thames
+PCT0696,Kingswinford
+PCT0697,Kington
+PCT0698,Kingussie
+PCT0699,Kinlochleven
+PCT0700,Kinross
+PCT0701,Kirkby Stephen
+PCT0702,Kirkby-in-Furness
+PCT0703,Kirkcaldy
+PCT0704,Kirkcudbright
+PCT0705,Kirkliston
+PCT0706,Kirknewton
+PCT0707,Kirkwall
+PCT0708,Kirriemuir
+PCT0709,Knaresborough
+PCT0710,Knebworth
+PCT0711,Knighton
+PCT0712,Knottingley
+PCT0713,Knutsford
+PCT0714,Kyle
+PCT0715,Lairg
+PCT0716,Lampeter
+PCT0717,Lanark
+PCT0718,Lancaster
+PCT0719,Lancing
+PCT0720,Langholm
+PCT0721,Langport
+PCT0722,Larbert
+PCT0723,Largs
+PCT0724,Larkhall
+PCT0725,Larne
+PCT0726,Lasswade
+PCT0727,Latheron
+PCT0728,Lauder
+PCT0729,Launceston
+PCT0730,Laurencekirk
+PCT0731,Leamington Spa
+PCT0732,Leatherhead
+PCT0733,Lechlade
+PCT0734,Ledbury
+PCT0735,Lee-on-the-Solent
+PCT0736,Leeds
+PCT0737,Leek
+PCT0738,Leicester
+PCT0739,Leigh
+PCT0740,Leigh-on-Sea
+PCT0741,Leighton Buzzard
+PCT0742,Leiston
+PCT0743,Leominster
+PCT0744,Letchworth Garden City
+PCT0745,Leven
+PCT0746,Lewes
+PCT0747,Leyburn
+PCT0748,Leyland
+PCT0749,Lichfield
+PCT0750,Lifton
+PCT0751,Lightwater
+PCT0752,Limavady
+PCT0753,Lincoln
+PCT0754,Lingfield
+PCT0755,Linlithgow
+PCT0756,Liphook
+PCT0757,Lisburn
+PCT0758,Liskeard
+PCT0759,Liss
+PCT0760,Littleborough
+PCT0761,Littlehampton
+PCT0762,Liverpool
+PCT0763,Liversedge
+PCT0764,Livingston
+PCT0765,Llanarth
+PCT0766,Llanbedr
+PCT0767,Llanbedrgoch
+PCT0768,Llanbrynmair
+PCT0769,Llandinam
+PCT0770,Llandovery
+PCT0771,Llandrindod Wells
+PCT0772,Llandudno
+PCT0773,Llandudno Junction
+PCT0774,Llandysul
+PCT0775,Llanelli
+PCT0776,Llanerchymedd
+PCT0777,Llanfairfechan
+PCT0778,Llanfairpwllgwyngyll
+PCT0779,Llanfyrnach
+PCT0780,Llangammarch Wells
+PCT0781,Llangollen
+PCT0782,Llanidloes
+PCT0783,Llanrhystud
+PCT0784,Llanrwst
+PCT0785,Llantwit Major
+PCT0786,Llanwrda
+PCT0787,Llanwrtyd Wells
+PCT0788,Llanybydder
+PCT0789,Llanymynec
+PCT0790,Llwyngwril
+PCT0791,Loanhead
+PCT0792,Lochailort
+PCT0793,Lochearnhead
+PCT0794,Lochgelly
+PCT0795,Lochgilphead
+PCT0796,Lochwinnoch
+PCT0797,Lockerbie
+PCT0798,London (E)
+PCT0799,London (EC)
+PCT0800,London (N)
+PCT0801,London (NW)
+PCT0802,London (SE)
+PCT0803,London (SW)
+PCT0804,London (W)
+PCT0805,London (WC)
+PCT0806,Londonderry
+PCT0807,Longfield
+PCT0808,Looe
+PCT0809,Lossiemouth
+PCT0810,Lostwithiel
+PCT0811,Loughborough
+PCT0812,Loughton
+PCT0813,Louth
+PCT0814,Lowestoft
+PCT0815,Ludlow
+PCT0816,Luton
+PCT0817,Lutterworth
+PCT0818,Lybster
+PCT0819,Lydbury North
+PCT0820,Lydney
+PCT0821,Lyme Regis
+PCT0822,Lymington
+PCT0823,Lymm
+PCT0824,Lyndhurst
+PCT0825,Lynton
+PCT0826,Lytham St. Annes
+PCT0827,Mablethorpe
+PCT0828,Macclesfield
+PCT0829,Macduff
+PCT0830,Machynlleth
+PCT0831,Maesteg
+PCT0832,Maghera
+PCT0833,Magherafelt
+PCT0834,Maidenhead
+PCT0835,Maidstone
+PCT0836,Maldon
+PCT0837,Mallaig
+PCT0838,Malmesbury
+PCT0839,Malpas
+PCT0840,Malton
+PCT0841,Malvern
+PCT0842,Manchester
+PCT0843,Manningtree
+PCT0844,Mansfield
+PCT0845,Marazion
+PCT0846,March
+PCT0847,Margate
+PCT0848,Marianglas
+PCT0849,Market Drayton
+PCT0850,Market Harborough
+PCT0851,Market Rasen
+PCT0852,Markfield
+PCT0853,Marlborough
+PCT0854,Marlow
+PCT0855,Martock
+PCT0856,Maryport
+PCT0857,Matlock
+PCT0858,Mauchline And Catrine
+PCT0859,Maybole
+PCT0860,Mayfield
+PCT0861,Melksham
+PCT0862,Melrose
+PCT0863,Melton Constable
+PCT0864,Melton Mowbray
+PCT0865,Menai Bridge
+PCT0866,Menstrie
+PCT0867,Merriott
+PCT0868,Merthyr Tydfil
+PCT0869,Mexborough
+PCT0870,Middlesbrough
+PCT0871,Middlewich
+PCT0872,Midhurst
+PCT0873,Milford Haven
+PCT0874,Millom
+PCT0875,Milltimber
+PCT0876,Milnthorpe
+PCT0877,Milton Keynes
+PCT0878,Mindrum
+PCT0879,Minehead
+PCT0880,Mirfield
+PCT0881,Mitcham
+PCT0882,Moelfre
+PCT0883,Moffat
+PCT0884,Mold
+PCT0885,Monmouth
+PCT0886,Montacute
+PCT0887,Montgomery
+PCT0888,Montrose
+PCT0889,Moor Row
+PCT0890,Morden
+PCT0891,Morecambe
+PCT0892,Moreton-in-Marsh
+PCT0893,Morpeth
+PCT0894,Motherwell
+PCT0895,Mountain Ash
+PCT0896,Much Hadham
+PCT0897,Much Wenlock
+PCT0898,Muir of Ord
+PCT0899,Munlochy
+PCT0900,Musselburgh
+PCT0901,Nairn
+PCT0902,Nantwich
+PCT0903,Narberth
+PCT0904,Neath
+PCT0905,Nelson
+PCT0906,Neston
+PCT0907,Nethy Bridge
+PCT0908,New Malden
+PCT0909,New Milton
+PCT0910,New Quay
+PCT0911,New Romney
+PCT0912,New Tredegar
+PCT0913,Newark
+PCT0914,Newbiggin-by-the-Sea
+PCT0915,Newbridge
+PCT0916,Newbury
+PCT0917,Newcastle (BT)
+PCT0918,Newcastle (ST)
+PCT0919,Newcastle Emlyn
+PCT0920,Newcastle upon Tyne
+PCT0921,Newcastleton
+PCT0922,Newent
+PCT0923,Newhaven
+PCT0924,Newmarket
+PCT0925,Newmilns
+PCT0926,Newport (NP)
+PCT0927,Newport (SA)
+PCT0928,Newport (TF)
+PCT0929,Newport Pagnell
+PCT0930,Newquay
+PCT0931,Newry (south Armagh Section)
+PCT0932,Newry (south Down Section)
+PCT0933,Newton Abbot
+PCT0934,Newton Aycliffe
+PCT0935,Newton Stewart
+PCT0936,Newton-le-Willows
+PCT0937,Newtonmore
+PCT0938,Newtown
+PCT0939,Newtownabbey
+PCT0940,Newtownards
+PCT0941,Normanton
+PCT0942,North Berwick
+PCT0943,North Ferriby
+PCT0944,North Shields
+PCT0945,Northallerton
+PCT0946,Northampton
+PCT0947,Northolt
+PCT0948,Northwich
+PCT0949,Northwood
+PCT0950,Norwich
+PCT0951,Nottingham
+PCT0952,Nuneaton
+PCT0953,Oakham
+PCT0954,Oban
+PCT0955,Okehampton
+PCT0956,Oldbury
+PCT0957,Oldham
+PCT0958,Olney
+PCT0959,Omagh
+PCT0960,Ongar
+PCT0961,Orkney
+PCT0962,Ormskirk
+PCT0963,Orpington
+PCT0964,Ossett
+PCT0965,Oswestry
+PCT0966,Otley
+PCT0967,Ottery St. Mary
+PCT0968,Oxford
+PCT0969,Oxted
+PCT0970,Padstow
+PCT0971,Paignton
+PCT0972,Paisley
+PCT0973,Par
+PCT0974,Pathhead
+PCT0975,Patna And Drongan
+PCT0976,Peacehaven
+PCT0977,Peebles
+PCT0978,Pembroke
+PCT0979,Pembroke Dock
+PCT0980,Penarth
+PCT0981,Pencader
+PCT0982,Penicuik
+PCT0983,Penmaenmawr
+PCT0984,Penrhyndeudraeth
+PCT0985,Penrith
+PCT0986,Penryn
+PCT0987,Pentraeth
+PCT0988,Pentre
+PCT0989,Penysarn
+PCT0990,Penzance
+PCT0991,Perranporth
+PCT0992,Pershore
+PCT0993,Perth
+PCT0994,Peterborough
+PCT0995,Peterculter
+PCT0996,Peterhead
+PCT0997,Peterlee
+PCT0998,Petersfield
+PCT0999,Petworth
+PCT1000,Pevensey
+PCT1001,Pewsey
+PCT1002,Pickering
+PCT1003,Pinner
+PCT1004,Pitlochry
+PCT1005,Plockton
+PCT1006,Plymouth
+PCT1007,Polegate
+PCT1008,Pontefract
+PCT1009,Pontyclun
+PCT1010,Pontypool
+PCT1011,Pontypridd
+PCT1012,Poole
+PCT1013,Port Glasgow
+PCT1014,Port Talbot
+PCT1015,Port isaac
+PCT1016,Porth
+PCT1017,Porthcawl
+PCT1018,Porthmadog
+PCT1019,Portland
+PCT1020,Portree
+PCT1021,Portrush
+PCT1022,Portsmouth
+PCT1023,Portstewart
+PCT1024,Potters Bar
+PCT1025,Poulton-le-Fylde
+PCT1026,Prenton
+PCT1027,Prescot
+PCT1028,Prestatyn
+PCT1029,Presteigne
+PCT1030,Preston
+PCT1031,Prestonpans
+PCT1032,Prestwick
+PCT1033,Princes Risborough
+PCT1034,Prudhoe
+PCT1035,Pudsey
+PCT1036,Pulborough
+PCT1037,Purfleet
+PCT1038,Purley
+PCT1039,Pwllheli
+PCT1040,Queenborough
+PCT1041,Radlett
+PCT1042,Radstock
+PCT1043,Rainham
+PCT1044,Ramsgate
+PCT1045,Ravenglass
+PCT1046,Rayleigh
+PCT1047,Reading
+PCT1048,Redcar
+PCT1049,Redditch
+PCT1050,Redhill
+PCT1051,Redruth
+PCT1052,Reigate
+PCT1053,Renfrew
+PCT1054,Retford
+PCT1055,Rhayader
+PCT1056,Rhosgoch
+PCT1057,Rhosneigr
+PCT1058,Richmond (DL)
+PCT1059,Richmond (TW)
+PCT1060,Rickmansworth
+PCT1061,Riding Mill
+PCT1062,Ringwood
+PCT1063,Ripley
+PCT1064,Ripon
+PCT1065,Robertsbridge
+PCT1066,Rochdale
+PCT1067,Rochester
+PCT1068,Rochford
+PCT1069,Rogart
+PCT1070,Romford
+PCT1071,Romney Marsh
+PCT1072,Romsey
+PCT1073,Rosewell
+PCT1074,Roslin
+PCT1075,Ross-on-Wye
+PCT1076,Rossendale
+PCT1077,Rotherham
+PCT1078,Rowland's Castle
+PCT1079,Rowlands Gill
+PCT1080,Rowley Regis
+PCT1081,Roy Bridge
+PCT1082,Royston
+PCT1083,Ruardean
+PCT1084,Rugby
+PCT1085,Rugeley
+PCT1086,Ruislip
+PCT1087,Runcorn
+PCT1088,Rushden
+PCT1089,Ruthin
+PCT1090,Ryde
+PCT1091,Rye
+PCT1092,Ryton
+PCT1093,Saffron Walden
+PCT1094,Salcombe
+PCT1095,Sale
+PCT1096,Salford
+PCT1097,Salisbury
+PCT1098,Saltash
+PCT1099,Saltburn-by-the-Sea
+PCT1100,Saltcoats
+PCT1101,Sandbach
+PCT1102,Sandhurst
+PCT1103,Sandringham
+PCT1104,Sandwich
+PCT1105,Sandy
+PCT1106,Sanquhar
+PCT1107,Saundersfoot
+PCT1108,Sawbridgeworth
+PCT1109,Saxmundham
+PCT1110,Scarborough
+PCT1111,Scunthorpe
+PCT1112,Seaford
+PCT1113,Seaham
+PCT1114,Seahouses
+PCT1115,Seascale
+PCT1116,Seaton
+PCT1117,Seaview
+PCT1118,Sedbergh
+PCT1119,Selby
+PCT1120,Selkirk
+PCT1121,Settle
+PCT1122,Sevenoaks
+PCT1123,Shaftesbury
+PCT1124,Shanklin
+PCT1125,Sheerness
+PCT1126,Sheffield
+PCT1127,Shefford
+PCT1128,Shepperton
+PCT1129,Shepton Mallet
+PCT1130,Sherborne
+PCT1131,Sheringham
+PCT1132,Shetland
+PCT1133,Shifnal
+PCT1134,Shildon
+PCT1135,Shipley
+PCT1136,Shipston-on-Stour
+PCT1137,Shoreham-by-Sea
+PCT1138,Shotts
+PCT1139,Shrewsbury
+PCT1140,Sidcup
+PCT1141,Sidmouth
+PCT1142,Sittingbourne
+PCT1143,Skegness
+PCT1144,Skelmorlie
+PCT1145,Skipton
+PCT1146,Sleaford
+PCT1147,Slough
+PCT1148,Smethwick
+PCT1149,Solihull
+PCT1150,Somerton
+PCT1151,South Brent
+PCT1152,South Croydon
+PCT1153,South Molton
+PCT1154,South Ockendon
+PCT1155,South Petherton
+PCT1156,South Queensferry
+PCT1157,South Shields
+PCT1158,Southall
+PCT1159,Southam
+PCT1160,Southampton
+PCT1161,Southend-on-Sea
+PCT1162,Southminster
+PCT1163,Southport
+PCT1164,Southsea
+PCT1165,Southwell
+PCT1166,Southwold
+PCT1167,Sowerby Bridge
+PCT1168,Spalding
+PCT1169,Spean Bridge
+PCT1170,Spennymoor
+PCT1171,Spilsby
+PCT1172,Springside
+PCT1173,St. Agnes
+PCT1174,St. Albans
+PCT1175,St. Andrews
+PCT1176,St. Asaph
+PCT1177,St. Bees
+PCT1178,St. Columb
+PCT1179,St. Helens
+PCT1180,St. Ives (PE)
+PCT1181,St. Ives (TR)
+PCT1182,St. Leonards-on-Sea
+PCT1183,St. Neots
+PCT1184,St. austell
+PCT1185,Stafford
+PCT1186,Staines-upon-Thames
+PCT1187,Stalybridge
+PCT1188,Stamford
+PCT1189,Stanford-le-Hope
+PCT1190,Stanley
+PCT1191,Stanmore
+PCT1192,Stansted
+PCT1193,Stevenage
+PCT1194,Stevenston
+PCT1195,Steyning
+PCT1196,Stirling
+PCT1197,Stockbridge
+PCT1198,Stockport
+PCT1199,Stocksfield
+PCT1200,Stockton-on-Tees
+PCT1201,Stoke-Sub-Hamdon
+PCT1202,Stoke-on-Trent
+PCT1203,Stone
+PCT1204,Stonehaven
+PCT1205,Stonehouse
+PCT1206,Stornoway
+PCT1207,Stourbridge
+PCT1208,Stourport-on-Severn
+PCT1209,Stowmarket
+PCT1210,Strabane
+PCT1211,Stranraer
+PCT1212,Stratford-upon-Avon
+PCT1213,Strathaven
+PCT1214,Strathcarron
+PCT1215,Strathdon
+PCT1216,Strathpeffer
+PCT1217,Street
+PCT1218,Strome Ferry
+PCT1219,Stromness
+PCT1220,Stroud
+PCT1221,Studley
+PCT1222,Sturminster Newton
+PCT1223,Sudbury
+PCT1224,Sunbury-on-Thames
+PCT1225,Sunderland
+PCT1226,Surbiton
+PCT1227,Sutton
+PCT1228,Sutton Coldfield
+PCT1229,Sutton-in-Ashfield
+PCT1230,Swadlincote
+PCT1231,Swaffham
+PCT1232,Swanage
+PCT1233,Swanley
+PCT1234,Swanscombe
+PCT1235,Swansea
+PCT1236,Swindon
+PCT1237,Tadcaster
+PCT1238,Tadley
+PCT1239,Tadworth
+PCT1240,Tain
+PCT1241,Talsarnau
+PCT1242,Talybont (LL)
+PCT1243,Talybont (SY)
+PCT1244,Tamworth
+PCT1245,Tarbert
+PCT1246,Tarporley
+PCT1247,Taunton
+PCT1248,Tavistock
+PCT1249,Taynuilt
+PCT1250,Tayport
+PCT1251,Teddington
+PCT1252,Teignmouth
+PCT1253,Telford
+PCT1254,Templecombe
+PCT1255,Tenbury Wells
+PCT1256,Tenby
+PCT1257,Tenterden
+PCT1258,Tetbury
+PCT1259,Tewkesbury
+PCT1260,Thame
+PCT1261,Thames Ditton
+PCT1262,Thatcham
+PCT1263,Thetford
+PCT1264,Thirsk
+PCT1265,Thornhill
+PCT1266,Thornton Heath
+PCT1267,Thornton-Cleveleys
+PCT1268,Thurso
+PCT1269,Tidworth
+PCT1270,Tighnabruaich
+PCT1271,Tilbury
+PCT1272,Tillicoultry
+PCT1273,Tintagel
+PCT1274,Tipton
+PCT1275,Tiverton
+PCT1276,Todmorden
+PCT1277,Tonbridge
+PCT1278,Tonypandy
+PCT1279,Torpoint
+PCT1280,Torquay
+PCT1281,Torrington
+PCT1282,Totland Bay
+PCT1283,Totnes
+PCT1284,Towcester
+PCT1285,Tranent
+PCT1286,Tredegar
+PCT1287,Trefriw
+PCT1288,Treharris
+PCT1289,Treorchy
+PCT1290,Trimdon Station
+PCT1291,Tring
+PCT1292,Troon
+PCT1293,Trowbridge
+PCT1294,Truro
+PCT1295,Tunbridge Wells
+PCT1296,Turriff
+PCT1297,Twickenham
+PCT1298,Ty Croes
+PCT1299,Tyn-y-Gongl
+PCT1300,Tywyn
+PCT1301,Uckfield
+PCT1302,Ulceby
+PCT1303,Ullapool
+PCT1304,Ulverston
+PCT1305,Umberleigh
+PCT1306,Upminster
+PCT1307,Usk
+PCT1308,Uttoxeter
+PCT1309,Uxbridge
+PCT1310,Ventnor
+PCT1311,Verwood
+PCT1312,Virginia Water
+PCT1313,Wadebridge
+PCT1314,Wadhurst
+PCT1315,Wakefield
+PCT1316,Walkerburn
+PCT1317,Wallasey
+PCT1318,Wallingford
+PCT1319,Wallington
+PCT1320,Wallsend
+PCT1321,Walsall
+PCT1322,Walsingham
+PCT1323,Waltham Abbey
+PCT1324,Waltham Cross
+PCT1325,Walton on the Naze
+PCT1326,Walton-on-Thames
+PCT1327,Wantage
+PCT1328,Ware
+PCT1329,Wareham
+PCT1330,Warlingham
+PCT1331,Warminster
+PCT1332,Warrington
+PCT1333,Warwick
+PCT1334,Washington
+PCT1335,Watchet
+PCT1336,Waterlooville
+PCT1337,Watford
+PCT1338,Watlington
+PCT1339,Wedmore
+PCT1340,Wednesbury
+PCT1341,Welling
+PCT1342,Wellingborough
+PCT1343,Wellington
+PCT1344,Wells
+PCT1345,Wells-Next-the-Sea
+PCT1346,Welshpool
+PCT1347,Welwyn
+PCT1348,Welwyn Garden City
+PCT1349,Wembley
+PCT1350,Wemyss Bay
+PCT1351,West Bromwich
+PCT1352,West Byfleet
+PCT1353,West Calder
+PCT1354,West Drayton
+PCT1355,West Linton
+PCT1356,West Malling
+PCT1357,West Molesey
+PCT1358,West Wickham
+PCT1359,West kilbride
+PCT1360,Westbury
+PCT1361,Westbury-on-Severn
+PCT1362,Westcliff-on-Sea
+PCT1363,Westerham
+PCT1364,Westgate-on-Sea
+PCT1365,Westhill
+PCT1366,Weston-Super-Mare
+PCT1367,Wetherby
+PCT1368,Weybridge
+PCT1369,Weymouth
+PCT1370,Whitby
+PCT1371,Whitchurch (RG)
+PCT1372,Whitchurch (SY)
+PCT1373,Whitehaven
+PCT1374,Whitland
+PCT1375,Whitley Bay
+PCT1376,Whitstable
+PCT1377,Wick
+PCT1378,Wickford
+PCT1379,Widnes
+PCT1380,Wigan
+PCT1381,Wigston
+PCT1382,Wigton
+PCT1383,Willenhall
+PCT1384,Wilmslow
+PCT1385,Wimborne
+PCT1386,Wincanton
+PCT1387,Winchelsea
+PCT1388,Winchester
+PCT1389,Windermere
+PCT1390,Windlesham
+PCT1391,Windsor
+PCT1392,Wingate
+PCT1393,Winkleigh
+PCT1394,Winscombe
+PCT1395,Winsford
+PCT1396,Wirral
+PCT1397,Wisbech
+PCT1398,Wishaw
+PCT1399,Witham
+PCT1400,Withernsea
+PCT1401,Witney
+PCT1402,Woking
+PCT1403,Wokingham
+PCT1404,Wolverhampton
+PCT1405,Woodbridge
+PCT1406,Woodford Green
+PCT1407,Woodhall Spa
+PCT1408,Woodstock
+PCT1409,Woolacombe
+PCT1410,Wooler
+PCT1411,Worcester
+PCT1412,Worcester Park
+PCT1413,Workington
+PCT1414,Worksop
+PCT1415,Worthing
+PCT1416,Wotton-under-Edge
+PCT1417,Wrexham
+PCT1418,Wylam
+PCT1419,Wymondham
+PCT1420,Y Felinheli
+PCT1421,Yarm
+PCT1422,Yarmouth
+PCT1423,Yateley
+PCT1424,Yelverton
+PCT1425,Yeovil
+PCT1426,York
+PCT1427,Ystrad Meurig

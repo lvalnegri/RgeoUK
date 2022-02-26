@@ -1,0 +1,19 @@
+area_id,area,name,description,rank,country
+1,1,Large urban area,"Settlement of over 125,000 people","",S
+2,2,Other urban area,"Settlement of 10,000 to 125,000 people","",S
+3,3,Accessible small town,"Settlement of 3,000 to 10,000 people, within 30 minutes drive of a settlement of 10,000 or more","",S
+4,4,Remote small town,"Settlement of 3,000 to 10,000 people, with a drive time of 30 to 60 minutes to a settlement of 10,000 or more","",S
+5,5,Very remote small town,"Settlement of 3,000 to 10,000 people, with a drive time of over 60 minutes to a settlement of 10,000 or more","",S
+6,6,Accessible rural area,"Settlement of less than 3,000 people, within 30 minutes drive of a settlement of 10,000 or more","",S
+7,7,Remote rural area,"Settlement of less than 3,000 people, with a drive time of 30 to 60 minutes to a settlement of 10,000 or more","",S
+8,8,Very remote rural area,"Settlement of less than 3,000 people, with a drive time of over 60 minutes to a settlement of 10,000 or more","",S
+11,A1,Urban major conurbation,"Built-up area with a population of 10,000 or more and is assigned to the major conurbation settlement category. The wider surrounding area is less sparsely populated",U1,EW
+12,B1,Urban minor conurbation,"Built-up area with a population of 10,000 or more and is assigned to the minor conurbation settlement category. The wider surrounding area is less sparsely populated",U2,EW
+13,C1,Urban city and town,"Built-up area with a population of 10,000 or more and is assigned to the city and town settlement category. The wider surrounding area is less sparsely populated",U3,EW
+14,C2,Urban sparse setting,"Built-up area with a population of 10,000 or more and is assigned to the city and town settlement category. The wider surrounding area is sparsely populated",U4,EW
+15,D1,Rural town and fringe,OA is assigned to the town and fringe settlement category. The wider surrounding area is less sparsely populated,R1,EW
+16,D2,Rural sparse town,OA is assigned to the town and fringe settlement category. The wider surrounding area is sparsely populated,R2,EW
+17,E1,Rural village,OA is assigned to the village settlement category. The wider surrounding area is less sparsely populated,R3,EW
+18,E2,Rural sparse village,OA is assigned to the village settlement category. The wider surrounding area is sparsely populated,R4,EW
+19,F1,Rural hamlet and isolated dwellings,OA is assigned to the hamlet and isolated dwelling settlement category. The wider surrounding area is less sparsely populated,R5,EW
+20,F2,Rural sparse hamlet,OA is assigned to the hamlet and isolated dwelling settlement category. The wider surrounding area is sparsely populated,R6,EW

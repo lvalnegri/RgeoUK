@@ -1,0 +1,30 @@
+sgroup_id,sgroup_code,sgroup_desc,group_id,group_code,group_desc
+1,A,Retail,11,A1,Low density wholesale and retail
+1,A,Retail,12,A2,Market squares
+1,A,Retail,13,A3,Multiethnic urban high streets
+1,A,Retail,14,A4,Traditional high streets
+1,A,Retail,15,A5,Shop until you drop
+1,A,Retail,16,A6,"Eat, drink and be merry"
+2,B,City and business parks,21,B1,Global business
+2,B,City and business parks,22,B2,Administrative centres
+2,B,City and business parks,23,B3,Big city life
+2,B,City and business parks,24,B4,Regional business centres
+2,B,City and business parks,25,B5,Science and business parks
+3,C,Metro suburbs,31,C1,Teachers and carers in metro suburbs
+3,C,Metro suburbs,32,C2,Independent professional metro services
+3,C,Metro suburbs,33,C3,Metro suburban distribution industries
+3,C,Metro suburbs,34,C4,Self-employed tradespeople in multicultural metro suburbs
+3,C,Metro suburbs,35,C5,Professional home-workers in outer suburbs
+4,D,Suburban services,41,D1,Non-metropolitan suburban areas
+4,D,Suburban services,42,D2,Primarily residential suburbs
+5,E,Manufacturing and distribution,51,E1,Mining and quarrying facilities
+5,E,Manufacturing and distribution,52,E2,Industrial units
+5,E,Manufacturing and distribution,53,E3,Business parks
+5,E,Manufacturing and distribution,54,E4,"Manufacturing, energy and utilities"
+6,F,Rural,61,F1,Town fringe countryside
+6,F,Rural,62,F2,Accessible countryside
+6,F,Rural,63,F3,Rural with mining or quarrying
+6,F,Rural,64,F4,Traditional countryside
+7,G,Servants of society,71,G1,Public administration and security
+7,G,Servants of society,72,G2,Healthcare and public administration
+7,G,Servants of society,73,G3,Large scale education

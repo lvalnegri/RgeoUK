@@ -1,0 +1,34 @@
+location_type,geography,prog_id,ons_id,ordering,name,theme,countries,count_ons,count_pkg,last_update,needs_update,is_frozen,max_child,exact_cov,min_parent,pref_filter,pref_map,dts_id,bnd_id
+OA,area,1,oa,11,Output Area,Census,ENSW,"232,296 ","232,296 ",Dec-11,N,Y,,100 ,LSOA,,,,
+LSOA,area,2,lsoa,12,Lower Layer Super Output Area,Census,ENSW,"42,619 ","42,619 ",Dec-11,N,Y,OA,100 ,MSOA,,,,
+MSOA,area,3,msoa,13,Middle Layer Super Output Area,Census,ESW,"9,370 ","9,370 ",Dec-11,N,Y,LSOA,100 ,LAD,,,,
+LAD,area,4,lad,14,Local Authority & District,Census,ENSW,350 ,350 ,Dec-21,Y,N,MSOA,100 ,CTY,,,,1782872283f648828142036f3b213fb3
+CTY,area,5,cty,15,County & Unitary Authority,Census,E,93 ,93 ,May-21,N,N,LAD,100 ,RGN,,,1e5367cba9074514ae9012f5627a3241,95cd503f6737487b897b6dbc89cb0652
+RGN,area,6,rgn,16,Region,Census,E,12 ,12 ,Dec-19,N,Y,CTY,100 ,CTRY,,,,bcd09dc6a37348a6aff55caa6efd644e
+CTRY,area,7,ctry,17,Country,Census,ENSW,4 ,4 ,Apr-21,N,Y,RGN,,,,,,
+WPZ,area,8,wz,19,Workplace Zone,Census,ENSW,"60,709 ","60,709 ",Jul-05,N,Y,,,MSOA,,,,
+PCU,point,9,,20,Postcode Unit,Postal,ENSW,,,Nov-21,N,N,,,,,,,
+PCS,area,10,,21,Postcode Sector,Postal,ENSW,,"9,436 ",Nov-21,N,N,OA,,PCD,,,,
+PCD,area,11,,22,Postcode District,Postal,ENSW,,"2,799 ",Nov-21,N,N,PCS,,PCT,,,,
+PCT,area,12,,23,Post Town,Postal,ENSW,,"1,427 ",Nov-21,N,N,PCD,,PCA,,,,
+PCA,area,13,,24,Postcode Area,Postal,ENSW,,121 ,Nov-21,N,N,PCT,,,,,,
+PCON,area,14,pcon,31,Westminster Parliamentary Constituency,Electoral,ENSW,650 ,650 ,Dec-20,N,N,OA,,,,,,8533474c4a474990a80e7c932f54fa46
+WARD,area,15,wd,32,Electoral Ward,Electoral,ENSW,"8,887 ","8,875 ",Dec-21,N,N,OA,,,,,,6719b85069bb407c9fd275ab1d5738ad
+CED,area,16,,33,County Electoral Division,Electoral,E,"1,717 ","1,719 ",May-21,N,N,OA,,,,,,
+TTWA,area,17,ttwa,41,Travel To Work Area,Urban,ENSW,228 ,228 ,Dec-11,N,Y,LSOA,,,,,,60637d04599242c988898dc154048e52
+MTC,area,18,tcity,42,Major Town or City,Urban,EW,113 ,113 ,Dec-15,N,Y,OA,,,,,,ca06d2ff61914ef78dff3d30a5f8f624
+BUA,area,19,bua,44,Built-up Area,Urban,EW,"5,830 ","5,795 ",Dec-11,N,Y,OA,,,,,,f6684981be23404e83321077306fa837
+BUAS,area,20,buasd,43,Built-up Area Sub-division,Urban,EW,"1,826 ","1,824 ",Dec-11,N,Y,OA,,,,,,30858d02474b4f5a85916acac0f45168
+PAR,area,21,parncp,51,Civil Parish or Unparished; Community,Social,EWS,"11,561 ","12,415 ",Dec-20,N,N,OA,,,,,,418db4c652624407baedb677a702ff31
+PFN,area,22,,52,Police Neighborhood,Social,ENSW,,"4,814 ",Dec-21,N,N,OA,,,,,,
+PFA,area,23,pfa,53,Police Force Area,Social,ENSW,45 ,45 ,Dec-20,N,N,PFN,,,,,,61752cc924354e71846ffa044aa76669
+FRA,area,24,fra,54,Fire Rescue Authority,Social,ENSW,79 ,48 ,May-21,N,N,OA,,,,,,a3f60bbefce04a6d8cf8d490a3d8b3ff
+CSP,area,25,csp,55,Community Safety Partnership,Social,EW,314 ,314 ,Dec-20,N,N,OA,,,,,,2b66d517065842bf8fe8d74eb5b321d4
+LPA,area,26,lpa,56,Local Planning Authority,Social,ENSW,398 ,397 ,May-21,N,N,OA,,,,,,71682af84f454279bedb77ad1cb1e1a3
+RGD,area,27,regd,57,Registration District,Social,EW,173 ,173 ,Dec-20,N,N,OA,,,,,,12f7373f0cad4a0d8b6607e58398f717
+LRF,area,28,lrf,58,Local Resilience Forum,Social,EW,42 ,42 ,Dec-20,N,N,OA,,,,,,dfa7d7623a2342759aa160edf8398046
+CCG,area,29,ccg,62,Clinical Commissioning Group,Health,ENSW,106 ,106 ,Apr-21,N,N,LSOA,,STP,,,,5718e9da058f41b3b9f558a1c9beca1a
+STP,area,30,stp,63,Sustainability and Transformation Partnership,Health,E,42 ,42 ,Apr-21,N,N,CCG,,NHSO,,,a458c272484743aa9caa25619ccbe1ac,8ad7969a91574ac5be15b8597c55de67
+NHSR,area,31,nhsrlo,65,NHS England Region,Health,E,7 ,7 ,Apr-21,N,N,NHSO,,,,,,87511f3ae00a40208741c685f827c1d3
+CIS,area,32,cis,69,Covid Infection Survey,Health,ENSW,133 ,133 ,Dec-20,N,N,OA,,,,,,79b40510aff44f34954dcd1c21abfe36
+,,,,,,,,,,,,,,,,,,,

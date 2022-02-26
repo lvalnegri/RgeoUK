@@ -1,0 +1,58 @@
+PFA,PFAn,PFAid
+E23000001,Metropolitan,metropolitan
+E23000002,Cumbria,cumbria
+E23000003,Lancashire,lancashire
+E23000004,Merseyside,merseyside
+E23000005,Greater Manchester,greater-manchester
+E23000006,Cheshire,cheshire
+E23000007,Northumbria,northumbria
+E23000008,Durham,durham
+E23000009,North Yorkshire,north-yorkshire
+E23000010,West Yorkshire,west-yorkshire
+E23000011,South Yorkshire,south-yorkshire
+E23000012,Humberside,humberside
+E23000013,Cleveland,cleveland
+E23000014,West Midlands,west-midlands
+E23000015,Staffordshire,staffordshire
+E23000016,West Mercia,west-mercia
+E23000017,Warwickshire,warwickshire
+E23000018,Derbyshire,derbyshire
+E23000019,Nottinghamshire,nottinghamshire
+E23000020,Lincolnshire,lincolnshire
+E23000021,Leicestershire,leicestershire
+E23000022,Northamptonshire,northamptonshire
+E23000023,Cambridgeshire,cambridgeshire
+E23000024,Norfolk,norfolk
+E23000025,Suffolk,suffolk
+E23000026,Bedfordshire,bedfordshire
+E23000027,Hertfordshire,hertfordshire
+E23000028,Essex,essex
+E23000029,Thames Valley,thames-valley
+E23000030,Hampshire,hampshire
+E23000031,Surrey,surrey
+E23000032,Kent,kent
+E23000033,Sussex,sussex
+E23000034,City of London,city-of-london
+E23000035,Devon and Cornwall,devon-and-cornwall
+E23000036,Avon and Somerset,avon-and-somerset
+E23000037,Gloucestershire,gloucestershire
+E23000038,Wiltshire,wiltshire
+E23000039,Dorset,dorset
+NIE_PFN,Northern Ireland,northern-ireland
+S32000003,Argyll and West Dunbartonshire,
+S32000004,Ayrshire,
+S32000005,Dumfries and Galloway,
+S32000006,Edinburgh,
+S32000008,Forth Valley,
+S32000010,Highlands and Islands,
+S32000012,The Lothians and Scottish Borders,
+S32000013,Renfrewshire and Inverclyde,
+S32000015,North East,
+S32000016,Fife,
+S32000017,Tayside,
+S32000018,Greater Glasgow,
+S32000019,Lanarkshire,
+W15000001,North Wales,north-wales
+W15000002,Gwent,gwent
+W15000003,South Wales,south-wales
+W15000004,Dyfed-Powys,dyfed-powys

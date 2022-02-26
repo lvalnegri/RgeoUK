@@ -160,7 +160,9 @@ pc[, (cols) := lapply(.SD, factor), .SDcols = cols]
 message('Saving postcodes with various indices...')
 setorderv(pc, c('is_active', 'CTRY', 'RGN', 'PCS', 'OA', 'PCU'))
 write_fst_idx('postcodes', c('is_active', 'PCS'), pc, geouk_path)
-fwrite(pc, './data-raw/csv/postcodes.csv')
+fwrite(pc, './data-raw/postcodes.csv')
+zip('./data-raw/csv/locations/postcodes.zip', './data-raw/postcodes.csv')
+file.remove('./data-raw/postcodes.csv')
 
 message('Saving a lookalike Table 2 User Guide (remember that now postcodes without grid have been deleted)...')
 pc <- ypk[pc[, PCS := NULL], on = 'OA']

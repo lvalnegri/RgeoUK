@@ -113,34 +113,35 @@ for(idx in 1:nrow(yc)){
 }
 yc[grepl('char', PFN), PFN := NA]
 
-# check (manually, visually) which PFN for missing OAs
+# check (manually, visually) which PFN for missing OAs (>>> https://www.police.uk/pu/your-area/)
 ycn <- yc[is.na(PFN)][, .(OA)]
-bnd.ycn <- bnd.oa |> filter(OA %in% ycn$OA)
-bfr.ycn <- st_buffer( bnd.ycn, 10000 ) |> st_union()
-leaflet() |> 
-    addTiles() |> 
-    addPolygons( 
-        data = bnd.ycn |> st_transform(4326), 
-        group = 'OA (red)', 
-        color = 'red', 
-        weight = 6, 
-        label = ~OA
-    ) |> 
-    addPolygons( 
-        data = bnd.pcn[unlist(st_intersects(bfr.ycn, bnd.pcn)),]|> st_transform(4326), 
-        group = 'PFN (black)', 
-        weight = 2, 
-        fillOpacity = 0, 
-        color = 'black',
-        label = ~PFN
-    ) |>
-    addLayersControl(overlayGroups = c('OA (red)', 'PFN (black)'))
-
-# ycn[, PFN := c(
-#     'E23000033_035', 'E23000033_241', 'E23000033_187', 'E23000033_047', 'E23000033_047', 'E23000033_034',
-#     '', '', '', '', '', '', '', '', 
-# )]
-
+if(nrow(ycn) > 0){
+    bnd.ycn <- bnd.oa |> filter(OA %in% ycn$OA)
+    bfr.ycn <- st_buffer( bnd.ycn, 10000 ) |> st_union()
+    leaflet() |> 
+        addTiles() |> 
+        addPolygons( 
+            data = bnd.ycn |> st_transform(4326), 
+            group = 'OA (red)', 
+            color = 'red', 
+            weight = 6, 
+            label = ~OA
+        ) |> 
+        addPolygons( 
+            data = bnd.pcn[unlist(st_intersects(bfr.ycn, bnd.pcn)),]|> st_transform(4326), 
+            group = 'PFN (black)', 
+            weight = 2, 
+            fillOpacity = 0, 
+            color = 'black',
+            label = ~PFN
+        ) |>
+        addLayersControl(overlayGroups = c('OA (red)', 'PFN (black)'))
+    
+    # ycn[, PFN := c(
+    #     'E23000033_035', 'E23000033_241', 'E23000033_187', 'E23000033_047', 'E23000033_047', 'E23000033_034',
+    #     '', '', '', '', '', '', '', '', 
+    # )]
+}
 
 message('Adding Scotland OA lookups...')
 lkp <- fread('./data-raw/csv/lookups/WARD_PFN_LAD_SCO.csv')
@@ -148,7 +149,7 @@ lkpw <- fread('./data-raw/csv/lookups/OA_WARD.csv')
 yc <- rbindlist(list( yc, lkpw[lkp[, .(WARD, PFN)], on = 'WARD'][, WARD := NULL] ))
 fwrite(yc, './data-raw/csv/lookups/OA_PFN.csv')
 
-message(' * Building PFN+PFA boundaries from OA lookups...')
+message('Building PFN+PFA boundaries from OA lookups...')
 y <- merge(bnd.oa, yc)
 yn <- do.call( 'rbind', lapply( unique(y$RGN), \(x) y |> filter(RGN == x) |> ms_dissolve('PFN') ) ) |> st_transform(4326)
 saveRDS(yn, file.path(bnduk_path, 's00', 'PFN'))

@@ -2,7 +2,7 @@ location_type,geography,prog_id,ons_id,ordering,name,theme,countries,count_ons,c
 OA,area,1,oa,11,Output Area,Census,ENSW,"232,296 ","232,296 ",Dec-11,N,Y,,100 ,LSOA,,,,
 LSOA,area,2,lsoa,12,Lower Layer Super Output Area,Census,ENSW,"42,619 ","42,619 ",Dec-11,N,Y,OA,100 ,MSOA,,,,
 MSOA,area,3,msoa,13,Middle Layer Super Output Area,Census,ESW,"9,370 ","9,370 ",Dec-11,N,Y,LSOA,100 ,LAD,,,,
-LAD,area,4,lad,14,Local Authority & District,Census,ENSW,363 ,363 ,Dec-21,Y,N,MSOA,100 ,CTY,,,,0f131e03df73415b824a1c214594eeab
+LAD,area,4,lad,14,Local Authority & District,Census,ENSW,363 ,363 ,Dec-21,N,N,MSOA,100 ,CTY,,,,0f131e03df73415b824a1c214594eeab
 CTY,area,5,cty,15,County & Unitary Authority,Census,E,93 ,93 ,May-21,N,N,LAD,100 ,RGN,,,1e5367cba9074514ae9012f5627a3241,95cd503f6737487b897b6dbc89cb0652
 RGN,area,6,rgn,16,Region,Census,E,12 ,12 ,Dec-19,N,Y,CTY,100 ,CTRY,,,,bcd09dc6a37348a6aff55caa6efd644e
 CTRY,area,7,ctry,17,Country,Census,ENSW,4 ,4 ,Apr-21,N,Y,RGN,,,,,,

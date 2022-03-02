@@ -10,8 +10,20 @@ download.file(
     destfile = './data-raw/csv/ons/OA11_LSOA11_MSOA11-EW.csv'
 )
 download.file(
-    'https://statistics.gov.scot/downloads/file?id=1ab6565e-10e0-4888-b91c-4ae6821b30d7%2FDatazone2011lookup+%288%29.csv',
-    destfile = './data-raw/csv/ons/OA11_LSOA11_MSOA11-SCO.csv'
+    'https://www.nrscotland.gov.uk/files//geography/2011-census/OA_DZ_IZ_2011.xlsx',
+    destfile = './data-raw/csv/ons/OA11_LSOA11_MSOA11-SCO.xlsx'
+)
+fwrite(
+    readxl::read_xlsx( './data-raw/csv/ons/OA11_LSOA11_MSOA11-SCO.xlsx', sheet = 1),
+    './data-raw/csv/ons/OA11_LSOA11_MSOA11-SCO.csv'
+)
+fwrite(
+    readxl::read_xlsx( './data-raw/csv/ons/OA11_LSOA11_MSOA11-SCO.xlsx', sheet = 2),
+    './data-raw/csv/ons/LSOA11-SCO.csv'
+)
+fwrite(
+    readxl::read_xlsx( './data-raw/csv/ons/OA11_LSOA11_MSOA11-SCO.xlsx', sheet = 3),
+    './data-raw/csv/ons/MSOA11-SCO.csv'
 )
 download.file(
     'http://www.ninis2.nisra.gov.uk/Download/People%20and%20Places/Geographic%20Data%20(statistical%20geographies).ods',

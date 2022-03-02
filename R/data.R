@@ -1,22 +1,19 @@
 #' @importFrom data.table data.table
 NULL
 
-#' Location Types
+#' location_types
 #'
 #' A list of all the Geographies included in the package
 #' (apart from the Output Areas and the Workplace Zones, which are listed in the corresponding datasets)
 #'
-#' @format A data.table with the following ??? columns:
+#' @format A data.table with the following columns:
 #' \describe{
-#'   \item{\code{location_type}}{An acronym for the geography, used as its id}
-#'   \item{\code{prog_id}}{}
-#'   \item{\code{pd_id}}{}
-#'   \item{\code{ordering}}{}
+#'   \item{\code{location_type}}{ An acronym for the geography, used as its id }
+#'   \item{\code{prog_id}}{ a numeric id, used moslty as ordering}
 #'   \item{\code{name}}{}
 #'   \item{\code{theme}}{}
 #'   \item{\code{countries}}{}
 #'   \item{\code{count_ons}}{}
-#'   \item{\code{count_pd}}{}
 #'   \item{\code{count_pkg}}{}
 #'   \item{\code{last_update}}{}
 #'   \item{\code{is_frozen}}{}
@@ -34,11 +31,11 @@ NULL
 #'
 'location_types'
 
-#' Entities
+#' entities
 #'
 #' An alternative view of the geographies included in the package, as listed in \code{location_types}, partitioned by countries
 #'
-#' @format A data.table with the following ??? column:
+#' @format A data.table with the following columns:
 #' \describe{
 #'   \item{\code{location_type}}{An acronym for the geography, used as its id}
 #'   \item{\code{country}}{}
@@ -56,11 +53,11 @@ NULL
 #'
 'entities'
 
-#' Hierarchies
+#' hierarchies
 #'
 #' A list of possible mapping between each geography and its possible parents
 #'
-#' @format A data.table with the following ??? column:
+#' @format A data.table with the following columns:
 #' \describe{
 #'   \item{\code{hierarchy_id}}{}
 #'   \item{\code{child_type}}{}
@@ -80,13 +77,13 @@ NULL
 #'
 'hierarchies'
 
-#' Postcodes
+#' postcodes
 #'
 #' A list of all the postcode units in the UK, as of NOV-2020 (1,718,610 active, terminated)
 #' their coordinates in WGS84 CRS,
 #' and the corresponding Output Area, based on a *best-fit* approach
 #'
-#' @format A data.table with the following four columns:
+#' @format A data.table with the following columns:
 #' \describe{
 #'   \item{\code{PCU}}{unit postcode in 7-chars format}
 #'   \item{\code{is_active}}{flag that indicates if the corresponding unit postcode is currently active or terminated}
@@ -99,13 +96,13 @@ NULL
 #'
 'postcodes'
 
-#' Output Areas
+#' output_areas
 #'
 #' This dataset contains both a complete list of the UK \emph{Output Areas}, the smallest statistical geographic area in the UK,
 #' with some of its characteristics, and a mapping between them and all the other Geographies contained in the package
 #' (apart from Workplace Zones, which have a similar dedicated mapping dataset), as deployed and maintaned by \emph{ONS}.
 #'
-#' @format A data.table with the following 30 columns:
+#' @format A data.table with the following columns:
 #' \describe{
 #'   \item{\code{OA}}{Output Area. Theme: Census. Countries: ENSW. Total units: 232,296. Last updated: Jul-05 (Frozen). Base Layer. Direct Parent: LSOA}
 #'   \item{\code{LSOA}}{Lower Layer Super Output Area. Theme: Census. Countries: ENSW. Total units: 42,619. Last updated: Jul-05 (Frozen). Built From OA. Direct Parent: MSOA}
@@ -121,11 +118,8 @@ NULL
 #'   \item{\code{PCA}}{Postcode Area. Theme: Postal. Countries: ENSW. Total units: 121. Last updated: Nov-20. Built From PCT. Direct Parent: 0}
 #'   \item{\code{PCON}}{Westminster Parliamentary Constituency. Theme: Electoral. Countries: ENSW. Total units: 650. Last updated: Jan-00. Base Layer. Direct Parent: 0}
 #'   \item{\code{WARD}}{Electoral Ward. Theme: Electoral. Countries: ENSW. Total units: 8,875. Last updated: Dec-20. Base Layer. Direct Parent: 0}
-#'   \item{\code{CED}}{County Electoral Division. Theme: Electoral. Countries: E. Total units: 1,719. Last updated: Jan-00 (Frozen). Base Layer. Direct Parent: 0}
 #'   \item{\code{TTWA}}{Travel To Work Area. Theme: Urban. Countries: ENSW. Total units: 228. Last updated: Jul-05 (Frozen). Base Layer. Direct Parent: 0}
 #'   \item{\code{MTC}}{Major Town or City. Theme: Urban. Countries: EW. Total units: 113. Last updated: Jul-05 (Frozen). Base Layer. Direct Parent: 0}
-#'   \item{\code{BUA}}{Built-up Area. Theme: Urban. Countries: EW. Total units: 5,795. Last updated: Jul-05 (Frozen). Base Layer. Direct Parent: 0}
-#'   \item{\code{BUAS}}{Built-up Area Sub-division. Theme: Urban. Countries: EW. Total units: 1,824. Last updated: Jul-05 (Frozen). Base Layer. Direct Parent: 0}
 #'   \item{\code{PAR}}{Civil Parish or Unparished; Community. Theme: Social. Countries: EWS. Total units: 12,415. Last updated: Dec-20. Base Layer. Direct Parent: 0}
 #'   \item{\code{PFN}}{Police Neighborhood. Theme: Social. Countries: ENSW. Total units: 4,814. Last updated: Nov-20. Base Layer. Direct Parent: 0}
 #'   \item{\code{PFA}}{Police Force Area. Theme: Social. Countries: ENSW. Total units: 45. Last updated: Dec-19. Base Layer. Direct Parent: 0}
@@ -136,7 +130,6 @@ NULL
 #'   \item{\code{LRF}}{Local Resilience Forum. Theme: Social. Countries: EW. Total units: 42. Last updated: Dec-19. Base Layer. Direct Parent: 0}
 #'   \item{\code{CCG}}{Clinical Commissioning Group. Theme: Health. Countries: ENSW. Total units: 181. Last updated: Jan-00. Built From LSOA. Direct Parent: STP}
 #'   \item{\code{STP}}{Sustainability and Transformation Partnership. Theme: Health. Countries: E. Total units: 42. Last updated: Jan-00. Built From CCG. Direct Parent: NHSO}
-#'   \item{\code{NHSO}}{NHS England Local Office. Theme: Health. Countries: E. Total units: 14. Last updated: Jan-00. Built From STP. Direct Parent: NHSR}
 #'   \item{\code{NHSR}}{NHS England Region. Theme: Health. Countries: E. Total units: 7. Last updated: Jan-00. Built From NHSO. Direct Parent: 0}
 #'   \item{\code{CIS}}{Covid Infection Survey. Theme: Health. Countries: ENSW. Total units: 133. Last updated: Jan-21. Built From OA. Direct Parent: 0}
 #'   \item{\code{x_lon}}{}
@@ -151,12 +144,12 @@ NULL
 #'
 'output_areas'
 
-#' Workplace Zones
+#' workplace_zones
 #'
 #' This dataset contains both a complete list of the UK \emph{Workplace Zones}, a similar statistical geographic area as OAs but based on workers commuting patterns,
 #' with some of its characteristics, and a mapping between them and MSOA, so that there is a link to some higher level geographies.
 #'
-#' @format A data.table with the following six column:
+#' @format A data.table with the following columns:
 #' \describe{
 #'   \item{\code{WPZ}}{Workplace Zone}
 #'   \item{\code{MSOA}}{Middle LAyer Super Output Area (NA for N.Ireland)}
@@ -176,7 +169,7 @@ NULL
 #' (apart from the Output Areas themselves and the Workplace Zones)
 #' together with some of , like coordinates, Perimeter, and Area
 #'
-#' @format A data.table with the following ??? columns:
+#' @format A data.table with the following columns:
 #' \describe{
 #'   \item{\code{type}}{}
 #'   \item{\code{location_id}}{}
@@ -189,15 +182,13 @@ NULL
 #'   \item{\code{area}}{}
 #' }
 #'
-#' For further details, see \url{http://}
-#'
 'locations'
 
 #' lookups
 #'
 #' A list of all the geographies included in the \code{output_areas} mapping dataset (apart from the Output Areas themselves and the Workplace Zones)
 #'
-#' @format A data.table with the following ??? column:
+#' @format A data.table with the following columns:
 #' \describe{
 #'   \item{\code{}}{}
 #'   \item{\code{}}{}
@@ -205,21 +196,17 @@ NULL
 #'   \item{\code{}}{}
 #'   \item{\code{}}{}
 #' }
-#'
-#' For further details, see \url{http://}
 #'
 'lookups'
 
 #' neighbours
 #'
-#' This dataset contains the 1st order neighbours for all location areas
+#' This dataset contains the 1st order neighbours for all the \emph{areas} listed in the table in \code{locations}
 #'
-#' @format A data.table with the following two columns:
+#' @format A data.table with the following columns:
 #' \describe{
 #'   \item{\code{location_id}}{The code of an area}
 #'   \item{\code{neighbour_id}}{The 1st order neighbours of an area}
 #' }
-#'
-#' For further details, see \url{http://}
 #'
 'neighbours'

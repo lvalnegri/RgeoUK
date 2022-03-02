@@ -6,297 +6,223 @@ library(dmpkg.funs)
 
 dbn <- 'geography_uk'
 
-# create database -------------------------------
 create_db(dbn)
 
-# POSTCODES -------------------------------------
+# LOCATION_TYPES ------------
+x = "
+    location_type CHAR(4) NOT NULL,
+    ons_id CHAR(6) NULL,
+    prog_id TINYINT UNSIGNED NOT NULL,
+    name CHAR(50) NOT NULL,
+    theme CHAR(15) NOT NULL,
+    countries CHAR(4) NOT NULL,
+    count_ons MEDIUMINT UNSIGNED NOT NULL,
+    count_pkg MEDIUMINT UNSIGNED NOT NULL,
+    last_update CHAR(6) NOT NULL
+    needs_update CHAR(1) NOT NULL,
+    is_frozen CHAR(1) NOT NULL,
+    max_child CHAR(4) NULL,
+    min_parent CHAR(4) NULL,
+    pref_filter CHAR(4) NULL, 
+    pref_map CHAR(4) NULL,
+    dts_id CHAR(32) NULL,
+    bnd_id CHAR(32) NULL,
+    PRIMARY KEY (location_type),
+    UNIQUE INDEX (prog_id),
+    INDEX (needs_update),
+    INDEX (is_frozen)
+"
+create_dbtable('location_types', dbn, x)
+
+# ENTITIES ------------
+x = "
+    location_type CHAR(4) NOT NULL,
+    countries CHAR(15) NOT NULL,
+    prog_id TINYINT UNSIGNED NOT NULL,
+    ordering TINYINT UNSIGNED NOT NULL,
+    code CHAR(4) NULL,
+    name CHAR(50) NULL,
+    ons CHAR(5) NULL,
+    N_ons MEDIUMINT UNSIGNED NOT NULL,
+    N_pkg MEDIUMINT UNSIGNED NOT NULL,
+    PRIMARY KEY (prog_id, ordering)
+"
+create_dbtable('entities', dbn, x)
+
+# HIERARCHIES ---------------
+x = "
+    hierarchy_id SMALLINT(4) UNSIGNED NOT NULL,
+    child_type CHAR(4) NOT NULL,
+    child_id TINYINT(2) UNSIGNED NOT NULL,
+    parent_type CHAR(4) NOT NULL,
+    parent_id TINYINT(2) UNSIGNED NOT NULL,
+    countries CHAR(4) NOT NULL,
+    is_exact TINYINT(1) UNSIGNED NOT NULL,
+    is_direct TINYINT(1) UNSIGNED NOT NULL,
+    listing TINYINT(1) UNSIGNED NOT NULL,
+    charting TINYINT(1) UNSIGNED NOT NULL,
+    filtering TINYINT(1) UNSIGNED NOT NULL,
+    mapping TINYINT(1) UNSIGNED NOT NULL,
+    PRIMARY KEY (hierarchy_id),
+    INDEX (child_type),
+    INDEX (child_id),
+    INDEX (parent_type),
+    INDEX (parent_id),
+    INDEX (countries),
+    INDEX (is_exact),
+    INDEX (listing),
+    INDEX (charting),
+    INDEX (filtering),
+    INDEX (mapping)
+"
+create_dbtable('hierarchies', dbn, x)
+
+# POSTCODES -----------------
 x <- "
-    postcode CHAR(7) NOT NULL COMMENT 'postcode in 7-chars format: 4-chars outcode + 3-chars incode',
+    PCU CHAR(7) NOT NULL COMMENT 'postcode in 7-chars format: 4-chars outcode + 3-chars incode',
     is_active TINYINT(1) UNSIGNED NOT NULL,
-    usertype TINYINT(1) UNSIGNED NOT NULL 
-        COMMENT '0- small user, 1- large user (large means addresses receiving more than 25 items per day)',
+    usertype TINYINT(1) UNSIGNED NOT NULL COMMENT '0- small user, 1- large user (large means addresses receiving more than 25 items per day)',
     x_lon DECIMAL(7,6) NOT NULL COMMENT 'longitude of the geometric centroid of the postcode',
     y_lat DECIMAL(8,6) UNSIGNED NOT NULL COMMENT 'latitude of the geometric centroid of the postcode',
-
     OA CHAR(9) NOT NULL COMMENT 'Output Area (E00, W00, S00, N00)',
-    LSOA CHAR(9) NOT NULL COMMENT 'Lower Layer Super Output Area (E01, W01, S01, N01)',
-    MSOA CHAR(9) NULL DEFAULT NULL COMMENT 'Middle Layer Super Output Area (E02, W02, S02; England, Wales and Scotland Only)',
-    LAD CHAR(9) NOT NULL COMMENT 'Local Authority District (UA-E06/W06, LAD-E07, MD-E08, LB-E09, CA-S12, DCA-N09)',
-    CTY CHAR(9) NULL DEFAULT NULL COMMENT 'County (C-E10, MC-E11, IOL-E13, plus LAD-E06; England Only)',
     RGN CHAR(9) NULL DEFAULT NULL COMMENT 'Region (E12; England Only)',
     CTRY CHAR(1) NOT NULL COMMENT 'Country (E92, W92, S92, N92)',
-
     PCS CHAR(5) NULL DEFAULT NULL COMMENT 'PostCode Sector: outcode plus 1st digit incode',
-    PCD CHAR(4) NULL DEFAULT NULL COMMENT 'PostCode District: same as outcode',
-    PCT CHAR(7) NULL DEFAULT NULL COMMENT 'Post Town (code is auto-generated)',
-    PCA CHAR(2) NULL DEFAULT NULL COMMENT 'PostCode Area: letters only in outcode',
-
-    TTWA CHAR(9) NOT NULL COMMENT 'Travel To Work Area (E30, W22, S22, N12, K01 for overlapping zones)',
-    WARD CHAR(9) NOT NULL COMMENT 'Electoral Ward (E05, W05, S13, N08)',
-    PCON CHAR(9) NOT NULL COMMENT 'Westminster Parliamentary Constituency (E14, W07, S14, N06)',
-    CED CHAR(9) NULL DEFAULT NULL COMMENT 'County Electoral Division (E58; England Only; Partial Coverage)',
-    PAR CHAR(9) NULL DEFAULT NULL COMMENT 'Civil Parish (E04, W04; England and Wales Only; Partial Coverage England Only)',
-
-	BUA CHAR(9) NULL DEFAULT NULL 
-	    COMMENT 'Built-up Area (E34, W37, K05 for overlapping zones; England and Wales Only; Partial Coverage)',
-	BUAS CHAR(9) NULL DEFAULT NULL 
-	    COMMENT 'Built-up Subdivision (E35, W38, K06 for overlapping zones; England and Wales Only; Partial Coverage)',
-	WPZ CHAR(9) NULL DEFAULT NULL COMMENT 'Workplace Zone (E33, W35, S34, N19)',
-
-	PFN CHAR(9) NULL DEFAULT NULL COMMENT 'Police Force Neighborhood (E23, W15, S32, N24)',
-	CSP CHAR(9) NULL DEFAULT NULL COMMENT 'Community Safety Partnership (E23, W15, S32, N24)',
-	PFA CHAR(9) NULL DEFAULT NULL COMMENT 'Police Force Area (E23, W15, S32, N24)',
-	FRA CHAR(9) NOT NULL COMMENT 'Fire Rescue Authorities (E40; England Only)',
-	
-	STP CHAR(9) NULL DEFAULT NULL COMMENT 'Sustainability and Transformation Partnership (E54; England Only)',
-	CCG CHAR(9) NOT NULL COMMENT 'Clinical Commissioning Group (E38, W11, S03, ZC)',
-	NHSO CHAR(9) NOT NULL COMMENT 'NHS Local Office (E39; England Only)',
-	NHSR CHAR(9) NOT NULL COMMENT 'NHS Region (E40; England Only)',
-	
-	LPA CHAR(9) NOT NULL COMMENT 'Local Planning Authorities (E40; England Only)',
-	RGD CHAR(9) NOT NULL COMMENT 'Registration Districts (E40; England Only)',
-	LRF CHAR(9) NOT NULL COMMENT 'Local Resilience Forums (E40; England Only)',
-	
-	
-	I0 INT UNSIGNED NULL DEFAULT NULL COMMENT 'HexGrid spacing half mile',
-	I1 INT UNSIGNED NULL DEFAULT NULL COMMENT 'HexGrid spacing 1 mile',
-	I2 INT UNSIGNED NULL DEFAULT NULL COMMENT 'HexGrid spacing 2 miles',
-	I3 INT UNSIGNED NULL DEFAULT NULL COMMENT 'HexGrid spacing 3 miles',
-	I4 INT UNSIGNED NULL DEFAULT NULL COMMENT 'HexGrid spacing 4 miles',
-	I5 INT UNSIGNED NULL DEFAULT NULL COMMENT 'HexGrid spacing 5 miles',
-	M0 INT UNSIGNED NULL DEFAULT NULL COMMENT 'HexGrid spacing half kilometre',
-	M1 INT UNSIGNED NULL DEFAULT NULL COMMENT 'HexGrid spacing 1 kilometre',
-	M2 INT UNSIGNED NULL DEFAULT NULL COMMENT 'HexGrid spacing 2 kilometres',
-	M3 INT UNSIGNED NULL DEFAULT NULL COMMENT 'HexGrid spacing 3 kilometres',
-	M4 INT UNSIGNED NULL DEFAULT NULL COMMENT 'HexGrid spacing 4 kilometres',
-	M5 INT UNSIGNED NULL DEFAULT NULL COMMENT 'HexGrid spacing 5 kilometres',
-
-    PRIMARY KEY (postcode),
-    INDEX (OA),
+    PRIMARY KEY (PCU),
     INDEX (is_active),
     INDEX (usertype)
+    INDEX (OA),
+    INDEX (PCS),
+    INDEX (RGN),
+    INDEX (CTRY)
 "
 create_dbtable('postcodes', dbn, x)
 
-# OUTPUT AREAS ----------------------------------
-strSQL <- "
-    CREATE TABLE output_areas (
+# OUTPUT AREAS --------------
+x <- "
+    OA CHAR(9) NOT NULL COMMENT 'Output Area',
+    LSOA CHAR(9) NOT NULL COMMENT 'Lower Layer Super Output Area (E01, W01, S01, N01)',
+    MSOA CHAR(9) NULL DEFAULT NULL COMMENT 'Middle Layer Super Output Area (E02, W02, S02; England, Wales and Scotland Only)',
+    LAD CHAR(9) NOT NULL COLLATE 'utf8_unicode_ci' COMMENT 'Local Authority District (UA-E06/W06, LAD-E07, MD-E08, LB-E09, CA-S12, DCA-N09)',
+    CTY CHAR(9) NOT NULL COLLATE 'utf8_unicode_ci' COMMENT 'County (C-E10, MC-E11, IOL-E13, plus LAD-E060=>E069; England Only; pseudo: WLS_CTY, SCO_CTY, NIE_CTY)',
+    RGN CHAR(9) NOT NULL COLLATE 'utf8_unicode_ci' COMMENT 'Region (E12; England Only; pseudo: WLS_RGN, SCO_RGN, NIE_RGN)',
+    CTRY CHAR(3) NOT NULL COLLATE 'utf8_unicode_ci' COMMENT 'Country (E92 = ENG, W92 = WLS, S92 = SCO, N92 = NIE)',
+    PCS CHAR(5) NOT NULL COMMENT 'PostCode Sector: outcode plus 1st digit incode',
+    PCD CHAR(4) NOT NULL COMMENT 'PostCode District: same as outcode',
+    PCT CHAR(7) NOT NULL COMMENT 'Post Town (does not link up to PCA!)',
+    PCA CHAR(2) NOT NULL COMMENT 'PostCode Area: letters only in outcode',
+    PCON CHAR(9) NOT NULL COMMENT 'Westminster Parliamentary Constituency (E14, W07, S14, N06)',
+    WARD CHAR(9) NOT NULL COMMENT 'Electoral Ward (E05, W05, S13, N08)',
+    TTWA CHAR(9) NOT NULL COMMENT 'Travel To Work Area (E30, W22, S22, N12, K01 for overlapping zones)',
+    MTC CHAR(9) NULL DEFAULT NULL COMMENT 'Major Town or Centre (J01; England and Wales Only; Partial Coverage)',
+    BUA CHAR(9) NULL DEFAULT NULL COMMENT 'Built-up Area (E34, W37, K05 for overlapping zones; England and Wales Only; Partial Coverage)',
+    BUAS CHAR(9) NULL DEFAULT NULL COMMENT 'Built-up Subdivision (E35, W38, K06 for overlapping zones; England and Wales Only; Partial Coverage)',
+    PFN SMALLINT(5) UNSIGNED NULL DEFAULT NULL COMMENT 'Police Force Neighborhood (not ONS, see data.police.uk and www.police.uk/pu/your-area/)',
+    PFA CHAR(9) NULL DEFAULT NULL COMMENT 'Police Force Area (E23, W15, S32, N24)',
+
+    PAR CHAR(9) NULL DEFAULT NULL COMMENT 'Civil Parish (E04, W04; England and Wales Only; Partial Coverage England Only)',
+    CSP CHAR(9) NULL DEFAULT NULL COMMENT 'Community Safety Partnership (E22, W14; England and Wales Only)',
+
     
-        OA CHAR(9) NOT NULL COMMENT 'Output Area',
-        x_lon DECIMAL(7,6) NULL DEFAULT NULL COMMENT 'longitude for the geometric centroid',
-        y_lat DECIMAL(8,6) UNSIGNED NULL DEFAULT NULL COMMENT 'latitude for the geometric centroid',
-        wx_lon DECIMAL(7,6) NULL DEFAULT NULL COMMENT 'longitude for the population weigthed centroid',
-        wy_lat DECIMAL(8,6) UNSIGNED NULL DEFAULT NULL COMMENT 'latitude for the population weigthed centroid',
-        perimeter MEDIUMINT(8) UNSIGNED NULL DEFAULT NULL,
-        area INT(10) UNSIGNED NULL DEFAULT NULL,
-    	tot_uprn SMALLINT(5) UNSIGNED NULL DEFAULT NULL COMMENT 'Total unique spatial addresses',
-    	oac SMALLINT(3) UNSIGNED NULL DEFAULT NULL COMMENT 'Output Area Classification',
-    	ruc TINYINT(3) UNSIGNED NULL DEFAULT NULL COMMENT 'Rural Urban Classification',
+    STP CHAR(9) NOT NULL COMMENT 'Sustainability and Transformation Partnership (E54; England Only)',
+    CCG CHAR(9) NOT NULL COMMENT 'Clinical Commissioning Group (E38, W11, S03, ZC)',
+    NHSR CHAR(9) NOT NULL COMMENT 'NHS Region (E40; England Only)',
     
-        LSOA CHAR(9) NOT NULL COMMENT 'Lower Layer Super Output Area (E01, W01, S01, N01)',
-        MSOA CHAR(9) NULL DEFAULT NULL COMMENT 'Middle Layer Super Output Area (E02, W02, S02; England, Wales and Scotland Only)',
-        LAD CHAR(9) NOT NULL COLLATE 'utf8_unicode_ci' COMMENT 'Local Authority District (UA-E06/W06, LAD-E07, MD-E08, LB-E09, CA-S12, DCA-N09)',
-        CTY CHAR(9) NOT NULL COLLATE 'utf8_unicode_ci' COMMENT 'County (C-E10, MC-E11, IOL-E13, plus LAD-E060=>E069; England Only; pseudo: WLS_CTY, SCO_CTY, NIE_CTY)',
-        RGN CHAR(9) NOT NULL COLLATE 'utf8_unicode_ci' COMMENT 'Region (E12; England Only; pseudo: WLS_RGN, SCO_RGN, NIE_RGN)',
-        CTRY CHAR(3) NOT NULL COLLATE 'utf8_unicode_ci' COMMENT 'Country (E92 = ENG, W92 = WLS, S92 = SCO, N92 = NIE)',
-    
-        PCS CHAR(5) NOT NULL COMMENT 'PostCode Sector: outcode plus 1st digit incode',
-        PCD CHAR(4) NOT NULL COMMENT 'PostCode District: same as outcode',
-    	PCT CHAR(7) NOT NULL COMMENT 'Post Town (does not link up to PCA!)',
-        PCA CHAR(2) NOT NULL COMMENT 'PostCode Area: letters only in outcode',
-    
-        TTWA CHAR(9) NOT NULL COMMENT 'Travel To Work Area (E30, W22, S22, N12, K01 for overlapping zones)',
-        WARD CHAR(9) NOT NULL COMMENT 'Electoral Ward (E05, W05, S13, N08)',
-        PCON CHAR(9) NOT NULL COMMENT 'Westminster Parliamentary Constituency (E14, W07, S14, N06)',
-        CED CHAR(9) NULL DEFAULT NULL COMMENT 'County Electoral Division (E58; England Only; Partial Coverage)',
-        PAR CHAR(9) NULL DEFAULT NULL COMMENT 'Civil Parish (E04, W04; England and Wales Only; Partial Coverage England Only)',
-    
-    	BUA CHAR(9) NULL DEFAULT NULL 
-    	    COMMENT 'Built-up Area (E34, W37, K05 for overlapping zones; England and Wales Only; Partial Coverage)',
-    	BUAS CHAR(9) NULL DEFAULT NULL 
-    	    COMMENT 'Built-up Subdivision (E35, W38, K06 for overlapping zones; England and Wales Only; Partial Coverage)',
-    	MTC CHAR(9) NULL DEFAULT NULL COMMENT 'Major Town or Centre (J01; England and Wales Only; Partial Coverage)',
-    
-    	PFN SMALLINT(5) UNSIGNED NULL DEFAULT NULL COMMENT 'Police Force Neighbourhood',
-    	CSP CHAR(9) NULL DEFAULT NULL COMMENT 'Community Safety Partnership (E22, W14; England and Wales Only)',
-    	PFA CHAR(9) NULL DEFAULT NULL COMMENT 'Police Force Area (E23, W15, S32, N24)',
-    	
-    	STP CHAR(9) NOT NULL COMMENT 'Sustainability and Transformation Partnership (E54; England Only)',
-    	CCG CHAR(9) NOT NULL COMMENT 'Clinical Commissioning Group (E38, W11, S03, ZC)',
-    	NHSO CHAR(9) NOT NULL COMMENT 'NHS Local Office (E39; England Only)',
-    	NHSR CHAR(9) NOT NULL COMMENT 'NHS Region (E40; England Only)',
-    	
-        PRIMARY KEY (OA),
-    	INDEX oac (oac),
-    	INDEX ruc (ruc),
-        INDEX LSOA (LSOA),
-        INDEX MSOA (MSOA),
-        INDEX LAD (LAD),
-        INDEX CTY (CTY),
-        INDEX RGN (RGN),
-        INDEX CTRY (CTRY),
-        INDEX PCS (PCS),
-        INDEX PCD (PCD),
-        INDEX PCT (PCT),
-        INDEX PCA (PCA),
-        INDEX TTWA (TTWA),
-        INDEX WARD (WARD),
-        INDEX PCON (PCON),
-        INDEX CED (CED),
-        INDEX PAR (PAR),
-        INDEX BUA (BUA),
-    	INDEX BUAS (BUAS),
-    	INDEX MTC (MTC),
-    	INDEX PFN (PFN),
-    	INDEX PFA (PFA),
-    	INDEX STP (STP),
-    	INDEX CCG (CCG),
-    	INDEX NHSO (NHSO),
-    	INDEX NHSR (NHSR)
-    
-    ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=FIXED
+    PRIMARY KEY (OA),
+    INDEX LSOA (LSOA),
+    INDEX MSOA (MSOA),
+    INDEX LAD (LAD),
+    INDEX CTY (CTY),
+    INDEX RGN (RGN),
+    INDEX CTRY (CTRY),
+    INDEX PCS (PCS),
+    INDEX PCD (PCD),
+    INDEX PCT (PCT),
+    INDEX PCA (PCA),
+    INDEX PCON (PCON),
+    INDEX WARD (WARD),
+    INDEX TTWA (TTWA),
+    INDEX MTC (MTC),
+    INDEX BUA (BUA),
+    INDEX BUAS (BUAS),
+    INDEX PAR (PAR),
+    INDEX PFN (PFN),
+    INDEX PFA (PFA),
+    INDEX CCG (CCG),
+    INDEX STP (STP),
+    INDEX NHSR (NHSR)
 "
-dbSendQuery(dbc, strSQL)
+create_dbtable('output_areas', dbn, x)
 
-# WORKPLACE ZONES -------------------------------
-strSQL <- "
-    CREATE TABLE workplace_zones (
-    
-        WPZ CHAR(9) NOT NULL COMMENT 'Workplace Zone',
-        x_lon DECIMAL(7,6) NULL DEFAULT NULL COMMENT 'longitude for the geometric centroid',
-        y_lat DECIMAL(8,6) UNSIGNED NULL DEFAULT NULL COMMENT 'latitude for the geometric centroid',
-        wx_lon DECIMAL(7,6) NULL DEFAULT NULL COMMENT 'longitude for the population weigthed centroid',
-        wy_lat DECIMAL(8,6) UNSIGNED NULL DEFAULT NULL COMMENT 'latitude for the population weigthed centroid',
-        perimeter MEDIUMINT(8) UNSIGNED NULL DEFAULT NULL,
-        area INT(10) UNSIGNED NULL DEFAULT NULL,
-    	tot_uprn SMALLINT(5) UNSIGNED NULL DEFAULT NULL COMMENT 'Total unique spatial addresses',
-    	wzc CHAR(2) NULL DEFAULT NULL COMMENT 'Workplace Zones Classification: Group Code; see wzc.group_code',
-
-        MSOA CHAR(9) NULL DEFAULT NULL COMMENT 'Middle Layer Super Output Area (E02, W02, S02; England, Wales and Scotland Only)',
-        LAD CHAR(9) NOT NULL COLLATE 'utf8_unicode_ci' COMMENT 'Local Authority District (UA-E06/W06, LAD-E07, MD-E08, LB-E09, CA-S12, DCA-N09)',
-        CTY CHAR(9) NOT NULL COLLATE 'utf8_unicode_ci' COMMENT 'County (C-E10, MC-E11, IOL-E13, plus LAD-E060=>E069; England Only; pseudo: WLS_CTY, SCO_CTY, NIE_CTY)',
-        RGN CHAR(9) NOT NULL COLLATE 'utf8_unicode_ci' COMMENT 'Region (E12; England Only; pseudo: WLS_RGN, SCO_RGN, NIE_RGN)',
-        CTRY CHAR(3) NOT NULL COLLATE 'utf8_unicode_ci' COMMENT 'Country (E92 = ENG, W92 = WLS, S92 = SCO, N92 = NIE)',
-
-        PRIMARY KEY (WPZ),
-    	INDEX wzc (wzc),
-        INDEX MSOA (MSOA),
-        INDEX LAD (LAD),
-        INDEX CTY (CTY),
-        INDEX RGN (RGN),
-        INDEX CTRY (CTRY)
-
-    ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=FIXED
+# WORKPLACE ZONES -----------
+x <- "
+    WPZ CHAR(9) NOT NULL COMMENT 'Workplace Zone',
+    MSOA CHAR(9) NULL DEFAULT NULL COMMENT 'Middle Layer Super Output Area (E02, W02, S02; England, Wales and Scotland Only)',
+    LAD CHAR(9) NOT NULL COLLATE 'utf8_unicode_ci' COMMENT 'Local Authority District (UA-E06/W06, LAD-E07, MD-E08, LB-E09, CA-S12, DCA-N09)',
+    CTY CHAR(9) NOT NULL COLLATE 'utf8_unicode_ci' COMMENT 'County (C-E10, MC-E11, IOL-E13, plus LAD-E060=>E069; England Only; pseudo: WLS_CTY, SCO_CTY, NIE_CTY)',
+    RGN CHAR(9) NOT NULL COLLATE 'utf8_unicode_ci' COMMENT 'Region (E12; England Only; pseudo: WLS_RGN, SCO_RGN, NIE_RGN)',
+    CTRY CHAR(3) NOT NULL COLLATE 'utf8_unicode_ci' COMMENT 'Country (E92 = ENG, W92 = WLS, S92 = SCO, N92 = NIE)',
+    PRIMARY KEY (WPZ),
+    INDEX MSOA (MSOA),
+    INDEX LAD (LAD),
+    INDEX CTY (CTY),
+    INDEX RGN (RGN),
+    INDEX CTRY (CTRY)
 "
-dbSendQuery(dbc, strSQL)
+create_dbtable('workplace_zones', dbn, x)
 
-# LOCATIONS -------------------------------------
-strSQL <- "
-    CREATE TABLE locations (
-        location_type CHAR(4) NOT NULL COLLATE 'utf8_unicode_ci' COMMENT 'see location_types.location_type',
-        location_id CHAR(9) NOT NULL DEFAULT '',
-        name CHAR(75) NOT NULL DEFAULT '',
-        x_lon DECIMAL(8,6) NULL DEFAULT NULL COMMENT 'longitude for the geometric centroid',
-        y_lat DECIMAL(8,6) UNSIGNED NULL DEFAULT NULL COMMENT 'latitude for the geometric centroid',
-        wx_lon DECIMAL(8,6) NULL DEFAULT NULL COMMENT 'longitude for the population weigthed centroid',
-        wy_lat DECIMAL(8,6) UNSIGNED NULL DEFAULT NULL COMMENT 'latitude for the population weigthed centroid',
-        perimeter MEDIUMINT(8) UNSIGNED NULL DEFAULT NULL,
-        area INT(10) UNSIGNED NULL DEFAULT NULL,
-        PRIMARY KEY (location_id),
-        INDEX (location_type)
-    ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=FIXED
+# LOCATIONS -----------------
+x <- "
+    location_type CHAR(4) NOT NULL COLLATE 'utf8_unicode_ci' COMMENT 'see location_types.location_type',
+    location_id CHAR(9) NOT NULL DEFAULT '',
+    name CHAR(75) NOT NULL DEFAULT '',
+    x_lon DECIMAL(8,6) NULL DEFAULT NULL COMMENT 'longitude for the Geometric Centroid',
+    y_lat DECIMAL(8,6) UNSIGNED NULL DEFAULT NULL COMMENT 'latitude for the Geometric Centroid',
+    px_lon DECIMAL(8,6) NULL DEFAULT NULL COMMENT 'longitude for the Pole of inaccessibility',
+    py_lat DECIMAL(8,6) UNSIGNED NULL DEFAULT NULL COMMENT 'latitude for the Pole of inaccessibility',
+    wx_lon DECIMAL(8,6) NULL DEFAULT NULL COMMENT 'longitude for the Population Weigthed centroid',
+    wy_lat DECIMAL(8,6) UNSIGNED NULL DEFAULT NULL COMMENT 'latitude for the Population Weigthed centroid',
+    perimeter MEDIUMINT(8) UNSIGNED NULL DEFAULT NULL,
+    area INT(10) UNSIGNED NULL DEFAULT NULL,
+    PRIMARY KEY (location_id),
+    INDEX (location_type)
 "
-dbSendQuery(dbc, strSQL)
+create_dbtable('locations', dbn, x)
 
-# NEIGHBOURS ------------------------------------
-strSQL = "
-    CREATE TABLE neighbours (
-        location_type CHAR(4) NOT NULL,
-        location_id CHAR(9) NOT NULL,
-        neighbour_id CHAR(9) NOT NULL,
-        distance MEDIUMINT(7) UNSIGNED NOT NULL 
-            COMMENT 'Vincenty (ellipsoid) great circle distance, see http://www.movable-type.co.uk/scripts/latlong-vincenty.html',
-        INDEX (location_type),
-        INDEX (location_id),
-        INDEX (neighbour_id)
-    ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=FIXED;
+# LOOKUPS -------------------
+x = "
+    hierarchy_id SMALLINT(4) UNSIGNED NOT NULL COMMENT 'foreign key to hierarchies.hierarchy_id',
+    child_id CHAR(9)  NOT NULL,
+    parent_id CHAR(9) NOT NULL,
+    INDEX (hierarchy_id),
+    INDEX (child_id),
+    INDEX (parent_id)
 "
-dbSendQuery(dbc, strSQL)
+create_dbtable('lookups', dbn, x)
 
-# DISTANCES -------------------------------------
-strSQL = "
-    CREATE TABLE distances (
-        location_type CHAR(4) NOT NULL,
-        location_ida CHAR(9) NOT NULL,
-        location_idb CHAR(9) NOT NULL,
-        distance MEDIUMINT(7) UNSIGNED NOT NULL 
-            COMMENT 'Vincenty (ellipsoid) great circle distance, see http://www.movable-type.co.uk/scripts/latlong-vincenty.html',
-        INDEX (location_type),
-        INDEX (location_ida),
-        INDEX (location_idb)
-    ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=FIXED;
+# NEIGHBOURS ----------------
+x = "
+    location_type CHAR(4) NOT NULL,
+    location_id CHAR(9) NOT NULL,
+    neighbour_id CHAR(9) NOT NULL,
+    distance MEDIUMINT(7) UNSIGNED NOT NULL COMMENT 'Vincenty (ellipsoid) great circle distance, see http://www.movable-type.co.uk/scripts/latlong-vincenty.html',
+    INDEX (location_type),
+    INDEX (location_id),
+    INDEX (neighbour_id)
 "
-dbSendQuery(dbc, strSQL)
+create_dbtable('neighbours', dbn, x)
 
-# LOOKUPS ---------------------------------------
-strSQL = "
-    CREATE TABLE lookups (
-        hierarchy_id SMALLINT(4) UNSIGNED NOT NULL COMMENT 'foreign key to hierarchies.hierarchy_id',
-    	child_id CHAR(9)  NOT NULL,
-    	parent_id CHAR(9) NOT NULL,
-        INDEX (hierarchy_id),
-        INDEX (child_id),
-        INDEX (parent_id)
-    ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=FIXED;
+# DISTANCES -----------------
+x = "
+    location_type CHAR(4) NOT NULL,
+    location_ida CHAR(9) NOT NULL,
+    location_idb CHAR(9) NOT NULL,
+    distance MEDIUMINT(7) UNSIGNED NOT NULL COMMENT 'Vincenty (ellipsoid) great circle distance, see http://www.movable-type.co.uk/scripts/latlong-vincenty.html',
+    INDEX (location_type),
+    INDEX (location_ida),
+    INDEX (location_idb)
 "
-dbSendQuery(dbc, strSQL)
+create_dbtable('distances', dbn, x)
 
-# HIERARCHIES -----------------------------------
-strSQL = "
-    CREATE TABLE hierarchies (
-        hierarchy_id SMALLINT(4) UNSIGNED NOT NULL,
-    	child_type CHAR(4) NOT NULL,
-    	parent_type CHAR(4) NOT NULL,
-        is_exact TINYINT(1) UNSIGNED NOT NULL,
-        is_direct TINYINT(1) UNSIGNED NOT NULL,
-    	listing TINYINT(1) UNSIGNED NOT NULL,
-    	charting TINYINT(1) UNSIGNED NOT NULL,
-    	filtering TINYINT(1) UNSIGNED NOT NULL,
-    	mapping TINYINT(1) UNSIGNED NOT NULL,
-        countries CHAR(4) NOT NULL,
-        PRIMARY KEY (hierarchy_id),
-        INDEX (child_type),
-        INDEX (parent_type),
-        INDEX (is_exact),
-        INDEX (listing),
-        INDEX (charting),
-        INDEX (filtering),
-        INDEX (mapping),
-        INDEX (countries)
-    ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=FIXED;
-"
-dbSendQuery(dbc, strSQL)
-y <- read.csv(file.path(data_path, 'hierarchies.csv'))
-dbWriteTable(dbc, 'hierarchies', y, row.names = FALSE, append = TRUE)
-
-# LOCATION_TYPES --------------------------------
-strSQL = "
-    CREATE TABLE location_types (
-        location_type CHAR(4) NOT NULL,
-        name CHAR(50) NOT NULL,
-        theme CHAR(15) NOT NULL,
-        ordering TINYINT(2) UNSIGNED NOT NULL,
-        count_ons MEDIUMINT UNSIGNED NOT NULL,
-        count_pc MEDIUMINT UNSIGNED NOT NULL,
-        count_db MEDIUMINT UNSIGNED NOT NULL,
-        PRIMARY KEY (location_type)
-    ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=FIXED;
-"
-dbSendQuery(dbc, strSQL)
-y <- read.csv(file.path(data_path, 'location_types.csv'))
-dbWriteTable(dbc, 'location_types', y, row.names = FALSE, append = TRUE)
-
-# CLEAN & EXIT ----------------------------------
-dbDisconnect(dbc)
 rm(list = ls())
 gc()

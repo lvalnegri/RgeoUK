@@ -11,15 +11,12 @@ Sys.setenv(RSTUDIO_PANDOC="/usr/lib/rstudio-server/bin/pandoc")
 dmpkg.funs::load_pkgs(dmp = FALSE, 'data.table', 'dplyr', 'leaflet', 'rmapshaper', 'sf')
 sdir <- './data-raw/shp/'
 
-message('Loading OA datasets and boundaries...')
+message('Loading OA boundaries...')
 bnd.oa <- readRDS(file.path(bnduk_path, 's00', 'OAgb'))
-oar <- fread('./data-raw/csv/lookups/OA_RGN.csv')
-lsoa <- fread('./data-raw/csv/lookups/OA_LSOA_MSOA.csv', select = c('OA', 'LSOA'))
-bnd.oa <- merge(bnd.oa, oar)
 
 ln <- fread('./data-raw/csv/location_types.csv', 
             na.strings = '', 
-            select = c('location_type', 'name', 'ons_id', 'bnd_id', 'is_frozen', 'needs_update', 'max_child')
+            select = c('location_type', 'name', 'countries', 'ons_id', 'bnd_id', 'is_frozen', 'needs_update', 'max_child')
 )
 ln <- ln[!is.na(bnd_id) & is_frozen == 'N' & needs_update == 'Y']
 tmpd <- tempdir()
@@ -61,6 +58,7 @@ for(idx in 1:nrow(ln)){
     }
     
     if(ln[idx, max_child] != 'OA'){
+        lsoa <- fread('./data-raw/csv/lookups/OA_LSOA_MSOA.csv', select = c('OA', 'LSOA'))
         message('   > fixing LSOA overlapping...')
         setnames(yc, yt, 'X')
         yc <- lsoa[yc, on = 'OA']

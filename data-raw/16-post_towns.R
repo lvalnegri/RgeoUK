@@ -89,6 +89,7 @@ fwrite(pct, './data-raw/csv/locations/PCT.csv')
 pcdt <- pct[pcdt, on = c(name = 'PCT')][!is.na(PCT)][, name := NULL]
 setcolorder(pcdt, c('PCD', 'ordering', 'PCT'))
 fwrite(pcdt[, .(PCD, PCT, ordering)], './data-raw/csv/lookups/PCD_PCT.csv')
+fwrite(pcdt[fread('./data-raw/csv/lookups/OA_PCD.csv'), on = 'PCD'][, .(OA, PCT)], './data-raw/csv/lookups/OA_PCT.csv')
 if(nrow(pcdt[is.na(PCT)])) 
     warning('CHECK pcd.csv! Not all Post Towns have been found. There still are ', nrow(pcd[is.na(PCT)]), ' missing' )
 

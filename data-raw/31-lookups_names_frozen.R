@@ -4,7 +4,8 @@
 
 library('data.table')
 
-# OA > LSOA > MSOA: EW, SCO, NIE
+# OA > LSOA > MSOA: EWSN
+
 ## lookups
 y1 <- fread(
         './data-raw/csv/ons/OA11_LSOA11_MSOA11-EW.csv', 
@@ -18,6 +19,7 @@ y <- rbindlist(list( y1, y2, y3 ), use.names = FALSE)
 y <- y[order(OA)]
 fwrite(y[, .(OA, LSOA)], './data-raw/csv/lookups/OA_LSOA.csv')
 fwrite(y[, .(OA, MSOA)], './data-raw/csv/lookups/OA_MSOA.csv')
+
 ## locations
 y1 <- unique(fread( './data-raw/csv/ons/OA11_LSOA11_MSOA11-EW.csv', select = c('LSOA11CD', 'LSOA11NM'), col.names = c('LSOA', 'LSOAn') ))
 y2 <- fread('./data-raw/csv/ons/LSOA11-SCO.csv')
@@ -30,25 +32,26 @@ y <- rbindlist(list( y1, y2, y3 ), use.names = FALSE)
 y[substr(MSOA, 1, 2) == '95', MSOA := paste0('96', substring(MSOA, 3))]
 fwrite(y[order(MSOA)], './data-raw/csv/locations/MSOA.csv')
 
-## LSOA > TTWA: UK
+## LSOA > TTWA: EWSN
 y <- stats::na.omit(fread('./data-raw/csv/ons/LSOA11_TTWA11-UK.csv', na.strings = ''))
 fwrite(y[, .(LSOA = LSOA11CD, TTWA = TTWA11CD)][order(LSOA)], './data-raw/csv/lookups/LSOA_TTWA.csv')
 fwrite(y[, .(TTWA = TTWA11CD, TTWAn = TTWA11NM)][order(TTWA)], './data-raw/csv/locations/TTWA.csv')
 
 ## OA > MTC: EW
-y <- fread('./data-raw/csv/ons/OA11_MTC15-EW.csv')
-fwrite(y[, .(OA = OA11CD, MTC = TCITY15CD)][order(OA)], './data-raw/csv/lookups/OA_MTC.csv')
-fwrite(y[, .(MTC = TCITY15CD, MTCn = TCITY15NM)][order(MTC)], './data-raw/csv/locations/MTC.csv')
+y <- fread('./data-raw/csv/ons/OA11_MTC15-EW.csv', na.strings = '')
+fwrite(y[, .(OA = OA11CD, MTC = TCITY15CD)][!is.na(MTC)][order(OA)], './data-raw/csv/lookups/OA_MTC.csv')
+fwrite(y[, .(MTC = TCITY15CD, MTCn = TCITY15NM)][!is.na(MTC)][order(MTC)], './data-raw/csv/locations/MTC.csv')
 
 ## OA > BUAS > BUA: EW
 y <- fread('./data-raw/csv/ons/OA11_BUAS11_BUA11-EW.csv', na.strings = '')
 fwrite(y[, .(OA = OA11CD, BUAS = BUASD11CD)][!is.na(BUAS)][order(BUAS)], './data-raw/csv/lookups/OA_BUAS.csv')
 fwrite(y[, .(OA = OA11CD, BUA = BUA11CD)][!is.na(BUA)][order(BUA)], './data-raw/csv/lookups/OA_BUA.csv')
 fwrite(unique(y[, .(BUAS = BUASD11CD, BUASn = BUASD11NM)])[!is.na(BUAS)][order(BUAS)], './data-raw/csv/locations/BUAS.csv')
-fwrite(unique(y[, .(BUA = BUA11CD, BUAn = BUA11NM)])[!is.na(BUA)][order(BUA)]), './data-raw/csv/locations/BUA.csv')
+fwrite(unique(y[, .(BUA = BUA11CD, BUAn = BUA11NM)])[!is.na(BUA)][order(BUA)], './data-raw/csv/locations/BUA.csv')
 
-## WPZ > MSOA: EWS, NIE
-# ???
+## WPZ > MSOA: EWSN
+y <- fread('./data-raw/csv/ons/WPZ11_MSOA11-EWS.csv', na.strings = '')
+fwrite(y[, .(WPZ = WZ11CD, MSOA = MSOA11CD)][order(WPZ)], './data-raw/csv/lookups/WPZ_MSOA.csv')
 
 message('DONE! Cleaning...')
 rm(list = ls())

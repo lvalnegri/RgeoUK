@@ -105,7 +105,9 @@ yp <- rbindlist(list( yp, unique(yp[PCS %chin% noa$PCS, .(PCS, RGN)])[noa, on = 
 ypk <- yp[, .(OA, PCS)]
 ypk[, PCD := gsub(' .*', '', substr(PCS, 1, 4)) ]
 ypk[, PCA := sub('[0-9]', '', substr(PCS, 1, gregexpr("[[:digit:]]", PCS)[[1]][1] - 1) ) ]
-fwrite(ypk, './data-raw/csv/lookups/OA_PCS_PCD_PCA.csv')
+fwrite(ypk[, .(OA, PCS)], './data-raw/csv/lookups/OA_PCS.csv')
+fwrite(ypk[, .(OA, PCD)], './data-raw/csv/lookups/OA_PCD.csv')
+fwrite(ypk[, .(OA, PCA)], './data-raw/csv/lookups/OA_PCA.csv')
 fwrite(pc[is_active & !PCS %chin% unique(ypk$PCS)], './data-raw/csv/lookups/missing_PCS.csv')
 
 message('Adding correct order to PC Districts and save as csv file...')

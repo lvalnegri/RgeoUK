@@ -125,26 +125,26 @@ dd_simplify_bnd <- function(x, nm, out_path = dmpkg.funs::bnduk_path, verbose = 
 #'
 #' @author Luca Valnegri, \email{l.valnegri@datamaps.co.uk}
 #'
-#' @import data.table fst
+#' @import data.table fst dmpkg.funs add_Kcomma add_pct
 #'
 #' @export
 #'
-build_lookups_table <- function(
-                            child,
-                            parent,
-                            is_active = TRUE,
-                            filter_country = NULL,
-                            save_results = FALSE,
-                            out_path = file.path(ext_path, 'uk', 'geography', 'lookups')
-                       ){
+dd_build_lkps <- function(
+                    child,
+                    parent,
+                    is_active = TRUE,
+                    filter_country = NULL,
+                    save_results = FALSE,
+                    out_path = file.path(ext_path, 'uk', 'geography', 'lookups')
+                 ){
     message('Processing ', child, 's to ', parent, 's...')
     message(' - Reading postcodes data...')
     cols <- c(child, parent)
     if(!is.null(filter_country)) cols <- c(cols, 'CTRY')
     if(is_active == 1){
-        pc <- read_fst_idx(file.path(geouk_path, 'postcodes'), 1, cols = cols)
+        pc <- dmpkg.funs::read_fst_idx(file.path(dmpkg.funs::geouk_path, 'postcodes.full'), 1, cols = cols)
     } else {
-        pc <- read_fst(file.path(geouk_path, 'postcodes'), columns = cols, as.data.table = TRUE)
+        pc <- fst::read_fst(file.path(dmpkg.funs::geouk_path, 'postcodes.full'), columns = cols, as.data.table = TRUE)
     }
     if(!is.null(filter_country)) pc <- pc[CTRY %in% filter_country][, CTRY := NULL]
     message(' - Aggregating...')
@@ -178,9 +178,9 @@ build_lookups_table <- function(
         fwrite(y, paste0(out_path, child, '_to_', parent, ifelse(is.null(filter_country), '', paste0('-', filter_country)), '.csv'))
     }
     message(
-        'Done! Found ', add_Kcomma(exact_cov), ' exact associations and ', add_Kcomma(partial_cov), ' partial coverage (',
-        add_pct(exact_cov / nrow(y)), ' exact coverage)',
-        ifelse(ov_par == 0, '.', paste0(', with ', add_Kcomma(ov_par), ' ', parent, 's involved.'))
+        'Done! Found ', dmpkg.funs::add_Kcomma(exact_cov), ' exact associations and ', dmpkg.funs::add_Kcomma(partial_cov), ' partial coverage (',
+        dmpkg.funs::add_pct(exact_cov / nrow(y)), ' exact coverage)',
+        ifelse(ov_par == 0, '.', paste0(', with ', dmpkg.funs::add_Kcomma(ov_par), ' ', parent, 's involved.'))
     )
     return(y)
 }

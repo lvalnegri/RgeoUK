@@ -1,16 +1,18 @@
 Package: dmpkg.geouk
 Type: Package
-Date: 2021-01-01
+Date: 2022-04-01
 Title: Datasets related to UK Geographies
-Version: 0.0.1
+Version: 0.1.0
 Authors@R: person("Luca", "Valnegri", email = "l.valnegri@datamaps.co.uk", role = c("aut", "cre"))
 Description: This package consists of datasets designed to help Data Sourcing, Cleaning and Wrangling of geographical data, plus a bunch of other visualization and geographical stuff.
 License: file LICENSE
 Encoding: UTF-8
 Depends: R (>= 4.0)
 Imports:
-    data.table
+    data.table,
+    dmpkg.funs,
+    sf
 Suggests:
 LazyData: true
 URL: https://github.com/lvalnegri/dmpkg.geouk
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2

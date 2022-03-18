@@ -1,5 +1,5 @@
 #####################################
-# UK GEOGRAPHY * 03 - download csvs #
+# UK GEOGRAPHY * 31 - download csvs #
 #####################################
 
 library(data.table)
@@ -36,6 +36,18 @@ fwrite(
 fwrite(
     readODS::read_ods('./data-raw/csv/ons/OA11_LSOA11_MSOA11-NIE.ods', sheet = 'SOA', skip = 4)[1:2],
     './data-raw/csv/ons/LSOA11-NIE.csv'
+)
+
+# MSOA NAMES for EW
+download.file(
+    'https://houseofcommonslibrary.github.io/msoanames/MSOA-Names-Latest.csv',
+    destfile = './data-raw/csv/ons/MSOA_names.csv'
+)
+
+# LAD > CTY (ENG)
+download.file(
+    'https://opendata.arcgis.com/api/v3/datasets/1e5367cba9074514ae9012f5627a3241_0/downloads/data?format=csv&spatialRefId=4326',
+    destfile = './data-raw/csv/ons/LAD11_CTY11-ENG.csv'
 )
 
 # OA > TTWA

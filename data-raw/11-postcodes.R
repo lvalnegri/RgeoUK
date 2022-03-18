@@ -8,9 +8,6 @@ ons_id <- '3cee8796c4aa408581c55361a5ddc967'
 
 pc_path <- file.path(ext_path, 'uk', 'geography', 'postcodes')
 
-message('\nLoading OA boundaries...\n')
-bnd.oa <- readRDS(file.path(bnduk_path, 's00', 'OAgb'))
-
 message('\nDownloading ONSPD zip file...\n')
 tmpf <- tempfile()
 download.file(paste0('https://www.arcgis.com/sharing/rest/content/items/', ons_id, '/data'), destfile = tmpf)
@@ -24,11 +21,11 @@ system(paste0('mv ', pc_path, '/', basename(fname), ' ',  pc_path, '/ONSPD.csv')
 
 message('Loading ONSPD data...')
 pc <- fread(
-    file.path(pc_path, 'ONSPD.csv'), 
-        select = c('pcd', 'osgrdind', 'doterm', 'usertype', 'long', 'lat', 'oa11', 'rgn', 'ctry'),
-        col.names = c('PCU', 'osgrdind', 'is_active', 'usertype', 'x_lon', 'y_lat', 'OA', 'RGN', 'CTRY'),
-    na.string = '',
-    key = 'PCU'
+        file.path(pc_path, 'ONSPD.csv'), 
+        select = c('pcd', 'osgrdind', 'doterm', 'usertype', 'long', 'lat', 'oa11', 'rgn', 'ctry', 'wz11'),
+        col.names = c('PCU', 'osgrdind', 'is_active', 'usertype', 'x_lon', 'y_lat', 'OA', 'RGN', 'CTRY', 'WPZ'),
+        na.string = '',
+        key = 'PCU'
 )
 
 message('Building lookalike tables as Table 1 in User Guide:')
@@ -74,12 +71,13 @@ pc <- ctry[pc, on = c(old = 'CTRY')][, old := NULL]
 pc[substr(RGN, 1, 1) != 'E', RGN := paste0(CTRY, '_RGN')]
 
 message('Saving a geographic WGS84 version...')
-pcg <- pc[, .(PCU, x_lon, y_lat, is_active, PCS, OA, RGN, CTRY)]
+pcg <- pc[, .(PCU, x_lon, y_lat, is_active, PCS, OA, RGN, CTRY, WPZ)]
 pcg <- st_as_sf(pcg, coords = c('x_lon', 'y_lat'), crs = 4326)
 saveRDS(pcg, file.path(geouk_path, 'postcodes.geo'))
 pcg <- pcg |> st_transform(27700)
 
 message('Attach a postcode sector to missing OA...')
+bnd.oa <- readRDS(file.path(bnduk_path, 's00', 'OAgb'))
 oas <- fread('./data-raw/csv/lookups/OA_LSOA_MSOA.csv', select = 'OA')
 noa <- oas[!OA %in% unique(pc[is_active == 1, OA])][order(OA)]
 pcgn <- pcg |> filter(is_active == 1)
@@ -125,43 +123,35 @@ pcs <- pcs[pcd, on = 'PCD']
 pcs <- pcs[order(ordering, PCS)][, ordering := 1:.N][, .(PCS, ordering)]
 fwrite(pcs, file.path('./data-raw/csv/locations/PCS.csv'))
 
-message('\nBuilding PCS boundaries...')
-bnd.oa <- bnd.oa |> merge(yp)
-bnd.pcs <- do.call('rbind', lapply(unique(bnd.oa$RGN), \(x) bnd.oa |> filter(RGN == x) |> ms_dissolve('PCS'))) |> 
-                ms_dissolve('PCS') |> 
-                st_transform(4326) |>
-                st_make_valid()
-saveRDS(bnd.pcs, file.path(bnduk_path, 's00', 'PCS'))
-
-message('\nBuilding and saving PCD-PCA boundaries...')
-bnd.pcd <- bnd.pcs |> merge(unique(ypk[, .(PCS, PCD)])) |> ms_dissolve('PCD')
-saveRDS(bnd.pcd, file.path(bnduk_path, 's00', 'PCD'))
-bnd.pca <- bnd.pcd |> merge(unique(ypk[, .(PCD, PCA)])) |> ms_dissolve('PCA')
-saveRDS(bnd.pca, file.path(bnduk_path, 's00', 'PCA'))
-
-message('\nSimplifying boundaries...')
-for(s in seq(10, 50, 10)){
-    message(' - ', s, ' %...')
-    message('   * PCS')
-    bnd.pcs |> ms_simplify(s/100) |> saveRDS(file.path(bnduk_path, paste0('s', s), 'PCS'))
-    message('   * PCD')
-    bnd.pcd |> ms_simplify(s/100) |> saveRDS(file.path(bnduk_path, paste0('s', s), 'PCD'))
-    message('   * PCA')
-    bnd.pca |> ms_simplify(s/100) |> saveRDS(file.path(bnduk_path, paste0('s', s), 'PCA'))
-}
-
 message('\nReworking PCU-PCS for entire postcodes...')
 y <- rbindlist(list( pc[is_active == 1, .(PCU, PCS)], ypk[, .(OA, PCS)][pc[is_active == 0, .(PCU, OA)], on = 'OA'][, .(PCU, PCS)]))
 pc <- y[pc[, PCS := NULL], on = 'PCU']
 
+message('\nSaving a linkage between PCS/D old and new for terminated PCU...')
+pcsa <- unique(ypk[, .(PCS.old = PCS, PCS)])
+pcst <- pc[is_active == 0, .(PCU, PCS, PCS.old = gsub(' .*', '', substr(PCU, 1, 5)))
+            ][!PCS.old %in% pcsa$PCS][, .N, .(PCS.old, PCS)][order(PCS.old, -N)]
+pcst <- pcst[pcst[, .I[which.max(N)], PCS.old]$V1][, N := NULL]
+fwrite(rbindlist(list( pcsa, pcst ))[order(PCS.old)], './data-raw/csv/lookups/PCS_linkage.csv')
+pcda <- unique(ypk[, .(PCD.old = PCD, PCD)])
+pcdt <- ypk[, .(OA, PCD)
+           ][pc[is_active == 0, .(PCU, OA)], on = 'OA'
+             ][, PCD.old := gsub(' .*', '', substr(PCU, 1, 4))
+               ][!PCD.old %in% pcda$PCD][, .N, .(PCD.old, PCD)][order(PCD.old, -N)]
+pcdt <- pcdt[pcdt[, .I[which.max(N)], PCD.old]$V1][, N := NULL]
+fwrite(rbindlist(list( pcda, pcdt ))[order(PCD.old)], './data-raw/csv/lookups/PCD_linkage.csv')
+
 message('Recoding char columns as factors...')
-setcolorder(pc, c('PCU', 'is_active', 'usertype', 'x_lon', 'y_lat', 'OA', 'PCS', 'RGN', 'CTRY'))
-cols <- c('OA', 'PCS', 'RGN', 'CTRY')
+setcolorder(pc, c('PCU', 'is_active', 'usertype', 'x_lon', 'y_lat', 'OA', 'PCS', 'RGN', 'CTRY', 'WPZ'))
+cols <- c('OA', 'PCS', 'RGN', 'CTRY', 'WPZ')
 pc[, (cols) := lapply(.SD, factor), .SDcols = cols]
 
-message('Saving postcodes with various indices...')
+message('Saving postcodes in fst format and into database...')
 setorderv(pc, c('is_active', 'CTRY', 'RGN', 'PCS', 'OA', 'PCU'))
 write_fst_idx('postcodes', c('is_active', 'PCS'), pc, geouk_path)
+dd_dbm_do('geography_uk', 'w', 'postcodes', pc)
+
+message('Saving postcodes as zipped csv...')
 fwrite(pc, './data-raw/postcodes.csv')
 zip('./data-raw/csv/locations/postcodes.zip', './data-raw/postcodes.csv')
 file.remove('./data-raw/postcodes.csv')
@@ -186,6 +176,28 @@ pca <- rbindlist(list(
     )]        
 ))
 fwrite(pca, './data-raw/csv/locations/pca_totals.csv')
+
+message('Processing FULL postcodes dataset...')
+message(' - Reading csv file...')
+y <- fread(
+    file.path(pc_path, 'ONSPD.csv'), 
+    select = c(
+       'pcd', 'lsoa11', 'msoa11', 'oslaua', 'oscty', 'parish',
+       'pcon', 'osward', 'ced', 'ttwa', 'bua11', 'buasd11', 'pfa', 'ccg', 'stp', 'nhser'
+    ),
+    col.names = c(
+        'PCU', 'LSOA', 'MSOA', 'LAD', 'CTY', 'PAR',
+        'PCON', 'WARD', 'CED', 'TTWA', 'BUA', 'BUAS', 'PFA', 'CCG', 'STP', 'NHSR'
+    ),
+    na.string = '',
+    key = 'PCU'
+)
+y <- y[pc, on = 'PCU']
+setcolorder(y, names(pc))
+
+message(' - Saving as fst...')
+setorderv(y, c('is_active', 'CTRY', 'RGN', 'PCS', 'OA', 'PCU'))
+write_fst_idx('postcodes.full', c('is_active', 'PCS'), y, geouk_path)
 
 message('DONE! Cleaning...')
 rm(list = ls())

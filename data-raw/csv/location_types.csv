@@ -1,33 +1,33 @@
-location_type,ons_id,prog_id,name,theme,countries,count_ons,count_pkg,last_update,needs_update,is_frozen,max_child,exact_cov,min_parent,pref_filter,pref_map,dts_id,bnd_id
-OA,oa,11,Output Area,Census,ENSW,232 296 ,232 296 ,Dec-11,N,Y,,100 ,LSOA,,,,
-LSOA,lsoa,12,Lower Layer Super Output Area,Census,ENSW,42 619 ,42 619 ,Dec-11,N,Y,OA,100 ,MSOA,,,,
-MSOA,msoa,13,Middle Layer Super Output Area,Census,ESW,9 370 ,9 370 ,Dec-11,N,Y,LSOA,100 ,LAD,,,,
-LAD,lad,14,Local Authority & District,Census,ENSW,363 ,363 ,Dec-21,N,N,MSOA,100 ,CTY,,,,0f131e03df73415b824a1c214594eeab
-CTY,cty,15,County & Unitary Authority,Census,E,93 ,93 ,May-21,N,N,LAD,100 ,RGN,,,1e5367cba9074514ae9012f5627a3241,95cd503f6737487b897b6dbc89cb0652
-RGN,rgn,16,Region,Census,E,12 ,12 ,Dec-20,N,Y,CTY,100 ,CTRY,,,,bcd09dc6a37348a6aff55caa6efd644e
-CTRY,ctry,17,Country,Census,ENSW,4 ,4 ,Apr-21,N,Y,RGN,,,,,,
-WPZ,wz,21,Workplace Zone,Census,ENSW,60 709 ,60 709 ,Jul-05,N,Y,,,MSOA,,,,
-PCU,,30,Postcode Unit,Postal,ENSW,2 649 532 ,2 608 356 ,Feb-22,N,N,,,,,,,
-PCS,,31,Postcode Sector,Postal,ENSW,9 550 ,9 437 ,Feb-22,N,N,OA,,PCD,,,,
-PCD,,32,Postcode District,Postal,ENSW,,2 799 ,Feb-22,N,N,PCS,,PCT,,,,
-PCT,,33,Post Town,Postal,ENSW,,1 427 ,Feb-22,N,N,PCD,,PCA,,,,
-PCA,,34,Postcode Area,Postal,ENSW,121 ,121 ,Feb-22,N,N,PCT,,,,,,
-PCON,pcon,41,Westminster Parliamentary Constituency,Electoral,ENSW,650 ,650 ,Dec-20,N,N,OA,,,,,,8533474c4a474990a80e7c932f54fa46
-WARD,wd,42,Electoral Ward,Electoral,ENSW,8 887 ,8 875 ,Dec-21,N,N,OA,,,,,,6719b85069bb407c9fd275ab1d5738ad
-TTWA,ttwa,43,Travel To Work Area,Urban,ENSW,228 ,228 ,Dec-11,N,Y,LSOA,,,,,,60637d04599242c988898dc154048e52
-MTC,tcity,44,Major Town or City,Urban,EW,113 ,113 ,Dec-15,N,Y,OA,,,,,,ca06d2ff61914ef78dff3d30a5f8f624
-BUA,bua,45,Built-up Area,Urban,EW,5 830 ,5 795 ,Dec-11,Y,N,OA,,,,,,f6684981be23404e83321077306fa837
-BUAS,buasd,46,Built-up Area Sub-division,Urban,EW,1 826 ,1 824 ,Dec-11,Y,N,OA,,,,,,30858d02474b4f5a85916acac0f45168
-PAR,parncp,51,Civil Parish or Unparished; Community,Social,EWS,11 561 ,12 415 ,Dec-20,N,N,OA,,,,,,418db4c652624407baedb677a702ff31
-PFN,,52,Police Neighborhood,Social,ENSW,4 651 ,4 814 ,Dec-21,N,N,OA,,,,,,
-PFA,pfa,53,Police Force Area,Social,ENSW,45 ,45 ,Dec-20,N,N,PFN,,,,,,61752cc924354e71846ffa044aa76669
-FRA,fra,54,Fire Rescue Authority,Social,ENSW,79 ,48 ,May-21,N,N,OA,,,,,,a3f60bbefce04a6d8cf8d490a3d8b3ff
-CSP,csp,55,Community Safety Partnership,Social,EW,314 ,314 ,Dec-20,N,N,OA,,,,,,2b66d517065842bf8fe8d74eb5b321d4
-LPA,lpa,56,Local Planning Authority,Social,ENSW,398 ,397 ,May-21,N,N,OA,,,,,,71682af84f454279bedb77ad1cb1e1a3
-RGD,regd,57,Registration District,Social,EW,173 ,173 ,Dec-20,N,N,OA,,,,,,12f7373f0cad4a0d8b6607e58398f717
-LRF,lrf,58,Local Resilience Forum,Social,EW,42 ,42 ,Dec-20,N,N,OA,,,,,,dfa7d7623a2342759aa160edf8398046
-CCG,ccg,61,Clinical Commissioning Group,Health,ENSW,106 ,106 ,Apr-21,N,N,LSOA,,STP,,,,5718e9da058f41b3b9f558a1c9beca1a
-STP,stp,62,Sustainability and Transformation Partnership,Health,E,42 ,42 ,Apr-21,N,N,CCG,,NHSO,,,a458c272484743aa9caa25619ccbe1ac,8ad7969a91574ac5be15b8597c55de67
-NHSR,nhsrlo,63,NHS England Region,Health,E,7 ,7 ,Apr-21,N,N,NHSO,,,,,,87511f3ae00a40208741c685f827c1d3
-CIS,cis,69,Covid Infection Survey,Health,ENSW,133 ,133 ,Dec-20,N,N,OA,,,,,,79b40510aff44f34954dcd1c21abfe36
-,,,,,,,,,,,,,,,,,
+location_type,ons_id,prog_id,name,theme,countries,is_tot_cover,count_ons,count_pkg,is_pkg_less,max_child,min_parent,pref_filter,pref_map,last_update,has_comp_map,needs_update,is_frozen,dts_id,bnd_id,,
+OA,oa,11,Output Area,Census,ENSW,1,232 296 ,232 296 ,0 ,,LSOA,,,Dec-11,0,N,Y,,,,
+LSOA,lsoa,12,Lower Layer Super Output Area,Census,ENSW,1,42 619 ,42 619 ,0 ,OA,MSOA,,,Dec-11,0,N,Y,,,,
+MSOA,msoa,13,Middle Layer Super Output Area,Census,ESW,1,9 370 ,9 370 ,0 ,LSOA,LAD,,,Dec-11,0,N,Y,,,,
+WPZ,wz,16,Workplace Zone,Census,ENSW,1,60 709 ,60 709 ,0 ,,MSOA,,,Jul-05,0,N,Y,,,,
+PAR,parncp,21,Civil Parish or Unparished; Community,Admin,EWS,1,11 561 ,12 415 ,1 ,OA,,,,Dec-20,1,N,N,,418db4c652624407baedb677a702ff31,,
+LAD,lad,22,Local Authority & District,Admin,ENSW,1,363 ,363 ,0 ,MSOA,CTY,,,Dec-21,1,ONS,N,,0f131e03df73415b824a1c214594eeab,,
+CTY,cty,23,County & Unitary Authority,Admin,E,1,93 ,93 ,0 ,LAD,RGN,,,Dec-21,1,N,N,1e5367cba9074514ae9012f5627a3241,d1878cc7b6624d47b8622211e68f2492,,
+RGN,rgn,24,Region,Admin,E,1,12 ,12 ,0 ,CTY,CTRY,,,Dec-20,0,N,Y,,bcd09dc6a37348a6aff55caa6efd644e,,
+CTRY,ctry,25,Country,Admin,ENSW,1,4 ,4 ,0 ,RGN,,,,Apr-21,0,N,Y,,,,
+PCS,,31,Postcode Sector,Postal,ENSW,1,9 550 ,9 437 ,1 ,OA,PCD,,,Feb-22,0,N,N,,,,
+PCD,,32,Postcode District,Postal,ENSW,1,,2 799 ,1 ,PCS,PCT,,,Feb-22,0,N,N,,,,
+PCT,,33,Post Town,Postal,ENSW,1,,1 427 ,0 ,PCD,PCA,,,Feb-22,0,N,N,,,,
+PCA,,34,Postcode Area,Postal,ENSW,1,121 ,121 ,0 ,PCT,,,,Feb-22,0,N,N,,,,
+PCON,pcon,41,Westminster Parliamentary Constituency,Electoral,ENSW,1,650 ,650 ,0 ,OA,,,,Dec-20,1,N,N,,8533474c4a474990a80e7c932f54fa46,,
+PDT,,42,Polling Districts,Electoral,E,1,,,1 ,OA,WARD?,,,,1,OS,N,,,,
+WARD,wd,43,Electoral Ward,Electoral,ENSW,1,8 887 ,8 875 ,1 ,OA,,,,Dec-21,1,N,N,,6719b85069bb407c9fd275ab1d5738ad,,
+CED,ced,44,County Electoral Division,Electoral,E,1,1 574 ,0 ,1 ,OA,,,,May-21,1,N,N,,,,
+TTWA,ttwa,51,Travel To Work Area,Urban,ENSW,1,228 ,228 ,0 ,LSOA,,,,Dec-11,0,N,Y,,60637d04599242c988898dc154048e52,,
+MTC,tcity,52,Major Town or City,Urban,EW,1,113 ,113 ,0 ,OA,,,,Dec-15,0,N,Y,,ca06d2ff61914ef78dff3d30a5f8f624,,
+BUA,bua,53,Built-up Area,Urban,EW,1,5 830 ,5 493 ,1 ,OA,,,,Dec-11,0,N,Y,,f6684981be23404e83321077306fa837,,
+BUAS,buasd,54,Built-up Area Sub-division,Urban,EW,1,1 826 ,1 693 ,1 ,OA,,,,Dec-11,0,N,Y,,30858d02474b4f5a85916acac0f45168,,
+PFN,,61,Police Neighborhood,Crime,ENSW,1,4 651 ,4 814 ,0 ,OA,,,,Dec-21,1,N,N,,,,
+PFA,pfa,62,Police Force Area,Crime,ENSW,1,45 ,45 ,0 ,PFN,,,,Dec-20,1,N,N,,61752cc924354e71846ffa044aa76669,,
+CSP,csp,66,Community Safety Partnership,Crime,EW,1,314 ,314 ,0 ,OA,,,,Dec-20,1,N,N,,2b66d517065842bf8fe8d74eb5b321d4,,
+FRA,fra,71,Fire Rescue Authority,Social,ENSW,1,79 ,48 ,0 ,OA,,,,May-21,1,N,N,,a3f60bbefce04a6d8cf8d490a3d8b3ff,,
+LPA,lpa,72,Local Planning Authority,Social,ENSW,1,398 ,397 ,0 ,OA,,,,May-21,1,N,N,,71682af84f454279bedb77ad1cb1e1a3,,
+RGD,regd,73,Registration District,Social,EW,1,173 ,173 ,0 ,OA,,,,Dec-20,1,N,N,,12f7373f0cad4a0d8b6607e58398f717,,
+LRF,lrf,74,Local Resilience Forum,Social,EW,1,42 ,42 ,0 ,OA,,,,Dec-20,1,N,N,,dfa7d7623a2342759aa160edf8398046,,
+CCG,ccg,81,Clinical Commissioning Group,Health,ENSW,1,106 ,106 ,0 ,LSOA,STP,,,Apr-21,1,N,N,,5718e9da058f41b3b9f558a1c9beca1a,,
+STP,stp,82,Sustainability and Transformation Partnership,Health,E,1,42 ,42 ,0 ,CCG,NHSO,,,Apr-21,1,N,N,a458c272484743aa9caa25619ccbe1ac,8ad7969a91574ac5be15b8597c55de67,,
+NHSR,nhser,83,NHS England Region,Health,E,1,7 ,7 ,0 ,NHSO,,,,Dec-21,1,N,N,,a1dc18b4f1e64a82b623d2cc86d3fc01,,
+CIS,cis,86,Covid Infection Survey,Health,ENSW,1,133 ,133 ,0 ,OA,,,,Dec-20,1,N,N,,79b40510aff44f34954dcd1c21abfe36,,

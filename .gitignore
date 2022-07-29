@@ -27,5 +27,4 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 .Rbuildignore
-popiData_geouk.Rproj
-dmpkg.geouk.Rproj
+RgeoUK.Rproj

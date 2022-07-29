@@ -1,6 +1,10 @@
 #####################################
 # UK GEOGRAPHY * 31 - download csvs #
 #####################################
+# OA > LSOA, MSOA, MTC, BUAS, BUA
+# LSOA > TTWA
+# LAD > CTY (ENG) <<< This is the only one that needs updates <<<
+# WPZ > MSOA
 
 library(data.table)
 
@@ -50,7 +54,7 @@ download.file(
     destfile = './data-raw/csv/ons/LAD11_CTY11-ENG.csv'
 )
 
-# OA > TTWA
+# LSOA > TTWA
 download.file(
     'https://opendata.arcgis.com/api/v3/datasets/50ce6db9e3a24f16b3f63f07e6a069f0_0/downloads/data?format=csv&spatialRefId=4326',
     destfile = './data-raw/csv/ons/LSOA11_TTWA11-UK.csv'

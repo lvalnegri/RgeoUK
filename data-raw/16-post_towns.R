@@ -1,5 +1,5 @@
 ##################################
-# UK GEOGRAPHY * 15 - Post Towns #
+# UK GEOGRAPHY * 16 - Post Towns #
 ##################################
 
 dmpkg.funs::load_pkgs(dmp = FALSE, c('data.table', 'fst', 'htmltab', 'rvest'))
@@ -7,11 +7,11 @@ dmpkg.funs::load_pkgs(dmp = FALSE, c('data.table', 'fst', 'htmltab', 'rvest'))
 message('Downloading Postcode Areas (PCA)...')
 url_pref <- 'https://www.postcodes-uk.com/'
 pca <- read_html(paste0(url_pref, 'postcode-areas')) %>%
-    html_nodes('.postcode_areas_list a') %>% 
-    html_text() %>% 
-    matrix(byrow = TRUE, ncol = 2) %>% 
-    as.data.table() %>% 
-    setnames(c('PCA', 'name'))
+          html_nodes('.postcode_areas_list a') %>% 
+          html_text() %>% 
+          matrix(byrow = TRUE, ncol = 2) %>% 
+          as.data.table() %>% 
+          setnames(c('PCA', 'name'))
 pca[, `:=`(PCA = trimws(gsub('postcode area', '', PCA)), name = trimws(gsub('postcode area', '', name)))]
 fwrite(pca, './data-raw/csv/locations/PCA.csv')
 

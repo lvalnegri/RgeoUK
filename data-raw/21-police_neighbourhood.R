@@ -61,7 +61,15 @@ fnames <- fnames[pfn[, .(PFA, PFNid, PFN)], on = c('PFA', 'PFNid')][order(PFN)]
 fnames <- fnames[!is.na(PFAid)]
 
 message('Converting KML files into one single `sf` feature...')
-nbnd <- do.call('rbind', lapply(1:nrow(fnames), \(x) st_read(fnames[x]$fname, quiet = TRUE) %>% select(PFN = 1) %>% mutate(PFN = fnames[x]$PFN)))
+nbnd <- do.call(
+            'rbind', 
+            lapply(
+                1:nrow(fnames), 
+                \(x) st_read(fnames[x]$fname, quiet = TRUE) |>
+                        select(PFN = 1) |> 
+                        mutate(PFN = fnames[x]$PFN)
+            )
+)
 
 message('Deleting `Z` coordinates...')
 nbnd <- st_zm(nbnd) |> st_make_valid() |> st_transform(27700) |> st_cast('MULTIPOLYGON')
@@ -149,40 +157,40 @@ lkpw <- fread('./data-raw/csv/lookups/OA_WARD.csv')
 yc <- rbindlist(list( yc, lkpw[lkp[, .(WARD, PFN)], on = 'WARD'][, WARD := NULL] ))
 fwrite(yc, './data-raw/csv/lookups/OA_PFN.csv')
 
-message('Building PFN+PFA boundaries from OA lookups...')
-y <- merge(bnd.oa, yc)
-yn <- do.call( 'rbind', lapply( unique(y$RGN), \(x) y |> filter(RGN == x) |> ms_dissolve('PFN') ) ) |> st_transform(4326)
-saveRDS(yn, file.path(bnduk_path, 's00', 'PFN'))
-ya <- yn |> merge(pfn[, .(PFN, PFA)]) |> ms_dissolve('PFA')
-saveRDS(ya, file.path(bnduk_path, 's00', 'PFA'))
-
-message(' * Simplifying boundaries...')
-for(s in seq(10, 50, 10)){
-    message('   > ', s, '%')
-    saveRDS(ms_simplify(yn, s/100), file.path(bnduk_path, paste0('s', s), 'PFN'))
-    saveRDS(ms_simplify(ya, s/100), file.path(bnduk_path, paste0('s', s), 'PFA'))
-}
-
-message(' * Creating comparison maps...')
-ym <- leaflet() |>
-        addTiles() |>
-        addPolygons(
-            data = merge(yn |> ms_simplify(), pfn),
-            group = 'package',
-            color = 'black',
-            fillOpacity = 0.2,
-            label = ~PFNn
-        ) |>
-        addPolygons(
-            data = merge(nbnd |> st_transform(4326) |> ms_simplify(), pfn), 
-            group = 'original',
-            color = 'red', 
-            fillOpacity = 0.2,
-            label = ~PFNn
-        ) |>
-        addLayersControl(overlayGroups = c('package', 'original'))
-htmlwidgets::saveWidget(ym, paste0('./data-raw/maps/PFN.html'))
-system(paste0('rm -r ./data-raw/maps/PFN_files'))
+# message('Building PFN+PFA boundaries from OA lookups...')
+# y <- merge(bnd.oa, yc)
+# yn <- do.call( 'rbind', lapply( unique(y$RGN), \(x) y |> filter(RGN == x) |> ms_dissolve('PFN') ) ) |> st_transform(4326)
+# saveRDS(yn, file.path(bnduk_path, 's00', 'PFN'))
+# ya <- yn |> merge(pfn[, .(PFN, PFA)]) |> ms_dissolve('PFA')
+# saveRDS(ya, file.path(bnduk_path, 's00', 'PFA'))
+# 
+# message(' * Simplifying boundaries...')
+# for(s in seq(10, 50, 10)){
+#     message('   > ', s, '%')
+#     saveRDS(ms_simplify(yn, s/100), file.path(bnduk_path, paste0('s', s), 'PFN'))
+#     saveRDS(ms_simplify(ya, s/100), file.path(bnduk_path, paste0('s', s), 'PFA'))
+# }
+# 
+# message(' * Creating comparison maps...')
+# ym <- leaflet() |>
+#         addTiles() |>
+#         addPolygons(
+#             data = merge(yn |> ms_simplify(), pfn),
+#             group = 'package',
+#             color = 'black',
+#             fillOpacity = 0.2,
+#             label = ~PFNn
+#         ) |>
+#         addPolygons(
+#             data = merge(nbnd |> st_transform(4326) |> ms_simplify(), pfn), 
+#             group = 'original',
+#             color = 'red', 
+#             fillOpacity = 0.2,
+#             label = ~PFNn
+#         ) |>
+#         addLayersControl(overlayGroups = c('package', 'original'))
+# htmlwidgets::saveWidget(ym, paste0('./data-raw/maps/PFN.html'))
+# system(paste0('rm -r ./data-raw/maps/PFN_files'))
 
 # clean and Exit --------------------------------
 message('Clean and Exit...')

@@ -1,6 +1,9 @@
 ##################################################
 # UK GEOGRAPHY * 36 - Lookups+Names FROZEN TYPES #
 ##################################################
+# OA > LSOA, MSOA, CTRY, MTC, BUAS, BUA
+# LSOA > TTWA
+# WPZ > MSOA
 
 library('data.table')
 

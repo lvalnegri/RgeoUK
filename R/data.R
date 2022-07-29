@@ -103,6 +103,20 @@ NULL
 #'
 'postcodes'
 
+
+#' pc_linkage
+#'
+#' A mapping between Postcode Sectors/Districts, related to terminated Units (but each table contains all records).
+#'
+#' @format A list including two data.table, \code{PCS} and \code{PCD}, with the following columns for \code{PCS}:
+#' \describe{
+#'   \item{\code{PCS.old}}{ The actual Postcode Sector corresponding to the rule }
+#'   \item{\code{PCS}}{ The current Postcode Sector  corresponding to its location }
+#' }
+#' and similarly for \code{PCD}.
+#'
+'pc_linkage'
+
 #' output_areas
 #'
 #' This dataset contains both a complete list of the UK \emph{Output Areas}, the smallest statistical geographic area in the UK,
@@ -220,3 +234,4 @@ NULL
 #' }
 #'
 'neighbours'
+

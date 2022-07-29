@@ -26,7 +26,7 @@ You can also installed my other package [RbndUK](https://github.com/lvalnegri/Rb
 
 ### List of Datasets
 
-The following datasets are available both in *CSV* format, in the `data-raw` directory, and as *data.tables* in *RData* format in the `data` directory, ready to be called after installation:
+The package contains the following datasets in `data.table` format:
 
  - **entities**
  
@@ -45,7 +45,13 @@ The following datasets are available both in *CSV* format, in the `data-raw` dir
  - **workplace_zones**
  
  - **neighbours** 
-
+ 
+ The above datasets are also available in *CSV* format in the `data-raw/csv` folder, and can be downloaded directly from the repository. 
+ 
+ In the `data-raw` folder you can also find:
+ - in the `maps` subfolder, the comparison maps with the official boundaries and the ones built upon the *Output Areas* (for the geographies with no exact matching)
+ - in the `shp` subfolder, the original boundaries in *shapefile* format as distributed by the official channels
+ 
 
 ### Resources
 

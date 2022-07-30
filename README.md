@@ -45,27 +45,29 @@ The following datasets are available both in *CSV* format, in the `data-raw` dir
 
 ### Resources
 
- - [Register of Geographic Codes](https://geoportal.statistics.gov.uk/search?collection=Dataset&sort=-created&tags=all(PRD_RGC))
+ - [Register of Geographic Codes (March 2022)](https://geoportal.statistics.gov.uk/search?collection=Dataset&sort=-created&tags=all(PRD_RGC))
  
- - [Code History Database](https://geoportal.statistics.gov.uk/search?collection=Dataset&sort=-created&tags=all(PRD_CHD))
+ - [Code History Database (December 2021)](https://geoportal.statistics.gov.uk/search?collection=Dataset&sort=-created&tags=all(PRD_CHD))
  
- - [Hierarchical Representation of UK Statistical Geographies]()
+ - [Hierarchical Representation of UK Statistical Geographies (December 2021)](https://geoportal.statistics.gov.uk/documents/ons::hierarchical-representation-of-uk-statistical-geographies-december-2021/about)
 
- - [ONS Postcode Directory](https://geoportal.statistics.gov.uk/search?collection=Dataset&sort=-created&tags=all(PRD_ONSPD))
+ - [ONS Postcode Directory (May 2022)](https://geoportal.statistics.gov.uk/search?collection=Dataset&sort=-created&tags=all(PRD_ONSPD))
 
- - [NHS Postcode Directory](https://geoportal.statistics.gov.uk/search?collection=Dataset&sort=-created&tags=all(PRD_NHSPD))
+ - [NHS Postcode Directory (May 2022)](https://geoportal.statistics.gov.uk/search?collection=Dataset&sort=-created&tags=all(PRD_NHSPD))
+
+ - [A Beginners Guide to UK Geography (v.1, 2021)](https://geoportal.statistics.gov.uk/documents/ons::a-beginners-guide-to-uk-geography-2021-v1-0/about)
 
 
 ### Attributions
 
- - Contains OS data © Crown copyright and database rights [2020] 
+ - Contains OS data © Crown copyright and database rights [2022] 
  
- - Contains National Statistics data © Crown copyright and database rights [2020] 
+ - Contains National Statistics data © Crown copyright and database rights [2022] 
  
  - Source: Office for National Statistics licensed under the [Open Government Licence v.3.0](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
 
  - Contains Parliamentary information licensed under the [Open Parliament Licence v3.0](https://www.parliament.uk/site-information/copyright/open-parliament-licence/)
 
- - Contains Royal Mail data © Royal Mail copyright and database rights [2020] 
+ - Contains Royal Mail data © Royal Mail copyright and database rights [2022] 
 
  - (NI only) Contains or is based upon Land & Property Services (*LPS*) Intellectual Property subject to Crown copyright [[License](https://www.ons.gov.uk/file?uri=/methodology/geography/licences/lpsenduserlicenceoct11_tcm77-278044.doc)]

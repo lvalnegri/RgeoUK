@@ -1,11 +1,13 @@
 1] library(devtools) + load_all()
 2] update location_types.csv and entities.csv (hierarchies.csv needs an eye too)
 2] run 11-postcodes.R (updates PCU, PCS, PCD, and PCA lookups)
-3] run 16-post_towns.R (updates PCT names and lookups)
+3] run 16-postal_towns.R (updates PCT names and lookups)
+3] run 17-postal_map.R (create boundaries and map for the `postal` hierarchy)
 4] run 21-police_neighbourhood.R (updates PCN and PCA names and lookups)
+4] run 22-police_map.R (create boundaries and map for the `police` hierarchy)
 5] check if any frozen geography has by any chance been updated.
 5b] if [5] above is positive, update and run 31-download_csvs.R and 36-lookups_frozen.R
-6] check if any non-frozen geography has been updated.  
+6] check if any non-frozen geography has been updated  
 6b] if [6] above is positive, update and run 37-lookups_from_maps
 
 

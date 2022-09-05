@@ -2,41 +2,57 @@
 # UK GEOGRAPHY * 11 - POSTCODES #
 #################################
 
-dmpkg.funs::load_pkgs(dmp = FALSE, c('data.table', 'dplyr', 'rmapshaper', 'sf'))
+Rfuns::load_pkgs('data.table', 'qs', 'rmapshaper', 'sf')
+setDTthreads(12)
 
-ons_id <- '3cee8796c4aa408581c55361a5ddc967'
+ons_id <- '8e0d123a946240288c3c84cf9f9cba28'
+down <- FALSE
 
 pc_path <- file.path(ext_path, 'uk', 'geography', 'postcodes')
 
-message('\nDownloading ONSPD zip file...\n')
-tmpf <- tempfile()
-download.file(paste0('https://www.arcgis.com/sharing/rest/content/items/', ons_id, '/data'), destfile = tmpf)
-fname <- unzip(tmpf, list = TRUE)
-fname <- fname[order(fname$Length, decreasing = TRUE), 'Name'][1]
-
-message('Extracting csv file...')
-unzip(tmpf, files = fname, exdir = pc_path, junkpaths = TRUE)
-unlink(tmpf)
-system(paste0('mv ', pc_path, '/', basename(fname), ' ',  pc_path, '/ONSPD.csv'))
+if(down){
+    message('\nDownloading ONSPD zip file...\n')
+    tmpf <- tempfile()
+    download.file(paste0('https://www.arcgis.com/sharing/rest/content/items/', ons_id, '/data'), destfile = tmpf)
+    fname <- unzip(tmpf, list = TRUE)
+    fname <- fname[order(fname$Length, decreasing = TRUE), 'Name'][1]
+    
+    message('Extracting csv file...')
+    unzip(tmpf, files = fname, exdir = pc_path, junkpaths = TRUE)
+    unlink(tmpf)
+    system(paste0('mv ', pc_path, '/', basename(fname), ' ',  pc_path, '/ONSPD.csv'))
+}
 
 message('Loading ONSPD data...')
 pc <- fread(
         file.path(pc_path, 'ONSPD.csv'), 
-        select = c('pcd', 'osgrdind', 'doterm', 'usertype', 'long', 'lat', 'oa11', 'rgn', 'ctry', 'wz11'),
-        col.names = c('PCU', 'osgrdind', 'is_active', 'usertype', 'x_lon', 'y_lat', 'OA', 'RGN', 'CTRY', 'WPZ'),
+        select = c('pcd', 'osgrdind', 'doterm', 'usertype', 'long', 'lat', 'oa11', 'oa21', 'rgn', 'ctry', 'wz11'),
+        col.names = c('PCU', 'osgrdind', 'is_active', 'usertype', 'x_lon', 'y_lat', 'OA', 'OA21', 'RGN', 'CTRY', 'WPZ'),
         na.string = '',
         key = 'PCU'
 )
 
-message('Building lookalike tables as Table 1 in User Guide:')
-message(' + Total dataset...')
-print(pc[, .N, CTRY][order(CTRY)])
-message(' + Total UK...')
-print(pc[!(CTRY %in% c('L93000001', 'M83000003')), .N])
-message(' + By user type: 0-Small / 1-Large users for the whole dataset...')
+message('Building lookalike tables as Table 1 and 3 in User Guide:')
+message(' + Total dataset')
+rbind(pc[, .N, CTRY][order(CTRY)], pc[, .(CTRY = '==TOTAL==', .N)])
+pc <- pc[!(CTRY %in% c('L93000001', 'M83000003'))]
+message('Total UK')
+print(pc[, .N])
+message(' + By user type (0-Small / 1-Large users)')
 print(pc[, .N, usertype][order(usertype)])
-message(' + By user type: 0-Small / 1-Large users, Total UK ...')
-print(pc[!(CTRY %in% c('L93000001', 'M83000003')), .N, usertype])
+message(' + By country and user type')
+print(dcast(pc[, .N, .(usertype, CTRY)], CTRY~usertype))
+message(' + By grid, country and user type, with count and percentage')
+print(
+    dcast(
+        pc[, (Nct =.N),  .(usertype, CTRY)
+           ][pc[, .N, .(osgrdind, usertype, CTRY)], on = c('usertype', 'CTRY')
+             ][, pct := round(100 * N /V1, 2)][, V1 := NULL], 
+        osgrdind~CTRY+usertype, 
+        value.var = c('N', 'pct'), 
+        fill = 0
+    )
+)
 
 message('Deleting postcodes without grid reference (osgrdind == 9, deletes also GI/IM), then reorder by OA and PCU...')
 pc <- pc[osgrdind < 9][, osgrdind := NULL][order(OA, PCU)]
@@ -73,17 +89,18 @@ pc[substr(RGN, 1, 1) != 'E', RGN := paste0(CTRY, '_RGN')]
 message('Saving a geographic WGS84 version...')
 pcg <- pc[, .(PCU, x_lon, y_lat, is_active, PCS, OA, RGN, CTRY, WPZ)]
 pcg <- st_as_sf(pcg, coords = c('x_lon', 'y_lat'), crs = 4326)
-saveRDS(pcg, file.path(geouk_path, 'postcodes.geo'))
+qsave(pcg, file.path(geouk_path, 'postcodes.geo'), nthreads = 12)
+message('Reprojecting using OSGB36 / British National Grid, epsg 27700...')
 pcg <- pcg |> st_transform(27700)
 
 message('Attach a postcode sector to missing OA...')
-bnd.oa <- readRDS(file.path(bnduk_path, 's00', 'OAgb'))
+bnd.oa <- qread(file.path(bnduk_path, 's00', 'OAgb'), nthreads = 12)
 oas <- fread('./data-raw/csv/lookups/OA_LSOA_MSOA.csv', select = 'OA')
 noa <- oas[!OA %in% unique(pc[is_active == 1, OA])][order(OA)]
-pcgn <- pcg |> filter(is_active == 1)
-y <- st_nearest_feature(bnd.oa |> filter(OA %in% noa$OA), pcgn)
-noa <- cbind(noa, pcgn[y,] |> select(PCS) |> st_drop_geometry() |> as.data.table())
-fwrite(noa, './data-raw/csv/lookups/missing_OAs.csv')
+pcgn <- pcg |> dplyr::filter(is_active == 1)
+y <- st_nearest_feature(bnd.oa |> subset(OA %in% noa$OA), pcgn)
+noa <- data.table(noa, pcgn[y,] |> subset(select = PCS) |> st_drop_geometry())
+fwrite(noa[order(OA)], './data-raw/csv/lookups/missing_OAs.csv')
 
 message('\nBuilding OA-PCS lookups...')
 ypi <- pc[is_active == 1, .N, .(OA, PCS, RGN)][order(OA, -N)]

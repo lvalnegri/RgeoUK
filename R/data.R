@@ -1,7 +1,7 @@
 #' @importFrom data.table data.table
 NULL
 
-#' location_types
+#' Location Types
 #'
 #' A list of all the Geographies included in the package
 #' (apart from the Output Areas and the Workplace Zones, which are listed in the corresponding datasets)
@@ -9,21 +9,21 @@ NULL
 #' @format A data.table with the following columns:
 #' \describe{
 #'   \item{\code{location_type}}{ An acronym for the Geography, used as its id }
-#'   \item{\code{ons_id}}{ A numeric id, used moslty as ordering }
+#'   \item{\code{ons_id}}{ The id of the Geography used by ONS }
 #'   \item{\code{prog_id}}{ A numeric id, used moslty as ordering }
 #'   \item{\code{name}}{ The Name for the Geography }
 #'   \item{\code{theme}}{ A general Name to regroup different Geographies }
-#'   \item{\code{countries}}{ The countries the geography is present }
-#'   \item{\code{count_ons}}{ The total number of locations }
-#'   \item{\code{count_pkg}}{ The number of locations  }
+#'   \item{\code{countries}}{ The Countries where the geography is present }
+#'   \item{\code{count_ons}}{ The total number of Locations }
+#'   \item{\code{count_pkg}}{ The number of Locations present in the `lookups` table }
 #'   \item{\code{last_update}}{ The date the Geography has last been updated }
 #'   \item{\code{needs_update}}{ A flag used by the script \code{02} }
-#'   \item{\code{is_frozen}}{ A flag that indicates the Geography does not update regularly }
+#'   \item{\code{is_frozen}}{ A flag that indicates the Geography does not need a regular update }
 #'   \item{\code{max_child}}{ The location type that nest exactly into the current geography }
 #'   \item{\code{min_parent}}{ The location type that all the current geography nest exactly into }
 #'   \item{\code{pref_filter}}{ The location type to use by default as parent when filtering out }
 #'   \item{\code{pref_map}}{ The location type to use by default as parent when mapping }
-#'   \item{\code{dts_id}}{ The id to include in the ONS geoportal api call to retrieve the latest names and lookups  }
+#'   \item{\code{dts_id}}{ The id to include in the ONS geoportal api call to retrieve the latest lookups against its `max_child` }
 #'   \item{\code{bnd_id}}{ The id to include in the ONS geoportal api call to retrieve the latest map }
 #' }
 #'
@@ -32,7 +32,7 @@ NULL
 #'
 'location_types'
 
-#' entities
+#' Entities
 #'
 #' An alternative view of the geographies included in the package, as listed in \code{location_types}, partitioned by countries
 #'
@@ -53,7 +53,7 @@ NULL
 #'
 'entities'
 
-#' hierarchies
+#' Hierarchies
 #'
 #' A list of mappings between each geography and its possible parents.
 #'
@@ -75,10 +75,10 @@ NULL
 #'
 'hierarchies'
 
-#' postcodes
+#' Postcodes
 #'
 #' A list of all the \emph{Postcode Units} (\code{PCU}}) in the UK (with an associated \emph{grid reference} and not associated with a \emph{non-geographical} Postcode Sector),
-#' as of FEB-22 (1,731,665 active, 876,691 terminated), together with their geographic coordinates (in WGS84 CRS), 
+#' as of AUG-22 (1,731,665 active, 876,691 terminated), together with their geographic coordinates (CRS 4326, WGS84), 
 #' and the corresponding Output Area and \emph{current} Postcode Sector.
 #'
 #' @format A data.table with the following columns:
@@ -225,13 +225,13 @@ NULL
 
 #' neighbours
 #'
-#' This dataset contains the 1st order neighbours for all the \emph{areas} listed in the table in \code{locations}
+#' This dataset contains the *1st order neighbours* for all the \emph{areas} listed in the table in \code{locations}
 #'
 #' @format A data.table with the following columns:
 #' \describe{
+#'   \item{\code{location_type}}{ The type of the location as referenced in the \code{location_types} table }
 #'   \item{\code{location_id}}{ The code of an area }
 #'   \item{\code{neighbour_id}}{ The 1st order neighbours of an area }
 #' }
 #'
 'neighbours'
-

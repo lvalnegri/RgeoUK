@@ -20,7 +20,7 @@ dd_build_oa_lkps_maps <- function(y, cx = NA, check_lsoa = FALSE, verbose = FALS
     yn <- names(y)[1]
 
     if(verbose) message(' * Reading OA boundaries...')
-    yb <- readRDS(file.path(dmpkg.funs::bnduk_path, 's00', 'OAgb')) |> dplyr::select(-RGN)
+    yb <- readRDS(file.path(Rfuns::bnduk_path, 's00', 'OAgb')) |> dplyr::select(-RGN)
     if(!is.na(cx)) yb <- yb |> dplyr::filter(substr(OA, 1, 1) %in% strsplit(cx, '')[[1]])
 
     if(verbose) message(' * Calculating OAs in exact coverage...')
